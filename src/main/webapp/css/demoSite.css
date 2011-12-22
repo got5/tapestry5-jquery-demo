@@ -1,0 +1,145 @@
+.snippet-container{
+	margin-top:10px;
+	margin-bottom:10px;
+	z-index: -1000;
+}
+
+.superfish-demo-content{
+	position: relative;
+	z-index:1;
+}
+#colorbox{
+	z-index:2;
+}
+#cboxOverlay{
+	z-index:1;
+}
+.superfish-demo-header{
+	position: relative;
+	z-index:2;
+}
+/**
+*	For the Documentation Table
+*/
+.documentation {
+    padding:10px;
+    padding-bottom:30px;
+}
+
+.documentation h4{
+	padding-top:15px;	
+}
+    	
+.documentation table{
+	border:1px solid #c0c0c0;
+	border-collapse:collapse;
+	font-size:90%;
+}
+
+.documentation table tr td{
+	border:1px solid #c0c0c0;
+	padding:3px;
+	width:12%;
+}
+
+.documentation table tr:nth-child(even){
+	background-color:#E7F7DF;
+}
+.documentation table tr:nth-child(odd){
+	background:none;
+}
+
+.documentation table tr th{
+	border:1px solid #c0c0c0;
+	padding:3px;
+	background-color:#569D2F;
+	color:#E7F7DF;
+}
+
+caption{
+	border:1px solid #c0c0c0;
+	padding:3px;
+	background-color:#569D2F;
+	color:#E7F7DF;
+	font-weight: bold;
+	visibility: hidden
+}
+
+
+.documentation table tr td.name{
+	font-weight:bold;
+}
+
+
+.documentation table tr td.center{
+	text-align:center;
+}
+
+.documentation table tr td.description{
+	width:40%;
+}
+
+
+/*.documentation td{
+	font-family: sans-serif;
+    border: thin solid #569D2F;
+    text-align: left;
+    background-color: #ffffff;
+    padding: 15px 5px 15px 5px;
+}
+    	
+.documentation .title{
+	width: 20%;
+    font-weight:bold; 
+    background-color:#E7F7DF;
+}
+    	
+.documentation .content{
+	width: 80%;
+}
+
+.content .parameters li{
+	margin: 0px 0px 15px 0px;
+}*/
+
+#main #i-component{
+	padding-bottom: 500px;
+}
+
+/**
+* For the Reveal Mixin documentation page
+*/
+.reveal-closing{
+		font-size: 16px;
+		line-height: 1;
+		position: absolute;
+		top: 8px;
+		right: 11px;
+		color: #aaa;
+		text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+		font-weight: bold;
+		cursor: pointer;
+}
+
+#myDiv.reveal-div{
+	top:-100px;
+}
+
+#myDiv.reveal-hidden{
+	visibility: hidden;
+}
+
+.successMessage{
+	color: #f00;
+}
+
+.docs_service{
+	margin-left: 10px;
+	margin-bottom: 50px;
+}
+.releasenotes{
+	margin-left:50px;
+}
+
+
+	
