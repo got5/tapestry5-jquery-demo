@@ -33,6 +33,9 @@ import org.got5.tapestry5.jquery.JQuerySymbolConstants;
 import org.got5.tapestry5.jquery.data.IDataSource;
 import org.got5.tapestry5.jquery.data.MockDataSource;
 import org.got5.tapestry5.jquery.pages.GAnalyticsScriptsInjector;
+import org.got5.tapestry5.jquery.services.EffectsParam;
+import org.got5.tapestry5.jquery.services.JQueryModule;
+import org.got5.tapestry5.jquery.services.WidgetParams;
 
 @SubModule(value = JQueryModule.class)
 public class AppModule
@@ -44,7 +47,7 @@ public class AppModule
     	configuration.add(SymbolConstants.SUPPORTED_LOCALES, "en,fr,de,ru,ua");
     	
     	configuration.add(SymbolConstants.PRODUCTION_MODE, "false");
-    	
+
     	configuration.add(SymbolConstants.COMBINE_SCRIPTS, "false");
     	
     	configuration.add(SymbolConstants.COMPRESS_WHITESPACE, "false");
@@ -58,9 +61,9 @@ public class AppModule
     	configuration.add(JQuerySymbolConstants.JQUERY_UI_DEFAULT_THEME, "context:css/south-street/jquery-ui.css");
     	
     	configuration.add("enableAnalytics", "false");
-    	
+
     	configuration.add("demo-src-dir","");
-    	
+
     }
     
 @Contribute(WidgetParams.class)
