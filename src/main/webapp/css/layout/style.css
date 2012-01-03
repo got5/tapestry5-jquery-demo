@@ -212,7 +212,7 @@ DIV.t-error {
     margin: 10px 0px;
 }
 
-DIV.t-error DIV {
+DIV.t-error DIV.t-banner {
     padding: 10px;
     display: block;
     margin: 0px;
