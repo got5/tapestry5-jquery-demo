@@ -2,9 +2,9 @@
 t:title="FormFragment" 
 t:activeElement="0" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
 
-	<t:jquery.tabs  t:listTabData="prop:listTabData" t:activePanelId="0" />
+	<t:jquery.tabs  t:tabs="example" t:activePanelId="0">
 	
-	<t:block id="example">
+		<p:example>
 <h1>Order Address</h1>
 <t:form id="form">
 	<t:errors/>
@@ -47,7 +47,8 @@ t:activeElement="0" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 </t:form>  
     	<div t:type="jquery/showSource" t:ext="html" t:beginLine="8" t:endLine="47" t:path="resources/org/got5/tapestry5/jquery/pages/core/DocsFormFragment.tml"></div>
     	
-    	<div t:type="jquery/showSource" t:ext="java" t:beginLine="39" t:endLine="66" t:path="java/org/got5/tapestry5/jquery/pages/core/DocsFormFragment.java"></div>    	
-    </t:block>
-    
+    	<div t:type="jquery/showSource" t:ext="java" t:beginLine="25" t:endLine="56" t:path="java/org/got5/tapestry5/jquery/pages/core/DocsFormFragment.java"></div>
+		</p:example>
+	
+	</t:jquery.tabs>
 </html>

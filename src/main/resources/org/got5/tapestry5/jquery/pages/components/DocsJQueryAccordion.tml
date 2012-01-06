@@ -3,9 +3,9 @@ t:title="jQuery Accordion"
 t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
    
 
-<t:jquery.tabs  t:listTabData="prop:listTabData" t:activePanelId="tabIndex" />
+<t:jquery.tabs  t:tabs="docs,example" t:activePanelId="tabIndex">
 
-	<t:block id="docs">
+		<p:docs>
 			<t:componentDocumentation>
 			<p:title>
 				Accordion Component
@@ -45,31 +45,32 @@ t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 				/>
 			</p:param_3>
 		</t:componentDocumentation>
-	  </t:block>
+	  </p:docs>
     	
-      <t:block id="example">
-<t:jquery.accordion  t:listOfElements="prop:list" 
-		t:activeElementId="activeElement" />
+      <p:example>
+<t:jquery.accordion  t:panels="AccordionDemoTabs1,AccordionDemoTabs2,
+		AccordionDemoTabs3,AccordionDemoTabs4" 
+		t:activeElementId="activeElement">
 
-<t:block id="block1">
+<p:AccordionDemoTabs1>
 	<h3>Element 1</h3>
 	<hr/>
 	content from block 1
-</t:block>
+</p:AccordionDemoTabs1>
 		
-<t:block id="block2">
+<p:AccordionDemoTabs2>
 	<h3>Element 2</h3>
 	<hr/>	
 	content from block 2
-</t:block>
+</p:AccordionDemoTabs2>
 		
-<t:block id="block3">
+<p:AccordionDemoTabs3>
 	<h3>Element 3</h3>
 	<hr/>
 	content from block 3
-</t:block>
+</p:AccordionDemoTabs3>
 		
-<t:block id="block4">
+<p:AccordionDemoTabs4>
 	<h3>Element 4</h3>
 	<hr/>
 	content from block 4
@@ -77,10 +78,11 @@ t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 		<t:datefield value="sysDate"/>
 		<input type="submit"/>
 	</t:form>
-</t:block>
+</p:AccordionDemoTabs4>
 			
 			<div t:type="jquery/showSource" t:ext="html" t:beginLine="51" t:endLine="80" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsJQueryAccordion.tml"></div>      		
-      		<div t:type="jquery/showSource" t:ext="java" t:beginLine="45" t:endLine="67" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsJQueryAccordion.java"></div>
-	  </t:block>
-
+	  
+</t:jquery.accordion>
+</p:example>
+</t:jquery.tabs>
 </html>

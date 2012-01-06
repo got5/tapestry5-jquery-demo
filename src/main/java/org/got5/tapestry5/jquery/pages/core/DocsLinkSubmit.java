@@ -22,7 +22,6 @@ import java.util.List;
 import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.beaneditor.Validate;
-import org.got5.tapestry5.jquery.utils.JQueryTabData;
 
 public class DocsLinkSubmit
 {
@@ -42,18 +41,6 @@ public class DocsLinkSubmit
 		if(listOfNames==null) listOfNames = new ArrayList<String>();
 	}
 	
-    public List<JQueryTabData> getListTabData()
-	{
-    	List<JQueryTabData> listTabData = new ArrayList<JQueryTabData>();
-		
-		listTabData = new ArrayList<JQueryTabData>();
-		
-        listTabData.add(new JQueryTabData("Example","example"));
-        
-        return listTabData;
-    }
-	
-    
     void onSelectedFromSend() 
     { 
     	listOfNames.add(name);

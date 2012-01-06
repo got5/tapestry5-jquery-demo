@@ -2,10 +2,9 @@
 t:title="jQuery Dialog" 
 t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
 
-<t:jquery.tabs  t:listTabData="prop:listTabData" t:activePanelId="0" />
+<t:jquery.tabs  t:tabs="docs,dialog,dialoglink,dialogajaxlink,example" t:activePanelId="0">
 
-
-<t:block id="docs">
+	<p:docs>
 			<t:componentDocumentation>
 				<p:title>
 					Dialog Component
@@ -19,9 +18,9 @@ t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 				
 				<p:link_1><t:componentLink t:url="http://jqueryui.com/demos/dialog/"/></p:link_1>
 			</t:componentDocumentation>
-</t:block>
+	</p:docs>
     	
-<t:block id="dialog">
+	<p:dialog>
 	  	<t:componentDocumentation>
 			<p:title>
 				Dialog Component
@@ -48,10 +47,9 @@ t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 				/>
 			</p:param_2>
 		</t:componentDocumentation>
-	  	
-</t:block>
+	</p:dialog>
 
-<t:block id="dialoglink">
+	<p:dialoglink>
 	  	<t:componentDocumentation>
 			<p:title>
 				DialogLink Component
@@ -69,10 +67,9 @@ t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 				/>
 			</p:param_1>
 		</t:componentDocumentation>
-	  	
-</t:block>
+	</p:dialoglink>
 
-<t:block id="dialogajaxlink">
+	<p:dialogajaxlink>
 	  	<t:componentDocumentation>
 			<p:title>
 				DialogAjaxLink Component
@@ -100,12 +97,9 @@ t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 				/>
 			</p:param_2>
 		</t:componentDocumentation>
-	  	
-</t:block>
-
-
-      <t:block id="example">
-
+	</p:dialogajaxlink>
+	
+	<p:example>
 <t:jquery.dialog t:clientId="myDialog">
 	Dialog test!
 	<t:zone t:id="myZone" id="myZone">${count}
@@ -126,9 +120,9 @@ t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 	Open
 </t:jquery.dialogajaxlink>
 
-<div t:type="jquery/showSource" t:ext="html" t:beginLine="109" t:endLine="127" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsJQueryDialog.tml"></div>      		
-<div t:type="jquery/showSource" t:ext="java" t:beginLine="48" t:endLine="77" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsJQueryDialog.java"></div>			
-	  </t:block>
-	  
-	
+<div t:type="jquery/showSource" t:ext="html" t:beginLine="103" t:endLine="121" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsJQueryDialog.tml"></div>      		
+<div t:type="jquery/showSource" t:ext="java" t:beginLine="29" t:endLine="61" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsJQueryDialog.java"></div>			
+</p:example>
+
+</t:jquery.tabs>
 </html>

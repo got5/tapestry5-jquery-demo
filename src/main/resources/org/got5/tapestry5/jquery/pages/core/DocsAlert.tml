@@ -2,9 +2,8 @@
 t:title="Alert Demo" 
 t:activeElement="0" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
 
-<t:jquery.tabs  t:listTabData="prop:listTabData" t:activePanelId="0" />
-	
-	<t:block id="example">
+<t:jquery.tabs  t:tabs="example" t:activePanelId="0">
+<p:example>
 <h1>Alert Demo</h1>
 <br /><br />
 
@@ -14,8 +13,11 @@ t:activeElement="0" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 <t:actionLink t:id="single">Single Mode</t:actionLink><br />
 <t:actionLink t:id="untilDismiss">Until-Dismiss Mode</t:actionLink><br />
 
-		<div t:type="jquery/showSource" t:ext="html" t:beginLine="11" t:endLine="15" t:path="resources/org/got5/tapestry5/jquery/pages/core/DocsAlert.tml"></div>
+<div t:type="jquery/showSource" t:ext="html" t:beginLine="7" t:endLine="14" t:path="resources/org/got5/tapestry5/jquery/pages/core/DocsAlert.tml"></div>
     	
-    	<div t:type="jquery/showSource" t:ext="java" t:beginLine="21" t:endLine="41" t:path="java/org/got5/tapestry5/jquery/pages/core/DocsAlert.java"></div>    	
-    </t:block>
+<div t:type="jquery/showSource" t:ext="java" t:beginLine="8" t:endLine="32" t:path="java/org/got5/tapestry5/jquery/pages/core/DocsAlert.java"></div>
+
+</p:example>
+</t:jquery.tabs>
+
 </html>

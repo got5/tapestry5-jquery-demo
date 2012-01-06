@@ -16,7 +16,6 @@
 
 package org.got5.tapestry5.jquery.pages.components;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.tapestry5.ComponentResources;
@@ -35,7 +34,6 @@ import org.got5.tapestry5.jquery.data.Celebrity;
 import org.got5.tapestry5.jquery.data.CelebritySource;
 import org.got5.tapestry5.jquery.data.IDataSource;
 import org.got5.tapestry5.jquery.internal.TableInformation;
-import org.got5.tapestry5.jquery.utils.JQueryTabData;
 
 @Import(stylesheet ={ "context:dataTables/css/demo_table_jui.css",
 					  "context:dataTables/css/demo_page.css",	
@@ -131,17 +129,6 @@ public class DocsDataTables
 		  
 		
 	}
-	
-	public List<JQueryTabData> getListTabData()
-	{
-		List<JQueryTabData> listTabData = new ArrayList<JQueryTabData>();
-		
-	    listTabData.add(new JQueryTabData("Documentation","docs"));
-	    
-	    listTabData.add(new JQueryTabData("Example","example"));
-	    
-	    return listTabData;
-	} 
 	
 	public TableInformation getTableInformation(){
 		return new TableInformation() {

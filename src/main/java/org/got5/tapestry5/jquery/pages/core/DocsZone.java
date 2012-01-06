@@ -42,12 +42,12 @@ public class DocsZone
 	public List<JQueryTabData> getListTabData()
 	{
 		List<JQueryTabData> listTabData = new ArrayList<JQueryTabData>();
-	    listTabData.add(new JQueryTabData("Documentation","TabsBlock1"));
-	    listTabData.add(new JQueryTabData("ActionLink","TabsBlock2"));
-	    listTabData.add(new JQueryTabData("Form","TabsBlock3"));
-	    listTabData.add(new JQueryTabData("MultiZoneUpdate","TabsBlock4"));
-	    listTabData.add(new JQueryTabData("Custom Effects","TabsBlock5"));
-	    listTabData.add(new JQueryTabData("Back to Prototype","TabsBlockLast"));
+	    listTabData.add(new JQueryTabData("Documentation","ZoneBlock1"));
+	    listTabData.add(new JQueryTabData("ActionLink","ZoneBlock2"));
+	    listTabData.add(new JQueryTabData("Form","ZoneBlock3"));
+	    listTabData.add(new JQueryTabData("MultiZoneUpdate","ZoneBlock4"));
+	    listTabData.add(new JQueryTabData("Custom Effects","ZoneBlock5"));
+	    listTabData.add(new JQueryTabData("Back to Prototype","ZoneBlock6"));
 	    return listTabData;
 	}
 	

@@ -16,9 +16,7 @@
 
 package org.got5.tapestry5.jquery.pages.core;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import org.apache.tapestry5.EventConstants;
 import org.apache.tapestry5.ValueEncoder;
@@ -27,83 +25,71 @@ import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
 import org.got5.tapestry5.jquery.entities.Person;
 import org.got5.tapestry5.jquery.entities.Phone;
-import org.got5.tapestry5.jquery.utils.JQueryTabData;
 
 public class DocsAjaxFormLoop
 {
+	@Property
+	@Persist
+	private Person person;
 	
-	public List<JQueryTabData> getListTabData()
+	@Property
+	private Phone phone;
+	    
+	@Property
+	private Boolean deleted;
+	
+	@OnEvent(EventConstants.ACTIVATE)
+	void init()
 	{
-		List<JQueryTabData> listTabData = new ArrayList<JQueryTabData>();
-        listTabData.add(new JQueryTabData("Example","example")); 
-        return listTabData;
-    }
+		if (person == null)
+			person = new Person();
+	}
 	
-@Property
-@Persist
-private Person person;
-
-@Property
-private Phone phone;
-    
-@Property
-private Boolean deleted;
-
-@OnEvent(EventConstants.ACTIVATE)
-void init()
-{
-	if (person == null)
-		person = new Person();
-}
-
-public ValueEncoder<Phone> getPhoneEncoder()
-{
-	return new ValueEncoder<Phone>()
-    {
-		public String toClient(Phone value)
-        {
-			return value.getNumber();
-        }
-
-        public Phone toValue(String clientValue)
-        {
-        	for (Phone currentPhone : person.getPhones())
-            {	
-        		if (currentPhone.getNumber() != null && 
-        				clientValue.equals(currentPhone.getNumber()))
-        			return currentPhone;
-            }
-            	
-            return null;
-         }
-    };
-}
-    
-@OnEvent(EventConstants.SUCCESS)
-public Object onSuccess()
-{
-	return this;
-}
-    
-@OnEvent(value=EventConstants.ADD_ROW, component="phones")
-public Object onAddRowFromPhones()
-{
-	Phone phone = new Phone();
-    phone.setNumber("");
-    phone.setStartDate(new Date());
-
-    person.getPhones().add(phone);
-    phone.setPerson(person);
-    
-    return phone;
-}
-    
-@OnEvent(value=EventConstants.REMOVE_ROW, component="phones")
-void onRemoveRowFromPhones(Phone phoneToDelete) 
-{
-	person.getPhones().remove(phoneToDelete);
-}
-
-    
-    
+	public ValueEncoder<Phone> getPhoneEncoder()
+	{
+		return new ValueEncoder<Phone>()
+	    {
+			public String toClient(Phone value)
+	        {
+				return value.getNumber();
+	        }
+	
+	        public Phone toValue(String clientValue)
+	        {
+	        	for (Phone currentPhone : person.getPhones())
+	            {	
+	        		if (currentPhone.getNumber() != null && 
+	        				clientValue.equals(currentPhone.getNumber()))
+	        			return currentPhone;
+	            }
+	            	
+	            return null;
+	         }
+	    };
+	}
+	    
+	@OnEvent(EventConstants.SUCCESS)
+	public Object onSuccess()
+	{
+		return this;
+	}
+	    
+	@OnEvent(value=EventConstants.ADD_ROW, component="phones")
+	public Object onAddRowFromPhones()
+	{
+		Phone phone = new Phone();
+	    phone.setNumber("");
+	    phone.setStartDate(new Date());
+	
+	    person.getPhones().add(phone);
+	    phone.setPerson(person);
+	    
+	    return phone;
+	}
+	    
+	@OnEvent(value=EventConstants.REMOVE_ROW, component="phones")
+	void onRemoveRowFromPhones(Phone phoneToDelete) 
+	{
+		person.getPhones().remove(phoneToDelete);
+	}
 }

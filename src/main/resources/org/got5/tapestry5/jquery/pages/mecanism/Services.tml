@@ -1,10 +1,10 @@
 <html t:type="layoutWithAccordion" t:title="Mecanisms provided by Tapestry5/jQuery" t:activeElement="3" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
     
     
-    <t:jquery.tabs  t:listTabData="prop:listTabData" t:activePanelId="0" />
+    <t:jquery.tabs  t:tabs="services" t:activePanelId="0">
    
 
-	<t:block id="block1">
+	<p:services>
 		<div class="docs_service">
 			<h2>EffectsParam</h2>
 			<p>
@@ -28,7 +28,7 @@
 			</p>
 			<div t:type="jquery/showSource" t:ext="java" t:beginLine="65" t:endLine="70" t:path="java/org/got5/tapestry5/jquery/services/AppModule.java"></div>
 		</div>
-	</t:block>
-
+	</p:services>
+</t:jquery.tabs>
 
 </html>

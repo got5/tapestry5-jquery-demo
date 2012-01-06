@@ -16,13 +16,9 @@
 
 package org.got5.tapestry5.jquery.pages.mixins;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.apache.tapestry5.annotations.PageReset;
 import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
-import org.got5.tapestry5.jquery.utils.JQueryTabData;
 
 public class DocsButton
 {
@@ -30,17 +26,6 @@ public class DocsButton
 	@Property
 	private String foo;
 
-	public List<JQueryTabData> getListTabData()
-	{
-		List<JQueryTabData> listTabData = new ArrayList<JQueryTabData>();
-	    
-		listTabData.add(new JQueryTabData("Documentation","docs"));
-	    
-		listTabData.add(new JQueryTabData("Example","example"));
-	    
-	    return listTabData;
-	}
-	
 	@Persist
 	@Property
 	private int tabIndex;

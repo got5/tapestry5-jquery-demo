@@ -1,8 +1,8 @@
 <html t:type="layoutWithAccordion" t:activeElement="2" t:title="Mask" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
 
-<t:jquery.tabs  t:listTabData="prop:listTabData" t:activePanelId="0" />
+<t:jquery.tabs  t:tabs="docs,example" t:activePanelId="0">
 
-<t:block id="docs">
+	<p:docs>
 		<t:componentDocumentation>
 			<p:title>
 				Mask Mixin
@@ -28,28 +28,28 @@
 				/>
 			</p:param_1>
 		</t:componentDocumentation>
-</t:block>
+	</p:docs>
     	
-<t:block id="example">
-    <t:form t:id="monForm">
-    	<fieldset>	
-	    	<p>
-	    		<t:label t:for="monTextField">Phone Number : </t:label>
-	    		<t:textField t:id="monTextField" t:value="value" 
-	    		t:mixins="jquery/mask" t:format="literal:99-99-99-99-99" /> 
-	    		(t:format="literal:99-99-99-99-99")
-    	    </p>
-    	    <p>		
-	    		<t:label t:for="monTextField2">Birth Date : </t:label>
-	    		<t:textField t:id="monTextField2" t:value="value" 
-	    		t:mixins="jquery/mask" t:format="literal:99/99/9999" /> 
-	    		(t:format="literal:99/99/9999")
-    		</p>
-    	</fieldset>
-    </t:form>
+<p:example>
+<t:form t:id="monForm">
+	<fieldset>	
+ 	<p>
+ 		<t:label t:for="monTextField">Phone Number : </t:label>
+ 		<t:textField t:id="monTextField" t:value="value" 
+ 		t:mixins="jquery/mask" t:format="literal:99-99-99-99-99" /> 
+ 		(t:format="literal:99-99-99-99-99")
+	    </p>
+	    <p>		
+ 		<t:label t:for="monTextField2">Birth Date : </t:label>
+ 		<t:textField t:id="monTextField2" t:value="value" 
+ 		t:mixins="jquery/mask" t:format="literal:99/99/9999" /> 
+ 		(t:format="literal:99/99/9999")
+		</p>
+	</fieldset>
+</t:form>
     
     <div t:type="jquery/showSource" t:ext="html" t:beginLine="34" t:endLine="49" t:path="resources/org/got5/tapestry5/jquery/pages/mixins/DocsMask.tml"></div>
     	
-</t:block>
-
+</p:example>
+</t:jquery.tabs>
 </html>

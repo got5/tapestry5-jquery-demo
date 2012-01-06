@@ -1,0 +1,11 @@
+<t:container xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
+	<div class="change-style">
+		<t:form t:id="styleswitch">
+			<p>
+				<label for="i-theme">Select a jQuery UI theme:</label>
+				<t:select t:clientId="i-theme" t:id="theme" model="themeModel" t:blankOption="NEVER"/>
+			</p>
+			
+		</t:form>
+	</div>
+</t:container>

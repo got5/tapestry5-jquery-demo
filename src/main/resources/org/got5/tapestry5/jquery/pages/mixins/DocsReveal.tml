@@ -1,8 +1,8 @@
 <html t:type="layoutWithAccordion" t:title="Reveal" t:activeElement="2" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
  
-   <t:jquery.tabs  t:listTabData="prop:listTabData" t:activePanelId="0" />
+   <t:jquery.tabs  t:tabs="docs,example" t:activePanelId="0">
     
-    <t:block id="docs">
+    <p:docs>
     	<t:componentDocumentation>
 			<p:title>
 				Reveal Mixin
@@ -60,9 +60,9 @@
 			</p:param_5>
 		</t:componentDocumentation>
 		  	
-    </t:block>
+    </p:docs>
     
-    <t:block id="example">
+    <p:example>
 <a id="monLink" t:type="pageLink" t:page="Index" 
 	  t:mixins="jquery/reveal" 
 	  t:div="literal:myDiv" 
@@ -75,10 +75,11 @@
 		  
 		  <div t:type="jquery/showSource" t:ext="html" t:beginLine="80" t:endLine="83" t:path="resources/org/got5/tapestry5/jquery/pages/mixins/DocsReveal.tml"></div>
 
-	</t:block>
-    
+	</p:example>
+ </t:jquery.tabs>   
 <div id="myDiv" class="reveal-div reveal-hidden">
 	Here is the Modal Window/
 	<div class="reveal-closing">x</div>
 </div>
+
 </html>

@@ -16,9 +16,6 @@
 
 package org.got5.tapestry5.jquery.pages.components;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.apache.tapestry5.EventConstants;
 import org.apache.tapestry5.annotations.Component;
 import org.apache.tapestry5.annotations.OnEvent;
@@ -28,53 +25,37 @@ import org.apache.tapestry5.corelib.components.Zone;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.Request;
 import org.got5.tapestry5.jquery.pages.core.Autocomplete;
-import org.got5.tapestry5.jquery.utils.JQueryTabData;
 
 public class DocsJQueryDialog extends Autocomplete
 {
+	@Component
+	private Zone myZone;
 	
-	public List<JQueryTabData> getListTabData(){
-		List<JQueryTabData> listTabData = new ArrayList<JQueryTabData>();
-	    listTabData.add(new JQueryTabData("Documentation","docs"));
-	    listTabData.add(new JQueryTabData("Dialog Parameters","dialog"));
-	    listTabData.add(new JQueryTabData("DialogLink Parameters","dialoglink"));
-	    listTabData.add(new JQueryTabData("DialogAjaxLink Parameters","dialogajaxlink"));
-	    listTabData.add(new JQueryTabData("Example","example"));
-	    return listTabData;
+	@Persist 
+	private Integer count;
+	
+	@Inject
+	private Request request;
+	
+	@Property
+	private String goalName;
+	
+	@OnEvent(EventConstants.ACTIVATE)
+	void init()
+	{
+	    if (count == null)
+	        count = 0;
 	}
 	
+	public Integer getCount()
+	{
+	    return count++;
+	}
 	
-@Component
-private Zone myZone;
-
-@Persist 
-private Integer count;
-
-@Inject
-private Request request;
-
-@Property
-private String goalName;
-
-@OnEvent(EventConstants.ACTIVATE)
-void init()
-{
-    if (count == null)
-        count = 0;
-}
-
-public Integer getCount()
-{
-    return count++;
-}
-
-@OnEvent(EventConstants.ACTION)
-Object updateCount()
-{
-    if (!request.isXHR()) { return this; }
-    return myZone;
-}
-    
-    
-    
+	@OnEvent(EventConstants.ACTION)
+	Object updateCount()
+	{
+	    if (!request.isXHR()) { return this; }
+	    return myZone;
+	}
 }

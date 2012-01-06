@@ -2,11 +2,10 @@
 t:title="jQuery Tabs" 
 t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
    
-<t:jquery.tabs  t:listTabData="prop:listTabData" t:activePanelId="tabIndex" />
+<t:jquery.tabs  t:tabs="docs,example" t:activePanelId="tabIndex">
 
-
-<t:block id="docs">
-			<t:componentDocumentation>
+	<p:docs>
+		<t:componentDocumentation>
 			<p:title>
 				Tabs Component
 			</p:title>
@@ -44,43 +43,44 @@ t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 				/>
 			</p:param_3>
 		</t:componentDocumentation>
-	 </t:block>
-    	
-      <t:block id="example">
-<t:jquery.tabs  t:listTabData="prop:listTabDataDemo" 
-	t:activePanelId="activeElement" />
+	</p:docs>
+	
+	<p:example>
+<t:jquery.tabs  t:tabs="TabsDemoTabs1,TabsDemoTabs2,TabsDemoTabs3,TabsDemoTabs4" 
+	t:activePanelId="activeElement">
+	
+	<p:TabsDemoTabs1>
+		<h3>Panel 1</h3>
+		<hr/>
+		content from block 1
+	</p:TabsDemoTabs1>
+	
+	<p:TabsDemoTabs2>
+		<h3>Panel 2</h3>
+		<hr/>	
+		content from block 2
+	</p:TabsDemoTabs2>
+	
+	<p:TabsDemoTabs3>
+		<h3>Panel 3</h3>
+		<hr/>
+		content from block 3
+	</p:TabsDemoTabs3>
+	
+	<p:TabsDemoTabs4>
+		<h3>Panel 4</h3>
+		<hr/>
+		content from block 4
+		<t:form>
+			<t:datefield value="sysDate"/>
+			<input type="submit"/>
+		</t:form>
+	</p:TabsDemoTabs4>
+</t:jquery.tabs>
 
-<t:block id="block1">
-	<h3>Panel 1</h3>
-	<hr/>
-	content from block 1
-</t:block>
-		
-<t:block id="block2">
-	<h3>Panel 2</h3>
-	<hr/>	
-	content from block 2
-</t:block>
-		
-<t:block id="block3">
-	<h3>Panel 3</h3>
-	<hr/>
-	content from block 3
-</t:block>
+	<div t:type="jquery/showSource" t:ext="html" t:beginLine="49" t:endLine="79" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsJQueryTabs.tml"></div>      		
+    <div t:type="jquery/showSource" t:ext="java" t:beginLine="30" t:endLine="39" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsJQueryTabs.java"></div>
 			
-<t:block id="block4">
-	<h3>Panel 4</h3>
-	<hr/>
-	content from block 4
-	<t:form>
-		<t:datefield value="sysDate"/>
-		<input type="submit"/>
-	</t:form>
-</t:block>
-
-			<div t:type="jquery/showSource" t:ext="html" t:beginLine="50" t:endLine="79" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsJQueryTabs.tml"></div>      		
-      		<div t:type="jquery/showSource" t:ext="java" t:beginLine="43" t:endLine="62" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsJQueryTabs.java"></div>
-			
-	  </t:block>
-
+	</p:example>
+</t:jquery.tabs>
 </html>

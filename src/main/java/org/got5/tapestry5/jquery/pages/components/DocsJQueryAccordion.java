@@ -16,56 +16,24 @@
 
 package org.got5.tapestry5.jquery.pages.components;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
-import org.apache.tapestry5.EventConstants;
-import org.apache.tapestry5.annotations.OnEvent;
 import org.apache.tapestry5.annotations.PageReset;
 import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
-import org.got5.tapestry5.jquery.utils.JQueryAccordionData;
-import org.got5.tapestry5.jquery.utils.JQueryTabData;
 
 
 public class DocsJQueryAccordion
 {
-
-	public List<JQueryTabData> getListTabData(){
-		
-		List<JQueryTabData> listTabData = new ArrayList<JQueryTabData>();
-		
-	    listTabData.add(new JQueryTabData("Documentation","docs"));
-	    
-	    listTabData.add(new JQueryTabData("Example","example"));
-	    
-	    return listTabData;
-	}
+	@Persist
+	@Property
+	private int activeElement;
 	
-@Persist
-@Property
-private int activeElement;
+	@Persist
+	@Property
+	private Date sysDate;
 
-@Persist
-@Property
-private Date sysDate;
-
-@Property
-private List<JQueryAccordionData> list;
-
-@OnEvent(EventConstants.ACTIVATE)
-void onSetupRender()
-{
-			
-	list = new ArrayList<JQueryAccordionData>();
-    list.add(new JQueryAccordionData("Element1","block1"));
-    list.add(new JQueryAccordionData("Element2","block2"));
-    list.add(new JQueryAccordionData("Element3","block3"));
-    list.add(new JQueryAccordionData("Element4","block4"));
-    
-}
-		
+	
 	@Persist
 	@Property
 	private int tabIndex;
@@ -80,5 +48,4 @@ void onSetupRender()
 		tabIndex=1;
 		activeElement=3;
 	}
-
 }

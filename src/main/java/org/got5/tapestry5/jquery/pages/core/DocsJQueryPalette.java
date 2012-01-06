@@ -16,19 +16,7 @@
 
 package org.got5.tapestry5.jquery.pages.core;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.got5.tapestry5.jquery.utils.JQueryTabData;
 
 public class DocsJQueryPalette extends Palette
 {
-	public List<JQueryTabData> getListTabData()
-	{
-		List<JQueryTabData> listTabData = new ArrayList<JQueryTabData>();
-		
-        listTabData.add(new JQueryTabData("Example","example"));
-        
-        return listTabData;
-    }
 }

@@ -36,17 +36,6 @@ public class DocsJQuerySlider {
 	@Inject
 	private Request request;
 	
-	public List<JQueryTabData> getListTabData(){
-		
-		List<JQueryTabData> listTabData = new ArrayList<JQueryTabData>();
-		
-	    listTabData.add(new JQueryTabData("Documentation","docs"));
-	    
-	    listTabData.add(new JQueryTabData("Example","example"));
-	    
-	    return listTabData;
-	}
-	
 	@Persist
 	@Property
 	private int tabIndex;

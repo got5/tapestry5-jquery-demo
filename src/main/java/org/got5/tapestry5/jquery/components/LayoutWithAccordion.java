@@ -16,19 +16,14 @@
 
 package org.got5.tapestry5.jquery.components;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.apache.tapestry5.ComponentResources;
 import org.apache.tapestry5.annotations.Import;
 import org.apache.tapestry5.annotations.Parameter;
 import org.apache.tapestry5.annotations.Property;
-import org.apache.tapestry5.annotations.SetupRender;
 import org.apache.tapestry5.ioc.Messages;
 import org.apache.tapestry5.ioc.annotations.Inject;
-import org.got5.tapestry5.jquery.utils.JQueryAccordionData;
 
-@Import(stylesheet =
+@Import(stack="themestack", stylesheet =
 { "context:css/layout/style.css" ,"context:css/demoSite.css"}
 )
 public class LayoutWithAccordion 
@@ -45,23 +40,6 @@ public class LayoutWithAccordion
     @Parameter
 	private int activeElement;
 
-
-	@Property
-	private List<JQueryAccordionData> list;
-
-	@SetupRender
-	void onSetupRender()
-	{
-		//title = resources.getPageName();
-				
-		list = new ArrayList<JQueryAccordionData>();
-        list.add(new JQueryAccordionData("Core Components","block1"));
-        list.add(new JQueryAccordionData("jQuery Components ","block2"));
-        list.add(new JQueryAccordionData("jQuery Mixins","block3"));
-        list.add(new JQueryAccordionData("Mecanisms","block4"));
-        
-	}
-	
 	@Inject
 	private Messages messages;
 	

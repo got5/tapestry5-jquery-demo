@@ -2,9 +2,9 @@
 	  xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" 
 	  xmlns:p="tapestry:parameter">
     
-     <t:jquery.tabs  t:listTabData="prop:listTabData" t:activePanelId="0" />
+     <t:jquery.tabs  t:tabs="docs,example" t:activePanelId="0">
 	 
-	  <t:block id="docs">
+	  <p:docs>
 	  		<t:componentDocumentation>
 				<p:title>
 					CustomDatepicker Mixin
@@ -26,9 +26,9 @@
 					/>
 				</p:param_1>
 			</t:componentDocumentation>
-	  </t:block>
+	  </p:docs>
     	
-      <t:block id="example">
+      <p:example>
 
 <p>
 	This example changes the nextText and prevText parameters of the jQuery DatePicker.
@@ -42,7 +42,8 @@
       		
       		<div t:type="jquery/showSource" t:ext="html" t:beginLine="37" t:endLine="41" t:path="resources/org/got5/tapestry5/jquery/pages/mixins/DocsCustomDatepicker.tml"></div>
       		
-      		<div t:type="jquery/showSource" t:ext="java" t:beginLine="25" t:endLine="30" t:path="java/org/got5/tapestry5/jquery/pages/mixins/DocsCustomDatepicker.java"></div>
+      		<div t:type="jquery/showSource" t:ext="java" t:beginLine="8" t:endLine="16" t:path="java/org/got5/tapestry5/jquery/pages/mixins/DocsCustomDatepicker.java"></div>
 
-	  </t:block>
+	  </p:example>
+</t:jquery.tabs>
 </html>

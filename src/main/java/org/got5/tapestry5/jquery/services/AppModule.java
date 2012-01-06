@@ -28,14 +28,12 @@ import org.apache.tapestry5.json.JSONObject;
 import org.apache.tapestry5.services.ApplicationStateContribution;
 import org.apache.tapestry5.services.ApplicationStateCreator;
 import org.apache.tapestry5.services.MarkupRendererFilter;
+import org.apache.tapestry5.services.javascript.JavaScriptStack;
 import org.got5.tapestry5.jquery.EffectsConstants;
 import org.got5.tapestry5.jquery.JQuerySymbolConstants;
 import org.got5.tapestry5.jquery.data.IDataSource;
 import org.got5.tapestry5.jquery.data.MockDataSource;
 import org.got5.tapestry5.jquery.pages.GAnalyticsScriptsInjector;
-import org.got5.tapestry5.jquery.services.EffectsParam;
-import org.got5.tapestry5.jquery.services.JQueryModule;
-import org.got5.tapestry5.jquery.services.WidgetParams;
 
 @SubModule(value = JQueryModule.class)
 public class AppModule
@@ -58,7 +56,7 @@ public class AppModule
     	
     	configuration.add(JQuerySymbolConstants.JQUERY_ALIAS, "$");
     	
-    	configuration.add(JQuerySymbolConstants.JQUERY_UI_DEFAULT_THEME, "context:css/south-street/jquery-ui.css");
+    	configuration.add(JQuerySymbolConstants.JQUERY_UI_DEFAULT_THEME, "context:css/empty.css");
     	
     	configuration.add("enableAnalytics", "false");
 
@@ -104,4 +102,12 @@ public void contributeMarkupRenderer(OrderedConfiguration<MarkupRendererFilter> 
 	}
 
 }
+
+	public static void contributeJavaScriptStackSource(
+			MappedConfiguration<String, JavaScriptStack> configuration) {
+		configuration.addInstance("themestack", ThemeStackSwitcher.class);
+		configuration.addInstance("jqueryui_smoothness", SmoothnessStack.class);
+		configuration.addInstance("jqueryui_sunny", SunnyStack.class);
+		configuration.addInstance("jqueryui_southstreet", SouthStreetStack.class);
+	}
 }

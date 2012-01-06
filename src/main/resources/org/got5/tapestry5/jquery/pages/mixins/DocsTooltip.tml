@@ -4,9 +4,9 @@
 	  xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" 
 	  xmlns:p="tapestry:parameter">
     
-    <t:jquery.tabs  t:listTabData="listTabData" t:activePanelId="0" />
+    <t:jquery.tabs  t:tabs="docs,example" t:activePanelId="0">
     
-    <t:block id="docs">
+    <p:docs>
     	<t:componentDocumentation>
 			<p:title>
 				Tooltip Mixin
@@ -17,17 +17,17 @@
 			
 			<p:link_1><t:componentLink t:url="http://access.aol.com/csun2011"/></p:link_1>
 		</t:componentDocumentation>
-	</t:block>
+	</p:docs>
     
-    <t:block id="example">
-    	<a t:type="pageLink" 
-		   t:page="Index" 
-		   t:mixins="jquery/tooltip" 
-		   title="a small tooltip">Lien vers l'Index</a>
+    <p:example>
+<a t:type="pageLink" 
+	 t:page="Index" 
+	 t:mixins="jquery/tooltip" 
+	 title="a small tooltip">Lien vers l'Index</a>
     	<br />
     	<br />
     	<div t:type="jquery/showSource" t:ext="html" t:beginLine="23" t:endLine="26" t:path="resources/org/got5/tapestry5/jquery/pages/mixins/DocsTooltip.tml"></div>
     	
-    </t:block>
-    
+    </p:example>
+</t:jquery.tabs>
 </html>

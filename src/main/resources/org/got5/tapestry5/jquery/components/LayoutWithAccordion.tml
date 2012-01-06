@@ -31,7 +31,8 @@
 			
 			
 			<div id="aside">
-			Tapestry5 jQuery provides jQuery Components and can fully replace Prototype and Scriptaculous by jQuery
+				Tapestry5 jQuery provides jQuery Components and can fully replace Prototype and Scriptaculous by jQuery
+				<div class="themeSwitcher"><t:themeSwitcher /></div>
 			</div>
 			
 			
@@ -41,133 +42,66 @@
 		
 		<div id="bar">
 			<strong>${title}</strong>
+			
 		</div>
 		
 		<div id="wrapper">
 		<div id="menu">
-			<t:jquery.accordion  t:listOfElements="prop:list" t:activeElementId="activeElement" />
+			<t:jquery.accordion  t:panels="block1,block2,block3,block4" t:activeElementId="activeElement">
+				<p:block1>
+					<ul>
+		        		<li><t:pagelink t:page="core/DocsZone">Zone</t:pagelink></li>
+		        		<li><t:pagelink t:page="core/DocsDateField">DateField</t:pagelink></li>
+		        		<li><t:pagelink t:page="core/DocsValidation">Validation</t:pagelink></li>
+		        		<li><t:pagelink t:page="core/DocsGrid">Grid</t:pagelink></li>
+		        		<li><t:pagelink t:page="core/DocsAjaxformloop">AjaxFormLoop</t:pagelink></li>
+		        		<li><t:pagelink t:page="core/DocsFormfragment">FormFragment</t:pagelink></li>
+		        		<li><t:pagelink t:page="core/DocsLinksubmit">LinkSubmit</t:pagelink></li>	
+		        		<li><t:pagelink t:page="core/DocsJQueryAutocomplete">j:Autocomplete</t:pagelink></li>
+		        		<li><t:pagelink t:page="core/DocsJQueryPalette">j:Palette</t:pagelink></li>
+		        		<li><t:pagelink t:page="core/DocsAlert">Alert</t:pagelink></li>
+		        		<li><t:pagelink t:page="core/AjaxExceptionReport">Ajax Exception Report</t:pagelink></li>
+		        		<li><t:pagelink t:page="core/DocsTree">Tree</t:pagelink></li>
+					</ul>
+				</p:block1>
 				
-			<t:block id="block1">
-			<!-- Core Components and features -->
-			<ul>
-        		<li>
-            		<t:pagelink t:page="core/DocsZone">Zone</t:pagelink>
-        		</li>
-        		<li>
-            		<t:pagelink t:page="core/DocsDateField">DateField</t:pagelink>
-        		</li>
-        		<li>
-            		<t:pagelink t:page="core/DocsValidation">Validation</t:pagelink>
-        		</li>
-        		<li>
-            		<t:pagelink t:page="core/DocsGrid">Grid</t:pagelink>
-        		</li>
-        		<li>
-            		<t:pagelink t:page="core/DocsAjaxformloop">AjaxFormLoop</t:pagelink>
-        		</li>
-        		<li>
-            		<t:pagelink t:page="core/DocsFormfragment">FormFragment</t:pagelink>
-        		</li>
-        		<li>
-            		<t:pagelink t:page="core/DocsLinksubmit">LinkSubmit</t:pagelink>
-        		</li>	
-        		<li>
-            		<t:pagelink t:page="core/DocsJQueryAutocomplete">j:Autocomplete</t:pagelink>
-        		</li>
-        		<li>
-            		<t:pagelink t:page="core/DocsJQueryPalette">j:Palette</t:pagelink>
-        		</li>
-        		<li>
-                    <t:pagelink t:page="core/DocsAlert">Alert</t:pagelink> 
-        		</li>
-        		<li>
-                    <t:pagelink t:page="core/AjaxExceptionReport">Ajax Exception Report</t:pagelink> 
-        		</li>
-        		<li>
-                    <t:pagelink t:page="core/DocsTree">Tree</t:pagelink> 
-        		</li>
-			</ul>
-			</t:block>
-		
-			<t:block id="block2">
-			<!-- Core Components that need lib mapping -->
-			<ul>
-				 <li>
-			         <t:pagelink t:page="components/DocsJqueryDialog">Dialog</t:pagelink>
-			     </li>
-			     <li>
-			         <t:pagelink t:page="components/DocsJqueryTabs">Tabs</t:pagelink>
-			     </li>
-			     <li>
-			         <t:pagelink t:page="components/DocsJqueryAccordion">Accordion</t:pagelink>
-			     </li>
-			     <li>
-			        <t:pagelink t:page="components/DocsJquerySlider">Slider</t:pagelink>
-			     </li>
-				 <li>
-			        <t:pagelink t:page="components/DocsJqueryRangeSlider">Range Slider</t:pagelink>
-			     </li>
-			     <li>
-			     	<t:pagelink t:page="components/DocsAjaxupload">AjaxUpload</t:pagelink>
-			     </li>			
-			     <li>
-			     	<t:pagelink t:page="components/DocsCarouselPage">Carousel</t:pagelink>
-			     </li>
-			     <li>
-			     	<t:pagelink t:page="components/DocsCheckbox">Checkbox</t:pagelink>
-			     </li>
-                             <li>
-                                <t:pagelink t:page="components/DocsSuperfish">Superfish Menu</t:pagelink>
-                             </li>
-                             <li>
-                                <t:pagelink t:page="components/DocsColorboxGallery">Gallery</t:pagelink>
-                             </li>
-                             <li>
-			     	<t:pagelink t:page="components/DocsDataTables">DataTables</t:pagelink>
-			     </li>
-			</ul>
-		
-			</t:block>
-		
-			<t:block id="block3">
-		
-				<!--  Exclusives jQuery components -->
-			   	
-			    <ul>
-			   		<li>
-			     		<t:pagelink t:page="mixins/DocsBind">Bind</t:pagelink>
-			     	</li>
-			    	<li>
-			     		<t:pagelink t:page="mixins/DocsButton">Button</t:pagelink>
-			     	</li>
-			     	<li>
-			     		<t:pagelink t:page="mixins/DocsCustomDatepicker">CustomDatepicker</t:pagelink>
-			     	</li>
-			       	<li>
-			            <t:pagelink t:page="mixins/DocsMask">Mask</t:pagelink>
-			        </li>
-			        <li>
-			            <t:pagelink t:page="mixins/Docsreveal">Reveal</t:pagelink>
-			        </li>
-			        <li>
-			            <t:pagelink t:page="mixins/DocsTooltip">Tooltip</t:pagelink>
-			        </li>
-			        <li>
-			     		<t:pagelink t:page="mixins/DocsWidget">Widget</t:pagelink>
-			     	</li>
-			        
-			    </ul>		
-			</t:block>
-			<t:block id="block4">
-				<ul>
-					<li>
-			            <t:pagelink t:page="mecanism/Services">Services</t:pagelink>
-			        </li>
-			        <li>
-			            <t:pagelink t:page="mecanism/DocsSelector">Selector Binding</t:pagelink>
-			        </li>
-				</ul>
-			</t:block>
+				<p:block2>
+					<ul>
+						 <li><t:pagelink t:page="components/DocsJqueryDialog">Dialog</t:pagelink></li>
+					     <li><t:pagelink t:page="components/DocsJqueryTabs">Tabs</t:pagelink></li>
+					     <li><t:pagelink t:page="components/DocsJqueryAccordion">Accordion</t:pagelink></li>
+					     <li><t:pagelink t:page="components/DocsJquerySlider">Slider</t:pagelink></li>
+						 <li><t:pagelink t:page="components/DocsJqueryRangeSlider">Range Slider</t:pagelink></li>
+					     <li><t:pagelink t:page="components/DocsAjaxupload">AjaxUpload</t:pagelink></li>			
+					     <li><t:pagelink t:page="components/DocsCarouselPage">Carousel</t:pagelink></li>
+					     <li><t:pagelink t:page="components/DocsCheckbox">Checkbox</t:pagelink></li>
+		                 <li><t:pagelink t:page="components/DocsSuperfish">Superfish Menu</t:pagelink></li>
+						 <li><t:pagelink t:page="components/DocsColorboxGallery">Gallery</t:pagelink></li>
+		                 <li><t:pagelink t:page="components/DocsDataTables">DataTables</t:pagelink></li>
+					</ul>
+				</p:block2>
+				
+				<p:block3>
+					<ul>
+				   		<li><t:pagelink t:page="mixins/DocsBind">Bind</t:pagelink></li>
+				    	<li><t:pagelink t:page="mixins/DocsButton">Button</t:pagelink></li>
+				     	<li><t:pagelink t:page="mixins/DocsCustomDatepicker">CustomDatepicker</t:pagelink></li>
+				       	<li><t:pagelink t:page="mixins/DocsMask">Mask</t:pagelink></li>
+				        <li><t:pagelink t:page="mixins/Docsreveal">Reveal</t:pagelink></li>
+				        <li><t:pagelink t:page="mixins/DocsTooltip">Tooltip</t:pagelink></li>
+				        <li><t:pagelink t:page="mixins/DocsWidget">Widget</t:pagelink></li>
+				    </ul>		
+				</p:block3>
+				
+				<p:block4>
+					<ul>
+						<li><t:pagelink t:page="mecanism/Services">Services</t:pagelink></li>
+				        <li><t:pagelink t:page="mecanism/DocsSelector">Selector Binding</t:pagelink></li>
+					</ul>
+				</p:block4>
+			</t:jquery.accordion>
+				
+			
 		</div>
 		
 		<div id="main">

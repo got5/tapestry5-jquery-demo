@@ -3,9 +3,8 @@ t:title="Carousel"
 t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter" xmlns:j="tapestry-library:jquery">
 
 
-<t:jquery.tabs  t:listTabData="prop:listTabData" t:activePanelId="0" />
-	
-	<t:block id="docs">
+<t:jquery.tabs  t:tabs="docs,example" t:activePanelId="0">
+	<p:docs>
 		<t:componentDocumentation>
 			<p:title>
 				Carousel Component
@@ -64,53 +63,45 @@ t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 			<p:param_7><t:componentParameter t:name="zone" 			t:required="false"	t:javaType="String" t:prefix="literal" 							t:description="If you provide a zone name, the surrounding link will be an ajax link" /></p:param_7>
 			
 		</t:componentDocumentation>
-		
-		 
-  		
-		
-		
-  				
+	</p:docs>
+	
+	<p:example>
+Complex Items:
+<j:carousel t:params="complexParams" t:clientId="myComplexCarousel">
+	<j:carouselItem t:imageSource="asset:context:img/flower_01.jpg" 
+		t:page="core/DocsJQueryPalette" t:context="3"/>
+	<j:carouselItem t:imageSource="asset:context:img/flower_02.jpg" 
+		t:event="zoneTest" t:zone="flowerZone"  />
+	<j:carouselItem t:imageSource="asset:context:img/flower_03.jpg" 
+		t:event="eventTest" t:context="literal:hello" />
+	<j:carouselItem t:imageSource="asset:context:img/flower_04.jpg"   />
+	<j:carouselItem t:imageSource="asset:context:img/flower_05.jpg"   />
+	<j:carouselItem t:imageSource="asset:context:img/flower_06.jpg"   />
+	<j:carouselItem t:imageSource="asset:context:img/flower_07.jpg"   />
+	<j:carouselItem t:imageSource="asset:context:img/flower_08.jpg"   />
+	<j:carouselItem t:imageSource="asset:context:img/flower_09.jpg"   />
+	<j:carouselItem t:imageSource="asset:context:img/flower_10.jpg"   />
+</j:carousel>
 
-  				
-
-	  </t:block>
-    	
-      <t:block id="example">
-			Complex Items:
-			<j:carousel t:params="complexParams" t:clientId="myComplexCarousel">
-				<j:carouselItem t:imageSource="asset:context:img/flower_01.jpg" 
-					t:page="core/DocsJQueryPalette" t:context="3"/>
-				<j:carouselItem t:imageSource="asset:context:img/flower_02.jpg" 
-					t:event="zoneTest" t:zone="flowerZone"  />
-				<j:carouselItem t:imageSource="asset:context:img/flower_03.jpg" 
-					t:event="eventTest" t:context="literal:hello" />
-				<j:carouselItem t:imageSource="asset:context:img/flower_04.jpg"   />
-				<j:carouselItem t:imageSource="asset:context:img/flower_05.jpg"   />
-				<j:carouselItem t:imageSource="asset:context:img/flower_06.jpg"   />
-				<j:carouselItem t:imageSource="asset:context:img/flower_07.jpg"   />
-				<j:carouselItem t:imageSource="asset:context:img/flower_08.jpg"   />
-				<j:carouselItem t:imageSource="asset:context:img/flower_09.jpg"   />
-				<j:carouselItem t:imageSource="asset:context:img/flower_10.jpg"   />
-			</j:carousel>
+<div id="zoneContainer">
+	<span>Click on the big white flower of the complex carousel:</span>
+	<t:zone t:id="flowerZone" id="flowerZone">
+		
+	</t:zone>
+	
+	<t:block t:id="flowerBlock" id="flowerBlock">
+		You just clicked on the big white flower !
+	</t:block>
+	
+</div>
+<br/><br/>
+Ajax loaded:
+<j:carousel t:params="ajaxParams" t:clientId="myAjaxCarousel" />
 			
-			<div id="zoneContainer">
-				<span>Click on the big white flower of the complex carousel:</span>
-				<t:zone t:id="flowerZone" id="flowerZone">
-					
-				</t:zone>
-				
-				<t:block t:id="flowerBlock" id="flowerBlock">
-					You just clicked on the big white flower !
-				</t:block>
-				
-			</div>
-			<br/><br/>
-			Ajax loaded:
-			<j:carousel t:params="ajaxParams" t:clientId="myAjaxCarousel" />
-			
-			<div t:type="jquery/showSource" t:ext="html" t:beginLine="79" t:endLine="109" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsCarouselPage.tml"></div>      		
-      		<div t:type="jquery/showSource" t:ext="java" t:beginLine="44" t:endLine="96" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsCarouselPage.java"></div>
-	  </t:block>
+			<div t:type="jquery/showSource" t:ext="html" t:beginLine="70" t:endLine="99" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsCarouselPage.tml"></div>      		
+      		<div t:type="jquery/showSource" t:ext="java" t:beginLine="27" t:endLine="82" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsCarouselPage.java"></div>
+	</p:example>
+</t:jquery.tabs>
 </html>
 
   

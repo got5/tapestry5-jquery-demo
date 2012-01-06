@@ -16,20 +16,7 @@
 
 package org.got5.tapestry5.jquery.pages;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.got5.tapestry5.jquery.utils.JQueryTabData;
 
 public class Index
 {
-	public List<JQueryTabData> getListTabData()
-	{
-				
-		List<JQueryTabData> listTabData = new ArrayList<JQueryTabData>();
-        listTabData.add(new JQueryTabData("Concept","block1"));
-        listTabData.add(new JQueryTabData("Usage","block2"));
-        listTabData.add(new JQueryTabData("About","block4"));
-        return listTabData;
-	}
 }

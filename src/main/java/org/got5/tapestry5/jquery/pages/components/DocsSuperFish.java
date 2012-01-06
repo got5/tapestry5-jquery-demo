@@ -16,12 +16,8 @@
 
 package org.got5.tapestry5.jquery.pages.components;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.apache.tapestry5.EventConstants;
 import org.apache.tapestry5.annotations.OnEvent;
-import org.got5.tapestry5.jquery.utils.JQueryTabData;
 
 
 public class DocsSuperFish{
@@ -30,17 +26,4 @@ public class DocsSuperFish{
 	public void testActionLink(){
 		System.out.println("test Action Link");
 	}
-	
-	public List<JQueryTabData> getListTabData()
-	{
-		List<JQueryTabData> listTabData = new ArrayList<JQueryTabData>();
-		
-	    listTabData.add(new JQueryTabData("Documentation","docs"));
-	    
-	    listTabData.add(new JQueryTabData("Example","example"));
-	    
-	    return listTabData;
-	} 
-	
-	
 }

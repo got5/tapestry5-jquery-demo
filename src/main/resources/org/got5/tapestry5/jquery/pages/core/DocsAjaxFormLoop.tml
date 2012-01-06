@@ -2,10 +2,9 @@
 t:title="Ajax Form Loop" 
 t:activeElement="0" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
 
-	<t:jquery.tabs  t:listTabData="prop:listTabData" t:activePanelId="0" />
+	<t:jquery.tabs  t:tabs="example" t:activePanelId="0">
 	
-	<t:block id="example">
-	
+		<p:example>
 <t:form t:id="form">
 	<t:errors/>
 	<div class="t-beaneditor">
@@ -26,9 +25,15 @@ t:activeElement="0" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 	</div>
 </t:form>  
 	    
-    	<div t:type="jquery/showSource" t:ext="html" t:beginLine="9" t:endLine="27" t:path="resources/org/got5/tapestry5/jquery/pages/core/DocsAjaxFormLoop.tml"></div>
+    	<div t:type="jquery/showSource" t:ext="html" t:beginLine="8" t:endLine="26" t:path="resources/org/got5/tapestry5/jquery/pages/core/DocsAjaxFormLoop.tml"></div>
     	
-    	<div t:type="jquery/showSource" t:ext="java" t:beginLine="42" t:endLine="105" t:path="java/org/got5/tapestry5/jquery/pages/core/DocsAjaxFormLoop.java"></div>    	
+    	<div t:type="jquery/showSource" t:ext="java" t:beginLine="29" t:endLine="95" t:path="java/org/got5/tapestry5/jquery/pages/core/DocsAjaxFormLoop.java"></div>
+		</p:example>
+	</t:jquery.tabs>
+	
+	<t:block id="example">
+	
+    	
     </t:block>
    
 </html>

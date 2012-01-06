@@ -6,18 +6,17 @@
         <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
 
 
-	<t:jquery.tabs  t:listTabData="prop:listTabData" t:activePanelId="0" />
- 	
- 	<t:block id="example">
-    	
-    	<t:tree t:model="model" t:selectionModel="selectModel"/>
+	<t:jquery.tabs  t:tabs="example" t:activePanelId="0">
+		<p:example>
+
+<t:tree t:model="model" t:selectionModel="selectModel"/>
     	 
-    	<div t:type="jquery/showSource" t:ext="html" t:beginLine="13" t:endLine="13" t:path="resources/org/got5/tapestry5/jquery/pages/core/DocsTree.tml"></div>
-    	
-    	<div t:type="jquery/showSource" t:ext="java" t:beginLine="27" t:endLine="43" t:path="java/org/got5/tapestry5/jquery/pages/core/DocsTree.java"></div>    	
-    	
-    	<div t:type="jquery/showSource" t:ext="java" t:beginLine="29" t:endLine="155" t:path="java/org/got5/tapestry5/jquery/entities/User.java"></div>
-    </t:block>
-   
-	
+	    	<div t:type="jquery/showSource" t:ext="html" t:beginLine="12" t:endLine="12" t:path="resources/org/got5/tapestry5/jquery/pages/core/DocsTree.tml"></div>
+	    	
+	    	<div t:type="jquery/showSource" t:ext="java" t:beginLine="13" t:endLine="32" t:path="java/org/got5/tapestry5/jquery/pages/core/DocsTree.java"></div>    	
+	    	
+	    	<div t:type="jquery/showSource" t:ext="java" t:beginLine="29" t:endLine="155" t:path="java/org/got5/tapestry5/jquery/entities/User.java"></div>
+			
+		</p:example>
+	</t:jquery.tabs>
 </html>
