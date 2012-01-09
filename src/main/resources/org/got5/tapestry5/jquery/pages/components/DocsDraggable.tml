@@ -5,17 +5,36 @@ t:activeElement="1"
 	  xmlns:p="tapestry:parameter">
 	  
   
-    <t:jquery.tabs  t:listTabData="prop:listTabData" t:activePanelId="0" />
+    <t:jquery.tabs  t:tabs="docs,example" t:activePanelId="0">
     
-    <t:block id="docs">
+    <p:docs>
     	<t:componentDocumentation>
 			<p:title>
 				Draggable component
 			</p:title>
 			<p:description>
 					This component allows you to make any content draggable.
-					The draggablecontext is used to pass data to the droppable 
+					The draggablecontext is used to pass data to the droppable zone.
 			</p:description>
+			<p:link_1>jQuery Draggable: <t:componentLink t:url="http://docs.jquery.com/UI/Draggable/"/></p:link_1>
+			<p:param_1>
+	                <t:componentParameter
+	                    t:name="draggablecontext"
+	                    t:required="false"
+	                    t:javaType="String"
+	                    t:prefix="prop"
+	                    t:description="If provided, this is the context for the target droppable zone"
+	                />
+	        </p:param_1>
+	        <p:param_2>
+	                <t:componentParameter
+	                    t:name="params"
+	                    t:required="false"
+	                    t:javaType="JSONObject"
+	                    t:prefix="prop"
+	                    t:description="The Draggable parameters you want to override."
+	                />
+	        </p:param_2>
 		</t:componentDocumentation>
 		<t:componentDocumentation>
 			<p:title>
@@ -24,12 +43,21 @@ t:activeElement="1"
 			<p:description>
 					This mixins allows a zone to be refresh on drop event.
 					On server side a drop event is fired with draggablecontext as parameter
-			</p:description>
-			
+			</p:description>+
+			<p:link_1>jQuery Draggable: <t:componentLink t:url="http://docs.jquery.com/UI/Draggable/"/></p:link_1>
+			<p:param_1>
+	                <t:componentParameter
+	                    t:name="params"
+	                    t:required="false"
+	                    t:javaType="JSONObject"
+	                    t:prefix="prop"
+	                    t:description="The Draggable parameters you want to override."
+	                />
+	        </p:param_1>
 		</t:componentDocumentation>
-    </t:block>
+    </p:docs>
     
-    <t:block id="example">
+    <p:example>
     	 <p>
     		This is a example of the Draggable component. <br />
     	</p>	
@@ -47,14 +75,14 @@ t:activeElement="1"
 	   </div>
 	
 	   <style type="text/css">
-	   	.ui-draggable { width: 75px; height: 25px; background: silver; padding: 10px; }
-	   	.ui-droppable { background: gray; color: white; padding: 10px; }
+	   	.ui-draggable { width: 75px; height: 25px; background: silver; padding: 10px; margin-bottom:20px;}
+	   	.ui-droppable { background: gray; color: white; padding: 10px; margin-bottom:20px;}
 	 	</style>
     	
     	<br />
     	
-    	<div t:type="jquery/showSource" t:ext="html" t:endLine="42" t:beginLine="28" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsDraggable.tml"></div>
+    	<div t:type="jquery/showSource" t:ext="html" t:endLine="75" t:beginLine="65" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsDraggable.tml"></div>
     	
-    </t:block>
-    
+    </p:example>
+   </t:jquery.tabs> 
 </html>
