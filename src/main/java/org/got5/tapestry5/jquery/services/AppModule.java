@@ -16,22 +16,24 @@
 package org.got5.tapestry5.jquery.services;
 
 import org.apache.tapestry5.SymbolConstants;
-import org.apache.tapestry5.internal.yuicompressor.CSSResourceMinimizer;
-import org.apache.tapestry5.internal.yuicompressor.JavaScriptResourceMinimizer;
 import org.apache.tapestry5.ioc.Configuration;
 import org.apache.tapestry5.ioc.MappedConfiguration;
+import org.apache.tapestry5.ioc.MethodAdviceReceiver;
 import org.apache.tapestry5.ioc.OrderedConfiguration;
+import org.apache.tapestry5.ioc.annotations.Advise;
 import org.apache.tapestry5.ioc.annotations.Contribute;
-import org.apache.tapestry5.ioc.annotations.Primary;
+import org.apache.tapestry5.ioc.annotations.Match;
 import org.apache.tapestry5.ioc.annotations.SubModule;
 import org.apache.tapestry5.ioc.annotations.Symbol;
 import org.apache.tapestry5.ioc.services.ApplicationDefaults;
 import org.apache.tapestry5.ioc.services.SymbolProvider;
 import org.apache.tapestry5.json.JSONObject;
+import org.apache.tapestry5.plastic.MethodAdvice;
+import org.apache.tapestry5.plastic.MethodInvocation;
 import org.apache.tapestry5.services.ApplicationStateContribution;
 import org.apache.tapestry5.services.ApplicationStateCreator;
+import org.apache.tapestry5.services.AssetSource;
 import org.apache.tapestry5.services.MarkupRendererFilter;
-import org.apache.tapestry5.services.assets.ResourceMinimizer;
 import org.apache.tapestry5.services.javascript.JavaScriptStack;
 import org.got5.tapestry5.jquery.EffectsConstants;
 import org.got5.tapestry5.jquery.JQuerySymbolConstants;
@@ -114,6 +116,28 @@ public void contributeMarkupRenderer(OrderedConfiguration<MarkupRendererFilter> 
 		configuration.addInstance("jqueryui_sunny", SunnyStack.class);
 		configuration.addInstance("jqueryui_southstreet", SouthStreetStack.class);
 	}
+	
+	@Advise
+    @Match("AssetPathConverter")
+    public static void modifyJsfile(MethodAdviceReceiver receiver, final AssetSource source)
+    	throws SecurityException, NoSuchMethodException{
+
+    	MethodAdvice advise = new MethodAdvice() {
+
+			public void advise(MethodInvocation invocation) {
+
+				invocation.proceed();
+
+				if(invocation.getReturnValue().toString().endsWith("jquery-1.7.1.min.js")){
+                                     invocation.setReturnValue("http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js");
+                                } else if(invocation.getReturnValue().toString().endsWith("jquery-1.7.1.js")){
+                                     invocation.setReturnValue("http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js");
+                                }
+
+			}
+		};
+		receiver.adviseMethod(receiver.getInterface().getMethod("convertAssetPath", String.class),advise);
+    }
 	
 	
 }
