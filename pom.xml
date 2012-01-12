@@ -6,7 +6,7 @@
 	<groupId>org.got5</groupId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>Tapestry 5 JQuery library</name>
+	<name>Tapestry 5 JQuery Demo WebSite</name>
 
         <dependencies>
 		<dependency>

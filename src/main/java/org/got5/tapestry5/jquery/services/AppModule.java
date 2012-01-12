@@ -129,10 +129,10 @@ public void contributeMarkupRenderer(OrderedConfiguration<MarkupRendererFilter> 
 				invocation.proceed();
 
 				if(invocation.getReturnValue().toString().endsWith("jquery-1.7.1.min.js")){
-                                     invocation.setReturnValue("http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js");
-                                } else if(invocation.getReturnValue().toString().endsWith("jquery-1.7.1.js")){
-                                     invocation.setReturnValue("http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js");
-                                }
+					invocation.setReturnValue("http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js");
+                } else if(invocation.getReturnValue().toString().endsWith("jquery-1.7.1.js")){
+                	invocation.setReturnValue("http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js");
+                }
 
 			}
 		};

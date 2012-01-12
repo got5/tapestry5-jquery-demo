@@ -1,31 +1,52 @@
 <html t:type="layoutWithAccordion" 
 t:title="InPlaceEditor" 
-t:activeElement="0" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
+t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
  	
- 	<t:jquery.tabs  t:listTabData="prop:listTabData" t:activePanelId="0" />
- 	
- 	<t:block id="example">
-    	 <t:grid source="users" row="user" model="myModel" t:inplace="true" 
-    	 			rowIndex="currentIndex" rowsPerPage="10">
-	        <p:lastnameCell>
-                            <div id="inPlaceEditor" t:type="jquery/inPlaceEditor" value="user.lastName" t:context="${currentIndex}" size="20"/>
-            </p:lastnameCell>
-	        <p:actionCell>
-	        	<t:jquery.dialogajaxlink t:dialog="myDialog" t:zone="detailZone" 
-	        		t:context="${currentIndex}" >Detail</t:jquery.dialogajaxlink>
-			</p:actionCell>
-	    </t:grid>
-	    
-	    <t:jquery.dialog t:clientId="myDialog" t:params="dialogParam">
-	    	Detail Dialog
-			<t:zone t:id="detailZone">
-			<div>
-				<t:beandisplay object="user"/>
-			</div>
-			<br/></t:zone>
-	    </t:jquery.dialog> 
-    	<div t:type="jquery/showSource" t:ext="html" t:beginLine="8" t:endLine="23" t:path="resources/org/got5/tapestry5/jquery/pages/core/DocsGrid.tml"></div>
-    	
-    	<div t:type="jquery/showSource" t:ext="java" t:beginLine="48" t:endLine="118" t:path="java/org/got5/tapestry5/jquery/pages/core/DocsGrid.java"></div>    	
-    </t:block>
+ 	<t:jquery.tabs  t:tabs="docs,example" t:activePanelId="0">	
+	 	<p:docs>
+	 		<t:componentDocumentation>
+				<p:title>
+					InPlaceEditor Component
+				</p:title>
+				<p:description>
+						This component makes it possible to update the value of a table (with the 
+						Grid Component), by just clicking on the desired value.  
+				</p:description>
+				<p:param_1>
+		                <t:componentParameter
+		                    t:name="value"
+		                    t:required="yes"
+		                    t:javaType="String"
+		                    t:prefix="prop"
+		                    t:description="The Java Attribute we want to override with the InPlaceEditor Component"
+		                />
+		        </p:param_1>
+		        <p:param_2>
+		                <t:componentParameter
+		                    t:name="size"
+		                    t:required="false"
+		                    t:javaType="int"
+		                    t:prefix="prop"
+		                    t:defaultValue="20"
+		                    t:description="The HTML Size Attribute"
+		                />
+		        </p:param_2>
+			</t:componentDocumentation>
+	 	</p:docs>
+	 	<p:example>
+ <t:grid source="users" row="user" model="myModel" t:inplace="true" 
+ 			rowIndex="currentIndex" rowsPerPage="10">
+ 	<p:firstnameCell>
+                       <div t:id="firstName" t:type="jquery/inPlaceEditor" value="user.firstName" t:context="${currentIndex}" size="20"/>
+       </p:firstnameCell>
+    <p:lastnameCell>
+                       <div t:id="lastName" t:type="jquery/inPlaceEditor" value="user.lastName" t:context="${currentIndex}" size="20"/>
+       </p:lastnameCell>
+</t:grid>
+		    
+	    	<div t:type="jquery/showSource" t:ext="html" t:beginLine="37" t:endLine="45" t:path="resources/org/got5/tapestry5/jquery/pages/core/DocsInPlaceEditor.tml"></div>
+	    	
+	    	<div t:type="jquery/showSource" t:ext="java" t:beginLine="34" t:endLine="104" t:path="java/org/got5/tapestry5/jquery/pages/core/DocsGrid.java"></div>    	
+	    </p:example>
+    </t:jquery.tabs>
 </html>
