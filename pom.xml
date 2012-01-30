@@ -21,10 +21,10 @@
 			<version>5.3.1</version>
 		</dependency>
 		<dependency>
-       		<groupId>org.got5</groupId>
-      		<artifactId>tapestry5-jquery</artifactId>
-      		<version>3.0.2-SNAPSHOT</version>
-    	</dependency>
+         		<groupId>org.got5</groupId>
+        		<artifactId>tapestry5-jquery</artifactId>
+        		<version>3.0.2-SNAPSHOT</version>
+    	        </dependency>
 	</dependencies>
 	<repositories>
                 <repository>
@@ -97,6 +97,6 @@
 	</build>
 
 	<properties>
-		<tapestry-jquery-release-version>3.0.0</tapestry-jquery-release-version>
+		<tapestry-jquery-release-version>3.0.2-SNAPSHOT</tapestry-jquery-release-version>
 	</properties>
 </project>

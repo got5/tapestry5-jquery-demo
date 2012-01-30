@@ -16,9 +16,6 @@
 
 package org.got5.tapestry5.jquery.pages.core;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.apache.tapestry5.Block;
 import org.apache.tapestry5.EventConstants;
 import org.apache.tapestry5.ajax.MultiZoneUpdate;
@@ -32,24 +29,13 @@ import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.json.JSONLiteral;
 import org.apache.tapestry5.json.JSONObject;
 import org.apache.tapestry5.services.Request;
-import org.got5.tapestry5.jquery.utils.JQueryTabData;
 @Import(library = "context:js/demo.js")
 public class DocsZone
 {
 	@Inject
 	private Request request;
 	 
-	public List<JQueryTabData> getListTabData()
-	{
-		List<JQueryTabData> listTabData = new ArrayList<JQueryTabData>();
-	    listTabData.add(new JQueryTabData("Documentation","ZoneBlock1"));
-	    listTabData.add(new JQueryTabData("ActionLink","ZoneBlock2"));
-	    listTabData.add(new JQueryTabData("Form","ZoneBlock3"));
-	    listTabData.add(new JQueryTabData("MultiZoneUpdate","ZoneBlock4"));
-	    listTabData.add(new JQueryTabData("Custom Effects","ZoneBlock5"));
-	    listTabData.add(new JQueryTabData("Back to Prototype","ZoneBlock6"));
-	    return listTabData;
-	}
+
 	
 //Demo ActionLink
 @Property

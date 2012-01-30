@@ -16,9 +16,6 @@
 
 package org.got5.tapestry5.jquery.pages.components;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.apache.tapestry5.EventConstants;
 import org.apache.tapestry5.annotations.Component;
 import org.apache.tapestry5.annotations.OnEvent;
@@ -29,7 +26,6 @@ import org.apache.tapestry5.corelib.components.Zone;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.json.JSONObject;
 import org.apache.tapestry5.services.Request;
-import org.got5.tapestry5.jquery.utils.JQueryTabData;
 
 public class DocsJQuerySlider {
 

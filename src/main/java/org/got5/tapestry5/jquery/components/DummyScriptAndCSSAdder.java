@@ -1,5 +1,5 @@
 //
-// Copyright 2010 GOT5 (Gang Of Tapestry 5)
+// Copyright 2010 GOT5 (GO Tapestry 5)
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,15 +14,12 @@
 // limitations under the License.
 //
 
-package org.got5.tapestry5.jquery.pages.mixins;
+package org.got5.tapestry5.jquery.components;
 
-import java.util.Date;
+import org.apache.tapestry5.annotations.Import;
 
-public class DocsZoneRefresh
+@Import(library="dummy.js")
+public class DummyScriptAndCSSAdder
 {
-	 public Date getNow()
-	 {
-		 return new Date();
-	 }
 
 }

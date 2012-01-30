@@ -1,4 +1,4 @@
-<html t:type="layoutWithAccordion" 
+<html t:type="layoutWithAccordion"
 t:title="InPlaceEditor" 
 t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
  	
@@ -35,7 +35,7 @@ t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 		                <t:componentParameter
 		                    t:name="context"
 		                    t:required="false"
-		                    t:javaType="List<?>"
+		                    t:javaType="List"
 		                    t:prefix="prop"
 		                    t:description="The context for the link (optional parameter). This list of values will be 
 		                    				converted into strings and included in the URI."

@@ -17,12 +17,10 @@
 package org.got5.tapestry5.jquery.pages.components;
 
 import java.util.Date;
-import java.util.List;
 
 import org.apache.tapestry5.annotations.PageReset;
 import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
-import org.got5.tapestry5.jquery.utils.JQueryTabData;
 
 public class DocsJQueryTabs
 {
@@ -35,8 +33,6 @@ private String activePanel;
 @Property
 private Date sysDate;
 
-@Property
-private List<JQueryTabData> listTabDataDemo;
 
 	@Persist
 	@Property

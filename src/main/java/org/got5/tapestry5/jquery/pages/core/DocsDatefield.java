@@ -16,9 +16,7 @@
 
 package org.got5.tapestry5.jquery.pages.core;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import org.apache.tapestry5.EventConstants;
 import org.apache.tapestry5.ajax.MultiZoneUpdate;
@@ -30,7 +28,6 @@ import org.apache.tapestry5.corelib.components.DateField;
 import org.apache.tapestry5.corelib.components.Form;
 import org.apache.tapestry5.corelib.components.TextField;
 import org.apache.tapestry5.corelib.components.Zone;
-import org.got5.tapestry5.jquery.utils.JQueryTabData;
 
 public class DocsDatefield
 {	
@@ -44,15 +41,7 @@ public class DocsDatefield
 			_lastName = "Dumpty";
 		}
 	}
-	public List<JQueryTabData> getListTabData()
-	{
-		List<JQueryTabData> listTabData = new ArrayList<JQueryTabData>();
-        listTabData.add(new JQueryTabData("DateField","TabsBlock1"));
-        listTabData.add(new JQueryTabData("Simple Date","TabsBlock2"));
-        listTabData.add(new JQueryTabData("Ajax Form","TabsBlock3"));
-        listTabData.add(new JQueryTabData("Back to Prototype","TabsBlockLast"));
-        return listTabData;
-    }
+	
 	
 	public void onSubmitFromSimpleDate(){
 		activePanel=1;
