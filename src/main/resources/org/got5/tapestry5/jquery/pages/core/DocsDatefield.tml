@@ -1,7 +1,7 @@
 <html t:type="layoutWithAccordion" 
 t:title="DateField" 
 t:activeElement="0" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
-    <t:jquery.tabs  t:tabs="TabsBlock1,TabsBlock2,TabsBlock3,TabsBlockLast" t:activePanelId="prop:activePanel">
+    <t:jquery.tabs  t:tabs="TabsBlock1,TabsBlock2,TabsBlock3,TabsBlockLast" t:activePanelId="prop:activePanel" t:ajax="false">
     
     	<p:TabsBlock1>
     		<t:componentDocumentation>

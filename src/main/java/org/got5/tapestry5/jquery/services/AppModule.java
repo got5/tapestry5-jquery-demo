@@ -15,6 +15,8 @@
 //
 package org.got5.tapestry5.jquery.services;
 
+import java.util.Locale;
+
 import org.apache.tapestry5.SymbolConstants;
 import org.apache.tapestry5.ioc.Configuration;
 import org.apache.tapestry5.ioc.MappedConfiguration;
@@ -137,6 +139,24 @@ public void contributeMarkupRenderer(OrderedConfiguration<MarkupRendererFilter> 
 			}
 		};
 		receiver.adviseMethod(receiver.getInterface().getMethod("convertAssetPath", String.class),advise);
+    }
+	
+	@Advise
+    @Match("PagePool")
+    public static void addLog(MethodAdviceReceiver receiver)
+    	throws SecurityException, NoSuchMethodException{
+
+    	MethodAdvice advise = new MethodAdvice() {
+
+			public void advise(MethodInvocation invocation) {
+				System.out.println("####################### " + invocation.getParameter(0));
+				invocation.proceed();
+				System.out.println("####################### " + invocation.getReturnValue());
+				
+
+			}
+		};
+		receiver.adviseMethod(receiver.getInterface().getMethod("checkout", String.class),advise);
     }
 	
 	

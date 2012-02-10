@@ -6,7 +6,7 @@
         <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
 
 
-	<t:jquery.tabs  t:tabs="example" t:activePanelId="0">
+	<t:jquery.tabs  t:tabs="example" t:activePanelId="0" t:ajax="false">
 		<p:example>
 
 <t:tree t:model="model" t:selectionModel="selectModel"/>

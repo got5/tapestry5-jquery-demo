@@ -2,7 +2,7 @@
 		t:title="Validation" 
 		t:activeElement="0" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
 		
-		<t:jquery.tabs  t:tabs="docs,example" t:activePanelId="0">
+		<t:jquery.tabs  t:tabs="docs,example" t:activePanelId="0" t:ajax="false">
 		
 			<p:docs>
 				<t:componentDocumentation>
@@ -28,16 +28,16 @@
             <br/><t:textfield t:value="foo" t:id="field"
             		t:validate="required, minLength=3, maxLength=10"/>
         </p>
-        <p><label for="field">Required, min=3, max=6, number</label>
+        <p><label for="field2">Required, min=3, max=6, number</label>
             <br/><t:textfield t:value="dummy" t:id="field2" 
             		t:validate="required, min=3, max=6"/>
         </p>
-		<p><label for="field">Required, email (will not produce any client side 
+		<p><label for="field3">Required, email (will not produce any client side 
 		validation, because default Tapestry validator does not handle it))</label>
             <br/><t:textfield t:value="email" t:id="field3" 
             		t:validate="required, email" />
         </p>
-		<p><label for="field">Required, regular expression (.*foo.*)</label>
+		<p><label for="field4">Required, regular expression (.*foo.*)</label>
            <br/><t:textfield t:value="regexp" t:id="field4" 
            			t:validate="required, regexp=.*foo.*"/>
         </p>

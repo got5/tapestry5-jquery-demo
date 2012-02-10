@@ -2,7 +2,7 @@
 t:title="jQuery Tabs" 
 t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
    
-<t:jquery.tabs  t:tabs="docs,example" t:activePanelId="tabIndex">
+<t:jquery.tabs  t:tabs="docs,example" t:activePanelId="tabIndex" t:ajax="false">
 
 	<p:docs>
 		<t:componentDocumentation>
@@ -47,7 +47,7 @@ t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 	
 	<p:example>
 <t:jquery.tabs  t:tabs="TabsDemoTabs1,TabsDemoTabs2,TabsDemoTabs3,TabsDemoTabs4" 
-	t:activePanelId="activeElement">
+	t:activePanelId="1">
 	
 	<p:TabsDemoTabs1>
 		<h3>Panel 1</h3>

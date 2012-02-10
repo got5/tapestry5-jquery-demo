@@ -2,7 +2,7 @@
 t:title="jQuery SuperFish" 
 t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter" xmlns:j="tapestry-library:jquery">
 	
-	<t:jquery.tabs  t:tabs="docs,example" t:activePanelId="0">
+	<t:jquery.tabs  t:tabs="docs,example" t:activePanelId="0" t:ajax="false">
 		<p:docs>
 			<t:componentDocumentation>
 				<p:title>

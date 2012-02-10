@@ -97,5 +97,4 @@ public class DocsAjaxUpload {
 
         return message;
     }
-
 }

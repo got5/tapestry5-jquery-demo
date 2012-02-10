@@ -5,7 +5,7 @@ t:activeElement="1"
 	  xmlns:p="tapestry:parameter">
 	  
   
-    <t:jquery.tabs  t:tabs="docs,example" t:activePanelId="0">
+    <t:jquery.tabs  t:tabs="docs,example" t:activePanelId="0" t:ajax="false">
     
     <p:docs>
     	<t:componentDocumentation>

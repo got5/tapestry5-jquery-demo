@@ -2,7 +2,7 @@
 t:title="jQuery Dialog" 
 t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
 
-<t:jquery.tabs  t:tabs="docs,dialog,dialoglink,dialogajaxlink,example" t:activePanelId="0">
+<t:jquery.tabs  t:tabs="docs,dialog,dialoglink,dialogajaxlink,example" t:activePanelId="0" t:ajax="false">
 
 	<p:docs>
 			<t:componentDocumentation>
@@ -113,10 +113,10 @@ t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 </t:jquery.dialog>
 			
 <h3>Dialog Link</h3>
-<t:jquery.dialoglink t:dialog="myDialog">Open</t:jquery.dialoglink>
+<t:jquery.dialoglink t:id="link1" t:dialog="myDialog">Open</t:jquery.dialoglink>
 			
 <h3>Dialog Ajax Link</h3>
-<t:jquery.dialogajaxlink t:dialog="myDialog" t:zone="myZone">
+<t:jquery.dialogajaxlink t:id="link2" t:dialog="myDialog" t:zone="myZone">
 	Open
 </t:jquery.dialogajaxlink>
 

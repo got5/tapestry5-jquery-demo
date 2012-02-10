@@ -1,6 +1,6 @@
 <html t:type="layoutWithAccordion" t:activeElement="2" t:title="Button" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
     
-    <t:jquery.tabs  t:tabs="docs,example" t:activePanelId="tabIndex">
+    <t:jquery.tabs  t:tabs="docs,example" t:activePanelId="tabIndex" t:ajax="false">
     
     <p:docs>
     	<t:componentDocumentation>

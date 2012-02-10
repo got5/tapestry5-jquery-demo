@@ -4,7 +4,7 @@
       xmlns:p="tapestry:parameter"
       xmlns:j="tapestry-library:jquery">
 
-    <t:jquery.tabs  t:tabs="docs,JSONParameters,example" t:activePanelId="0">
+    <t:jquery.tabs  t:tabs="docs,JSONParameters,example" t:activePanelId="0" t:ajax="false">
     	<p:docs>
     		<t:componentDocumentation>
 	            <p:title>
@@ -202,7 +202,7 @@
 </t:zone>
 
         <div t:type="jquery/showSource" t:ext="html" t:beginLine="179" t:endLine="202" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsAjaxUpload.tml"></div>           
-        <div t:type="jquery/showSource" t:ext="java" t:beginLine="26" t:endLine="101" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsAjaxUpload.java"></div>
+        <div t:type="jquery/showSource" t:ext="java" t:beginLine="26" t:endLine="100" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsAjaxUpload.java"></div>
     	</p:example>
     </t:jquery.tabs>
 </html>

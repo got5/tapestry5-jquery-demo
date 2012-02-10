@@ -2,7 +2,7 @@
 t:title="Alert Demo" 
 t:activeElement="0" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
 
-<t:jquery.tabs  t:tabs="example" t:activePanelId="0">
+<t:jquery.tabs  t:tabs="example" t:activePanelId="0" t:ajax="false">
 <p:example>
 <h1>Alert Demo</h1>
 <br /><br />

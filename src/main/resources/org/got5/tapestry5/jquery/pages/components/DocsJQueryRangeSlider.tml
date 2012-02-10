@@ -2,7 +2,7 @@
 t:title="jQuery Range Slider" 
 t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
 
-<t:jquery.tabs  t:tabs="docs,example" t:activePanelId="tabIndex">
+<t:jquery.tabs  t:tabs="docs,example" t:activePanelId="tabIndex" t:ajax="false">
 	<p:docs>
   		<t:componentDocumentation>
 			<p:title>
