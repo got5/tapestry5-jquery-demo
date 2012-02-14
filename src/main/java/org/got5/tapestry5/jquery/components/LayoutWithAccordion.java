@@ -22,6 +22,7 @@ import org.apache.tapestry5.annotations.Parameter;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.ioc.Messages;
 import org.apache.tapestry5.ioc.annotations.Inject;
+import org.apache.tapestry5.json.JSONObject;
 
 @Import(stack="themestack", stylesheet =
 { "context:css/layout/style.css" ,"context:css/demoSite.css"}
@@ -51,5 +52,9 @@ public class LayoutWithAccordion
 	
 	private String getSeoDatas(String type){
 		return messages.get(type);
+	}
+	
+	public JSONObject getParams(){
+		return new JSONObject("fillSpace", "true");
 	}
 }

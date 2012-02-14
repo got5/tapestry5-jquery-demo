@@ -47,7 +47,7 @@
 		
 		<div id="wrapper">
 		<div id="menu">
-			<t:jquery.accordion  t:panels="block1,block2,block3,block4" t:activeElementId="activeElement">
+			<t:jquery.accordion  t:panels="block1,block2,block3,block4" t:activeElementId="activeElement" t:params="params">
 				<p:block1>
 					<ul>
 		        		<li><t:pagelink t:page="core/DocsZone">Zone</t:pagelink></li>
@@ -57,6 +57,7 @@
 		        		<li><t:pagelink t:page="core/DocsAjaxformloop">AjaxFormLoop</t:pagelink></li>
 		        		<li><t:pagelink t:page="core/DocsFormfragment">FormFragment</t:pagelink></li>
 		        		<li><t:pagelink t:page="core/DocsLinksubmit">LinkSubmit</t:pagelink></li>	
+		        		<li><t:pagelink t:page="core/DocsProgressiveDisplay">Progressive Display</t:pagelink></li>
 		        		<li><t:pagelink t:page="core/DocsJQueryAutocomplete">j:Autocomplete</t:pagelink></li>
 		        		<li><t:pagelink t:page="core/DocsJQueryPalette">j:Palette</t:pagelink></li>
 		        		<li><t:pagelink t:page="core/DocsAlert">Alert</t:pagelink></li>

@@ -1,0 +1,23 @@
+<html t:type="layoutWithAccordion" 
+t:title="Grid" 
+t:activeElement="0" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
+ 	
+ 	<t:jquery.tabs  t:tabs="example" t:activePanelId="0" t:ajax="false">
+ 	
+ 	<p:example>	
+
+<t:progressiveDisplay />
+<t:block id="testBlock">
+	this is progressive display !
+</t:block>
+
+    	
+    	<div t:type="jquery/showSource" t:ext="html" t:beginLine="9" t:endLine="13" t:path="resources/org/got5/tapestry5/jquery/pages/core/DocsProgressiveDisplay.tml"></div>
+    	
+    	<div t:type="jquery/showSource" t:ext="java" t:beginLine="25" t:endLine="35" t:path="java/org/got5/tapestry5/jquery/pages/core/DocsProgressiveDisplay.java"></div>
+
+		</p:example>
+
+ 	</t:jquery.tabs>
+
+</html>
