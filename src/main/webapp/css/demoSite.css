@@ -1,6 +1,16 @@
+.list {
+	margin: 0 0 15px; 15px;
+	padding-left: 21px;
+}
+.list li{
+	list-style-type: square;
+	padding: 3px 0;
+}
+
 .themeSwitcher{
 	padding-top: 20px;
 }
+
 
 .snippet-container{
 	margin-top:10px;

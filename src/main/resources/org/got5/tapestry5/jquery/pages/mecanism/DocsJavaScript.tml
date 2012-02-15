@@ -1,0 +1,44 @@
+<html t:type="layoutWithAccordion" t:title="Mecanisms provided by Tapestry5/jQuery" t:activeElement="3" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
+    
+    
+    <t:jquery.tabs  t:tabs="services" t:activePanelId="0" t:ajax="false">
+   
+
+	<p:services>
+		<h2>Which JavaSript files are loaded in my Application ?</h2>
+		
+		<p>
+			After including Tapestry5-jQuery into your project, some JavaScript files
+			will automatically be loaded : 
+		</p>
+		<ul class="list">
+			<li>jquery.js</li>
+			<li>jquery.ui.core.js</li>
+			<li>jquery.ui.position.js</li>
+			<li>jquery.ui.widget.js</li>
+			<li>jquery.effects.core.js</li>
+			<li>jquery.json-2.2.js</li>
+		</ul>	
+	
+		<p>
+			By default, the default JavaScript stack, using Prototype and Script.aculo.us, will 
+			be replaced by this jQuery Stack. Howerver you can still integrate it by setting the 
+			JQuerySymbolConstants.SUPPRESS_PROTOTYPE to false in your AppModule. Tapestry5-jQuery
+			will manage everything, in order to avoid some conflicts between both JavaScript Libraries 
+			(by using jQuery.noConflict())
+		</p>
+		
+		<h2>The @ImportJQueryUI annotation</h2>
+		<p>
+			If you need more jQuery-UI Javascript files (jquery.ui.mouse.js, jquery.ui.sortable.js ...), 
+			you can use the @ImportJQueryUI annotation. All jQuery files are available in Tapestry5-jQuery by default.
+			You just need to specify the name of the file, without the extension (.js). Tapestry5-jQuery will 
+			import the unminified version if your are in development mode, otherwise the minified version.
+			
+		</p>
+		
+		<div t:type="jquery/showSource" t:ext="java" t:beginLine="5" t:endLine="8" t:path="resources/org/got5/tapestry5/jquery/pages/mecanism/DocsJavaScript.java"></div>
+	</p:services>
+</t:jquery.tabs>
+
+</html>
