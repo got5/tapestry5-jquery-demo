@@ -11,22 +11,35 @@ t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 				Accordion Component
 			</p:title>
 			<p:description>
-				This component allows you create a jquery ui accordion. 
+				This component allows you create a jquery ui accordion. Since Tapestry5-jQuery 3.0.2, a new implementation
+				of this component has be developed, in order to avoid using JQueryAccordionData-type parameter. You can 
+				still use it, but this parameter and the JQueryAccordionData class will be removed in a next release.<br />
+				If you use the new implementation (with the panels parameter), Tapestry5-jQuery will look for the label 
+				in an associated bundle, with the name of the panel as a key. If the message does not exist
+	  			Tapestry5-jQuery will provide a default value :  the name of the panel, with capital letters and spaces.
 			</p:description>
 			
 			<p:link_1><t:componentLink t:url="http://jqueryui.com/demos/accordion/"/></p:link_1>
-			
 			<p:param_1>
+				<t:componentParameter
+					t:name="panels"
+					t:required="false"
+					t:javaType="String"
+					t:prefix="literal"
+					t:description="The comma-separated list of panels name"
+				/>
+			</p:param_1>
+			<p:param_2>
 				<t:componentParameter
 					t:name="listOfElements "
 					t:required="true"
 					t:javaType="ArrayList of JQueryAccordionData"
 					t:prefix="prop"
 					t:defaultValue="button"
-					t:description="A list of JQueryAccordionData (object containing the title of the tab and the name of the block that has the content). "
+					t:description="DEPRECATED! A list of JQueryAccordionData (object containing the title of the tab and the name of the block that has the content). "
 				/>
-			</p:param_1>
-			<p:param_2>
+			</p:param_2>
+			<p:param_3>
 				<t:componentParameter
 					t:name="activeElementId "
 					t:required="true"
@@ -34,8 +47,8 @@ t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 					t:prefix="prop"
 					t:description="The number of the accordion tab to activate when the page is displayed on the client."
 				/>
-			</p:param_2>
-			<p:param_3>
+			</p:param_3>
+			<p:param_4>
 				<t:componentParameter
 					t:name="params "
 					t:required="false"
@@ -43,7 +56,7 @@ t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 					t:prefix="prop"
 					t:description="The Accordion parameters (please refer to jquery-ui documentation) "
 				/>
-			</p:param_3>
+			</p:param_4>
 		</t:componentDocumentation>
 	  </p:docs>
     	
@@ -80,9 +93,11 @@ t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 	</t:form>
 </p:AccordionDemoTabs4>
 			
-			<div t:type="jquery/showSource" t:ext="html" t:beginLine="51" t:endLine="80" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsJQueryAccordion.tml"></div>      		
 	  
 </t:jquery.accordion>
+
+			<div t:type="jquery/showSource" t:ext="html" t:beginLine="64" t:endLine="97" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsJQueryAccordion.tml"></div>      		
+
 </p:example>
 </t:jquery.tabs>
 </html>
