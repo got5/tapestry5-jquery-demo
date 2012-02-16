@@ -1,0 +1,60 @@
+<html t:type="layoutWithAccordion" 
+	  t:activeElement="literal:2"
+	  t:title="Sortable"
+	  xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" 
+	  xmlns:p="tapestry:parameter">
+    
+    <t:jquery.tabs  t:tabs="docs,example" t:activePanelId="0" t:ajax="false">
+    
+    <p:docs>
+    	<t:componentDocumentation>
+			<p:title>
+				Sortable Mixin
+			</p:title>
+			<p:description>
+				Sortable mixin, most of the time used with a UL HTML tag. After each sort, 
+				an ajax request will be send to the server, with as parameter a comma-separated
+				list containing the ids of the ordered li tag.<br />
+				When you will use this mixin, you will be able to catch the JQueryEventConstants.SORTABLE
+				event in your Java Class. Your method will have on parameter : the comma-separated list of ids.
+			</p:description>
+			
+			<p:link_1><t:componentLink t:url="http://jqueryui.com/demos/sortable/"/></p:link_1>
+			
+			<p:param_1>
+				<t:componentParameter
+					t:name="options"
+					t:required="false"
+					t:javaType="JSONObject"
+					t:prefix="prop"
+					t:defaultValue=""
+					t:description="Options used by the Sortable JavaScript Widget"
+				/>
+			</p:param_1>
+		</t:componentDocumentation>
+	</p:docs>
+    
+    <p:example>
+    	<div>
+    		<h2>How to the Sortable Mixin ?</h2>
+    		<p>
+	    		Most of the time, the Sortable mixin will be used with a UL element. In your java class, you will
+	    		catch the jQueryEventConstants.SORTABLE event, in order to get the new ordered list.
+	    	</p>
+    	 
+		<ul t:type="any" t:mixins="jquery/sortable">
+			<li class="ui-state-default" id="1">Row 1</li>
+			<li class="ui-state-default" id="2">Row 2</li>
+			<li class="ui-state-default" id="3">Row 3</li>
+			<li class="ui-state-default" id="4">Row 4</li>
+			<li class="ui-state-default" id="5">Row 5</li>
+		</ul> 
+    	
+    	<div t:type="jquery/showSource" t:ext="html" t:beginLine="45" t:endLine="51" t:path="resources/org/got5/tapestry5/jquery/pages/mixins/DocsSortable.tml"></div>
+    	
+    	<div t:type="jquery/showSource" t:ext="java" t:beginLine="6" t:endLine="12" t:path="java/org/got5/tapestry5/jquery/pages/mixins/DocsSortable.java"></div>
+ 		</div>
+
+    </p:example>
+</t:jquery.tabs>
+</html>
