@@ -28,6 +28,8 @@ import org.apache.tapestry5.corelib.components.DateField;
 import org.apache.tapestry5.corelib.components.Form;
 import org.apache.tapestry5.corelib.components.TextField;
 import org.apache.tapestry5.corelib.components.Zone;
+import org.apache.tapestry5.ioc.annotations.Inject;
+import org.apache.tapestry5.services.ajax.AjaxResponseRenderer;
 
 public class DocsDatefield
 {	
@@ -78,7 +80,10 @@ private Zone nameZone;
 	
 @Component(id="formZone")
 private Zone formZone;
-	
+
+@Inject
+private AjaxResponseRenderer renderer;
+
 @OnEvent(value = EventConstants.VALIDATE, component="ajaxForm")
 void onValidateAjaxForm() {
 	if (_firstName == null || _firstName.trim().equals("")) {
@@ -102,15 +107,12 @@ void onValidateAjaxForm() {
 }
 
 @OnEvent(value = EventConstants.SUCCESS, component="ajaxForm")
-Object onSuccessAjaxForm() {
-	MultiZoneUpdate zoneUpdate =  new MultiZoneUpdate(nameZone).add(formZone);
-	return zoneUpdate;
+void onSuccessAjaxForm() {
+	renderer.addRender(nameZone).addRender(formZone);
 }
 	
-Object onFailure() {
-	MultiZoneUpdate zoneUpdate =  new MultiZoneUpdate(formZone).add(nameZone);
-	return zoneUpdate;
-		
+void onFailure() {
+	renderer.addRender(formZone).addRender(nameZone);
 }
 
 public String getName() {

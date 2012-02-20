@@ -93,6 +93,7 @@
 				        <li><t:pagelink t:page="mixins/Docsreveal">Reveal</t:pagelink></li>
 				        <li><t:pagelink t:page="mixins/DocsTooltip">Tooltip</t:pagelink></li>
 				        <li><t:pagelink t:page="mixins/DocsSortable">Sortable</t:pagelink></li>
+				        <li><t:pagelink t:page="mixins/DocsZoneRefresh">ZoneRefresh</t:pagelink></li>
 				        <li><t:pagelink t:page="mixins/DocsWidget">Widget</t:pagelink></li>
 				    </ul>		
 				</p:block3>

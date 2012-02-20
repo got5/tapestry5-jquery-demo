@@ -18,11 +18,25 @@ package org.got5.tapestry5.jquery.pages.mixins;
 
 import java.util.Date;
 
+import org.apache.tapestry5.ioc.annotations.Inject;
+import org.apache.tapestry5.services.javascript.JavaScriptSupport;
+
 public class DocsZoneRefresh
 {
+	
+	@Inject
+	private JavaScriptSupport js;
+	
 	 public Date getNow()
 	 {
 		 return new Date();
 	 }
-
+	 
+	/**
+	* Add handlers method to the links, in order to stop/start refreshing the zone.
+	*/
+	public void afterRender(){
+		js.addScript("$(\"#stop\").bind(\"click\", function(){$(\"#clickZone\").trigger(\"stopRefresh\");});");
+		js.addScript("$(\"#start\").bind(\"click\", function(){$(\"#clickZone\").trigger(\"startRefresh\");});");
+	}
 }

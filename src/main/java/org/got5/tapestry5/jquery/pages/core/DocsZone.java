@@ -18,7 +18,6 @@ package org.got5.tapestry5.jquery.pages.core;
 
 import org.apache.tapestry5.Block;
 import org.apache.tapestry5.EventConstants;
-import org.apache.tapestry5.ajax.MultiZoneUpdate;
 import org.apache.tapestry5.annotations.Import;
 import org.apache.tapestry5.annotations.InjectComponent;
 import org.apache.tapestry5.annotations.OnEvent;
@@ -29,6 +28,7 @@ import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.json.JSONLiteral;
 import org.apache.tapestry5.json.JSONObject;
 import org.apache.tapestry5.services.Request;
+import org.apache.tapestry5.services.ajax.AjaxResponseRenderer;
 @Import(library = "context:js/demo.js")
 public class DocsZone
 {
@@ -92,12 +92,15 @@ private Zone multiZone1, multiZone2;
 @Inject
 private Block defaultBlock, multiUpdateBlock;
 
+@Inject
+private AjaxResponseRenderer renderer;
+
 @OnEvent(value = EventConstants.SUCCESS, component = "myMultiZoneUpdateForm")
-Object performMultiZoneUpdate()
+void performMultiZoneUpdate()
 {
 	afterFormSubmit = true;
-	return new MultiZoneUpdate("multiZone1",
-			multiZone1.getBody()).add("multiZone2", multiZone2.getBody());
+	
+	renderer.addRender("multiZone1",multiZone1.getBody()).addRender("multiZone2", multiZone2.getBody());
 }
     
 public Block getMultiUpdateBlock1() {
@@ -134,7 +137,4 @@ Object cutomMixin()
 	count++;
 	return myZoneCustom.getBody();
 }
-
-
 }
-

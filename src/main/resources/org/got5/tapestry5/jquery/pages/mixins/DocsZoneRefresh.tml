@@ -20,11 +20,11 @@
 		</p:docs>
 	    
 	    <p:example>
-	    	<div t:type='zone' t:mixins='jquery/zonerefresh' t:period='1'>${now} </div>
-	 		<div t:type='zone' id="zone2" t:mixins='jquery/zonerefresh' t:period='1'>${now} </div>
-	    	<br />
-	    	<br />
+	    	<div t:type='zone' id="clickZone" t:mixins='jquery/zonerefresh' t:period='1'>${now} </div>
+	    	<p><a id="start">Start Refreshing</a></p>
+	    	<p><a id="stop">Stop Refreshing</a></p>
 	    	<div t:type="jquery/showSource" t:ext="html" t:beginLine="23" t:endLine="26" t:path="resources/org/got5/tapestry5/jquery/pages/mixins/DocsZoneRefresh.tml"></div>
+	    	<div t:type="jquery/showSource" t:ext="java" t:beginLine="24" t:endLine="42" t:path="java/org/got5/tapestry5/jquery/pages/mixins/DocsZoneRefresh.java"></div>
 	    	
 	    </p:example>
     </t:jquery.tabs>

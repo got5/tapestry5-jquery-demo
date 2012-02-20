@@ -37,7 +37,7 @@ t:activeElement="0" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 	  	
 	  	<div t:type="jquery/showSource" t:ext="html" t:beginLine="28" t:endLine="35" t:path="resources/org/got5/tapestry5/jquery/pages/core/DocsDatefield.tml"></div>
 		  
-		<div t:type="jquery/showSource" t:ext="java" t:beginLine="61" t:endLine="63" t:path="java/org/got5/tapestry5/jquery/pages/core/DocsDatefield.java"></div>
+		<div t:type="jquery/showSource" t:ext="java" t:beginLine="52" t:endLine="54" t:path="java/org/got5/tapestry5/jquery/pages/core/DocsDatefield.java"></div>
 	
     	</p:TabsBlock2>
     	
@@ -66,7 +66,7 @@ t:activeElement="0" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 		
 		<div t:type="jquery/showSource" t:ext="html" t:beginLine="45" t:endLine="65" t:path="resources/org/got5/tapestry5/jquery/pages/core/DocsDatefield.tml"></div>
 		  
-		<div t:type="jquery/showSource" t:ext="java" t:beginLine="66" t:endLine="129" t:path="java/org/got5/tapestry5/jquery/pages/core/DocsDatefield.java"></div>
+		<div t:type="jquery/showSource" t:ext="java" t:beginLine="57" t:endLine="120" t:path="java/org/got5/tapestry5/jquery/pages/core/DocsDatefield.java"></div>
     	</p:TabsBlock3>
     	
     	<p:TabsBlockLast>
