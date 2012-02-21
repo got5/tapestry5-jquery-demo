@@ -1,0 +1,16 @@
+<html t:type="layoutWithAccordion" t:title="Tapestry5 JQuery" t:accordion="false" t:activeElement="0" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
+    
+    <div class="extra">
+    	<p>
+    		In this page, you will find other samples of our Tapestry and Tapestry5-jQuery components. If 
+    		you have other ideas of samples, do not hesitate to contact us on our mailing-list, we will implement
+    		them or we will integrate your samples into the documentation website. 
+    	</p>
+    	<ul>
+    		<li>
+    			<a t:type="pageLink" t:page="other/progressiveDisplayWithModal">ProgressiveDisplay component combining with a model window</a>
+    		</li>
+    	</ul>
+    </div>
+    
+</html>

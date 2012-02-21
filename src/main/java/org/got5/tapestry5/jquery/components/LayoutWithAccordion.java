@@ -16,6 +16,7 @@
 
 package org.got5.tapestry5.jquery.components;
 
+import org.apache.tapestry5.BindingConstants;
 import org.apache.tapestry5.ComponentResources;
 import org.apache.tapestry5.annotations.Import;
 import org.apache.tapestry5.annotations.Parameter;
@@ -32,7 +33,10 @@ public class LayoutWithAccordion
     @Parameter(required=true,defaultPrefix="literal")
     @Property
     private String title;
-
+    
+    @Parameter(defaultPrefix=BindingConstants.LITERAL, value="true")
+    private boolean accordion;
+    
     @Inject
     private ComponentResources resources;
 
@@ -57,4 +61,6 @@ public class LayoutWithAccordion
 	public JSONObject getParams(){
 		return new JSONObject("fillSpace", "true");
 	}
+	
+	public boolean getWithAccordion(){ return accordion; }
 }

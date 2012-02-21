@@ -1,128 +1,121 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
 <head>
-	<title>${headTitle}</title>
-	<meta name="description" content="${description}" />
-	<meta name="Keywords" content="${keywords}" />
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>${headTitle}</title>
+<meta name="description" content="${description}" />
+<meta name="Keywords" content="${keywords}" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body id="homepage">
-	<div class="wrapper bs">
-		<ul class="nav">
-				<li>
-					<t:pagelink t:page="index">Home</t:pagelink>
-				</li>
-				<li>
-					<a href="https://github.com/got5/tapestry5-jquery">Download</a>		
-				</li>
-				<li>
-					<a href="http://twitter.com/#!/GOTapestry5">Twitter</a>
-				</li>
-				<li class="last">
-					<a href="https://groups.google.com/forum/?hl=fr#!forum/tapestry5-jquery">Google Group</a>
-				</li>
-			
-		</ul>
+<div class="wrapper bs">
+<ul class="nav">
+	<li><t:pagelink t:page="index">Home</t:pagelink></li>
+	<li><t:pagelink t:page="other/Index">Other Samples</t:pagelink></li>
+	<li><a href="https://github.com/got5/tapestry5-jquery">Download</a>
+	</li>
+	<li><a href="http://twitter.com/#!/GOTapestry5">Twitter</a></li>
+	<li class="last"><a
+		href="https://groups.google.com/forum/?hl=fr#!forum/tapestry5-jquery">Google
+	Group</a></li>
 
-		<div id="top">
+</ul>
 
-			<h1><img src="${context:/css/layout/tapestry.png}" alt="Tapestry" id="tapestry" /></h1>
+<div id="top">
 
-			
-			
-			<div id="aside">
-				Tapestry5 jQuery provides jQuery Components and can fully replace Prototype and Scriptaculous by jQuery
-				<div class="themeSwitcher"><t:themeSwitcher /></div>
-			</div>
-			
-			
-			<div class="clearer"></div>
+<h1><img src="${context:/css/layout/tapestry.png}" alt="Tapestry"
+	id="tapestry" /></h1>
 
-		</div>
-		
-		<div id="bar">
-			<strong>${title}</strong>
-			
-		</div>
-		
-		<div id="wrapper">
-		<div id="menu">
-			<t:jquery.accordion  t:panels="block1,block2,block3,block4" t:activeElementId="activeElement" t:params="params">
-				<p:block1>
-					<ul>
-		        		<li><t:pagelink t:page="core/DocsZone">Zone</t:pagelink></li>
-		        		<li><t:pagelink t:page="core/DocsDateField">DateField</t:pagelink></li>
-		        		<li><t:pagelink t:page="core/DocsValidation">Validation</t:pagelink></li>
-		        		<li><t:pagelink t:page="core/DocsGrid">Grid</t:pagelink></li>
-		        		<li><t:pagelink t:page="core/DocsAjaxformloop">AjaxFormLoop</t:pagelink></li>
-		        		<li><t:pagelink t:page="core/DocsFormfragment">FormFragment</t:pagelink></li>
-		        		<li><t:pagelink t:page="core/DocsLinksubmit">LinkSubmit</t:pagelink></li>	
-		        		<li><t:pagelink t:page="core/DocsProgressiveDisplay">Progressive Display</t:pagelink></li>
-		        		<li><t:pagelink t:page="core/DocsJQueryAutocomplete">j:Autocomplete</t:pagelink></li>
-		        		<li><t:pagelink t:page="core/DocsJQueryPalette">j:Palette</t:pagelink></li>
-		        		<li><t:pagelink t:page="core/DocsAlert">Alert</t:pagelink></li>
-		        		<li><t:pagelink t:page="core/AjaxExceptionReport">Ajax Exception Report</t:pagelink></li>
-		        		<li><t:pagelink t:page="core/DocsTree">Tree</t:pagelink></li>
-					</ul>
-				</p:block1>
-				
-				<p:block2>
-					<ul>
-						 <li><t:pagelink t:page="components/DocsJqueryDialog">Dialog</t:pagelink></li>
-					     <li><t:pagelink t:page="components/DocsJqueryTabs">Tabs</t:pagelink></li>
-					     <li><t:pagelink t:page="components/DocsJqueryAccordion">Accordion</t:pagelink></li>
-					     <li><t:pagelink t:page="components/DocsJquerySlider">Slider</t:pagelink></li>
-						 <li><t:pagelink t:page="components/DocsJqueryRangeSlider">Range Slider</t:pagelink></li>
-					     <li><t:pagelink t:page="components/DocsAjaxupload">AjaxUpload</t:pagelink></li>			
-					     <li><t:pagelink t:page="components/DocsCarouselPage">Carousel</t:pagelink></li>
-					     <li><t:pagelink t:page="components/DocsCheckbox">Checkbox</t:pagelink></li>
-		                 <li><t:pagelink t:page="components/DocsSuperfish">Superfish Menu</t:pagelink></li>
-						 <li><t:pagelink t:page="components/DocsColorboxGallery">Gallery</t:pagelink></li>
-		                 <li><t:pagelink t:page="components/DocsDataTables">DataTables</t:pagelink></li>
-		                 <li><t:pagelink t:page="components/DocsDraggable">Draggable/Droppable</t:pagelink></li>
-		                 <li><t:pagelink t:page="components/DocsInPlaceEditor">InPlaceEditor</t:pagelink></li>
-					</ul>
-				</p:block2>
-				
-				<p:block3>
-					<ul>
-				   		<li><t:pagelink t:page="mixins/DocsBind">Bind</t:pagelink></li>
-				    	<li><t:pagelink t:page="mixins/DocsButton">Button</t:pagelink></li>
-				     	<li><t:pagelink t:page="mixins/DocsCustomDatepicker">CustomDatepicker</t:pagelink></li>
-				       	<li><t:pagelink t:page="mixins/DocsMask">Mask</t:pagelink></li>
-				        <li><t:pagelink t:page="mixins/Docsreveal">Reveal</t:pagelink></li>
-				        <li><t:pagelink t:page="mixins/DocsTooltip">Tooltip</t:pagelink></li>
-				        <li><t:pagelink t:page="mixins/DocsSortable">Sortable</t:pagelink></li>
-				        <li><t:pagelink t:page="mixins/DocsZoneRefresh">ZoneRefresh</t:pagelink></li>
-				        <li><t:pagelink t:page="mixins/DocsWidget">Widget</t:pagelink></li>
-				    </ul>		
-				</p:block3>
-				
-				<p:block4>
-					<ul>
-						<li><t:pagelink t:page="mecanism/Services">Services</t:pagelink></li>
-				        <li><t:pagelink t:page="mecanism/DocsSelector">Selector Binding</t:pagelink></li>
-				        <li><t:pagelink t:page="mecanism/DocsJavaScript">JavaScript Information</t:pagelink></li>
-					</ul>
-				</p:block4>
-			</t:jquery.accordion>
-				
-			
-		</div>
-		
-		<div id="main">
-			<div id="i-component">
-				<t:body />
-			</div>
-			<div class="clearer"></div>			
-		</div>	
-			
-		</div>
-		<div class="clearer"></div>
 
-		<div id="footer">Created with <a href="http://tapestry.apache.org/">Apache Tapestry 5</a>, 
-		Get the source code of Tapestry jQuery at <a href="https://github.com/got5">Github</a></div>
 
-	</div>
+<div id="aside">Tapestry5 jQuery provides jQuery Components and
+can fully replace Prototype and Scriptaculous by jQuery
+<div class="themeSwitcher"><t:themeSwitcher /></div>
+</div>
+
+
+<div class="clearer"></div>
+
+</div>
+
+<div id="bar"><strong>${title}</strong></div>
+
+<div id="wrapper"><t:if t:test="withAccordion">
+	<div id="menu"><t:jquery.accordion
+		t:panels="block1,block2,block3,block4"
+		t:activeElementId="activeElement" t:params="params">
+		<p:block1>
+			<ul>
+				<li><t:pagelink t:page="core/DocsZone">Zone</t:pagelink></li>
+				<li><t:pagelink t:page="core/DocsDateField">DateField</t:pagelink></li>
+				<li><t:pagelink t:page="core/DocsValidation">Validation</t:pagelink></li>
+				<li><t:pagelink t:page="core/DocsGrid">Grid</t:pagelink></li>
+				<li><t:pagelink t:page="core/DocsAjaxformloop">AjaxFormLoop</t:pagelink></li>
+				<li><t:pagelink t:page="core/DocsFormfragment">FormFragment</t:pagelink></li>
+				<li><t:pagelink t:page="core/DocsLinksubmit">LinkSubmit</t:pagelink></li>
+				<li><t:pagelink t:page="core/DocsProgressiveDisplay">Progressive Display</t:pagelink></li>
+				<li><t:pagelink t:page="core/DocsJQueryAutocomplete">j:Autocomplete</t:pagelink></li>
+				<li><t:pagelink t:page="core/DocsJQueryPalette">j:Palette</t:pagelink></li>
+				<li><t:pagelink t:page="core/DocsAlert">Alert</t:pagelink></li>
+				<li><t:pagelink t:page="core/AjaxExceptionReport">Ajax Exception Report</t:pagelink></li>
+				<li><t:pagelink t:page="core/DocsTree">Tree</t:pagelink></li>
+			</ul>
+		</p:block1>
+
+		<p:block2>
+			<ul>
+				<li><t:pagelink t:page="components/DocsJqueryDialog">Dialog</t:pagelink></li>
+				<li><t:pagelink t:page="components/DocsJqueryTabs">Tabs</t:pagelink></li>
+				<li><t:pagelink t:page="components/DocsJqueryAccordion">Accordion</t:pagelink></li>
+				<li><t:pagelink t:page="components/DocsJquerySlider">Slider</t:pagelink></li>
+				<li><t:pagelink t:page="components/DocsJqueryRangeSlider">Range Slider</t:pagelink></li>
+				<li><t:pagelink t:page="components/DocsAjaxupload">AjaxUpload</t:pagelink></li>
+				<li><t:pagelink t:page="components/DocsCarouselPage">Carousel</t:pagelink></li>
+				<li><t:pagelink t:page="components/DocsCheckbox">Checkbox</t:pagelink></li>
+				<li><t:pagelink t:page="components/DocsSuperfish">Superfish Menu</t:pagelink></li>
+				<li><t:pagelink t:page="components/DocsColorboxGallery">Gallery</t:pagelink></li>
+				<li><t:pagelink t:page="components/DocsDataTables">DataTables</t:pagelink></li>
+				<li><t:pagelink t:page="components/DocsDraggable">Draggable/Droppable</t:pagelink></li>
+				<li><t:pagelink t:page="components/DocsInPlaceEditor">InPlaceEditor</t:pagelink></li>
+			</ul>
+		</p:block2>
+
+		<p:block3>
+			<ul>
+				<li><t:pagelink t:page="mixins/DocsBind">Bind</t:pagelink></li>
+				<li><t:pagelink t:page="mixins/DocsButton">Button</t:pagelink></li>
+				<li><t:pagelink t:page="mixins/DocsCustomDatepicker">CustomDatepicker</t:pagelink></li>
+				<li><t:pagelink t:page="mixins/DocsMask">Mask</t:pagelink></li>
+				<li><t:pagelink t:page="mixins/Docsreveal">Reveal</t:pagelink></li>
+				<li><t:pagelink t:page="mixins/DocsTooltip">Tooltip</t:pagelink></li>
+				<li><t:pagelink t:page="mixins/DocsSortable">Sortable</t:pagelink></li>
+				<li><t:pagelink t:page="mixins/DocsZoneRefresh">ZoneRefresh</t:pagelink></li>
+				<li><t:pagelink t:page="mixins/DocsWidget">Widget</t:pagelink></li>
+			</ul>
+		</p:block3>
+
+		<p:block4>
+			<ul>
+				<li><t:pagelink t:page="mecanism/Services">Services</t:pagelink></li>
+				<li><t:pagelink t:page="mecanism/DocsSelector">Selector Binding</t:pagelink></li>
+				<li><t:pagelink t:page="mecanism/DocsJavaScript">JavaScript Information</t:pagelink></li>
+			</ul>
+		</p:block4>
+	</t:jquery.accordion></div>
+</t:if>
+<div id="main">
+<div id="i-component"><t:body /></div>
+<div class="clearer"></div>
+</div>
+
+</div>
+<div class="clearer"></div>
+
+<div id="footer">Created with <a
+	href="http://tapestry.apache.org/">Apache Tapestry 5</a>, Get the
+source code of Tapestry jQuery at <a href="https://github.com/got5">Github</a></div>
+
+</div>
 </body>
 </html>

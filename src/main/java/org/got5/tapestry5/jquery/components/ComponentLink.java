@@ -17,7 +17,7 @@ public class ComponentLink {
 	
 	@SetupRender
 	public void init(MarkupWriter w){
-		w.element("a","href",url);
+		w.element("a","href",url, "target", "_blank");
 		w.write(url);
 		w.end();
 		if(StringUtils.isNotEmpty(description)){
@@ -25,8 +25,4 @@ public class ComponentLink {
 		}
 		
 	}
-	
-		
-	
-	
 }

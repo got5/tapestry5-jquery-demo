@@ -1,0 +1,36 @@
+<html t:type="layoutWithAccordion" t:title="Tapestry5 JQuery" t:accordion="false" t:activeElement="0" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
+    
+    <div class="extra">
+    <t:progressiveDisplay t:initial="block:initial"/>
+	
+	<t:block t:id="initial">
+		<div id="dialog" class="window">
+			<div id="myDiv" class="reveal-div reveal-hidden">
+				<div class="t-loading">Loading...</div>
+			</div>
+		 </div>
+	</t:block>
+	
+	<t:block t:id="block">
+		<p>
+			This sample shows how to use the ProgressiveDisplay component
+			with the reveal jQuery widget. 
+		</p>
+		<p>
+			We added a worker (IndicatorWorker) for the ProgressiveDisplay 
+			component, in order to add all the reveal JavaScript and CSS files.  
+			And finally, we will execute a JavaScript init function, which will 
+			transform the initial block of the ProgressiveDisplay to a Reveal Widget.
+		</p>
+		
+		<div t:type="jquery/showSource" t:ext="html" t:beginLine="4" t:endLine="32" t:path="resources/org/got5/tapestry5/jquery/pages/other/ProgressiveDisplayWithModal.tml"></div>
+		<div t:type="jquery/showSource" t:ext="java" t:beginLine="9" t:endLine="22" t:path="java/org/got5/tapestry5/jquery/pages/other/ProgressiveDisplayWithModal.java"></div>
+		
+		<div t:type="jquery/showSource" t:ext="java" t:beginLine="145" t:endLine="151" t:path="java/org/got5/tapestry5/jquery/services/AppModule.java"></div>
+		<div t:type="jquery/showSource" t:ext="java" t:beginLine="16" t:endLine="50" t:path="java/org/got5/tapestry5/jquery/services/IndicatorWorker.java"></div>
+		<div t:type="jquery/showSource" t:ext="java" t:beginLine="1" t:endLine="19" t:path="webapp/js/other/indicator.js"></div>
+	</t:block>
+	
+	</div>
+	
+</html>

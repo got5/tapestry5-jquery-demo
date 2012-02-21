@@ -37,7 +37,7 @@
 			
 		</p>
 		
-		<div t:type="jquery/showSource" t:ext="java" t:beginLine="5" t:endLine="8" t:path="resources/org/got5/tapestry5/jquery/pages/mecanism/DocsJavaScript.java"></div>
+		<div t:type="jquery/showSource" t:ext="java" t:beginLine="5" t:endLine="8" t:path="java/org/got5/tapestry5/jquery/pages/mecanism/DocsJavaScript.java"></div>
 	</p:services>
 </t:jquery.tabs>
 

@@ -15,8 +15,6 @@
 //
 package org.got5.tapestry5.jquery.services;
 
-import java.util.Locale;
-
 import org.apache.tapestry5.SymbolConstants;
 import org.apache.tapestry5.ioc.Configuration;
 import org.apache.tapestry5.ioc.MappedConfiguration;
@@ -25,6 +23,7 @@ import org.apache.tapestry5.ioc.OrderedConfiguration;
 import org.apache.tapestry5.ioc.annotations.Advise;
 import org.apache.tapestry5.ioc.annotations.Contribute;
 import org.apache.tapestry5.ioc.annotations.Match;
+import org.apache.tapestry5.ioc.annotations.Primary;
 import org.apache.tapestry5.ioc.annotations.SubModule;
 import org.apache.tapestry5.ioc.annotations.Symbol;
 import org.apache.tapestry5.ioc.services.ApplicationDefaults;
@@ -37,6 +36,8 @@ import org.apache.tapestry5.services.ApplicationStateCreator;
 import org.apache.tapestry5.services.AssetSource;
 import org.apache.tapestry5.services.MarkupRendererFilter;
 import org.apache.tapestry5.services.javascript.JavaScriptStack;
+import org.apache.tapestry5.services.javascript.JavaScriptSupport;
+import org.apache.tapestry5.services.transform.ComponentClassTransformWorker2;
 import org.got5.tapestry5.jquery.EffectsConstants;
 import org.got5.tapestry5.jquery.JQuerySymbolConstants;
 import org.got5.tapestry5.jquery.data.IDataSource;
@@ -68,7 +69,7 @@ public class AppModule
     	
     	configuration.add("enableAnalytics", "false");
 
-    	configuration.add("demo-src-dir","");
+    	configuration.add("demo-src-dir","D:\\Documents\\a503018\\Documents\\WEBPLATFORM_DOCUMENTATION\\TAPESTRY5-jQUERY\\tapestry5-jquery-demo\\src\\main\\");
 
     }
     
@@ -141,23 +142,11 @@ public void contributeMarkupRenderer(OrderedConfiguration<MarkupRendererFilter> 
 		receiver.adviseMethod(receiver.getInterface().getMethod("convertAssetPath", String.class),advise);
     }
 	
-	@Advise
-    @Match("PagePool")
-    public static void addLog(MethodAdviceReceiver receiver)
-    	throws SecurityException, NoSuchMethodException{
-
-    	MethodAdvice advise = new MethodAdvice() {
-
-			public void advise(MethodInvocation invocation) {
-				System.out.println("####################### " + invocation.getParameter(0));
-				invocation.proceed();
-				System.out.println("####################### " + invocation.getReturnValue());
-				
-
-			}
-		};
-		receiver.adviseMethod(receiver.getInterface().getMethod("checkout", String.class),advise);
+	@Contribute(ComponentClassTransformWorker2.class)
+    @Primary
+    public static void  addWorker(OrderedConfiguration<ComponentClassTransformWorker2> configuration, 
+    		final JavaScriptSupport js, final AssetSource as) {
+    	
+    	configuration.addInstance("indicator", IndicatorWorker.class,"after:RenderPhase");
     }
-	
-	
 }

@@ -12,18 +12,40 @@
 					Zone Refresh
 				</p:title>
 				<p:description>
-					This mixin allows you to update a zone with a period. This mixin use the title attribute of your element
+					This mixin allows you to update automatically. You will be able to stopt/start the 
+					refreshing of your zone, by triggering the stopRefresh or startRefresh jQuery event, 
+					on your zone element. 
 				</p:description>
 				
-				<p:link_1><t:componentLink t:url="http://access.aol.com/csun2011"/></p:link_1>
+				<p:param_1>
+				<t:componentParameter
+					t:name="period"
+					t:required="true"
+					t:javaType="int"
+					t:prefix="literal"
+					t:defaultValue=""
+					t:description="Period between two consecutive refreshes (in seconds) "
+				/>
+				</p:param_1>
+				<p:param_2>
+				<t:componentParameter
+					t:name="context"
+					t:required="false"
+					t:javaType="Object[]"
+					t:prefix="prop"
+					t:defaultValue=""
+					t:description="Context passed to the event "
+				/>
+				</p:param_2>
 			</t:componentDocumentation>
 		</p:docs>
 	    
 	    <p:example>
-	    	<div t:type='zone' id="clickZone" t:mixins='jquery/zonerefresh' t:period='1'>${now} </div>
+	    	<div t:type='zone' id="clickZone" t:mixins='jquery/zonerefresh' 
+	    		t:period='5'>${now} </div>
 	    	<p><a id="start">Start Refreshing</a></p>
 	    	<p><a id="stop">Stop Refreshing</a></p>
-	    	<div t:type="jquery/showSource" t:ext="html" t:beginLine="23" t:endLine="26" t:path="resources/org/got5/tapestry5/jquery/pages/mixins/DocsZoneRefresh.tml"></div>
+	    	<div t:type="jquery/showSource" t:ext="html" t:beginLine="44" t:endLine="47" t:path="resources/org/got5/tapestry5/jquery/pages/mixins/DocsZoneRefresh.tml"></div>
 	    	<div t:type="jquery/showSource" t:ext="java" t:beginLine="24" t:endLine="42" t:path="java/org/got5/tapestry5/jquery/pages/mixins/DocsZoneRefresh.java"></div>
 	    	
 	    </p:example>

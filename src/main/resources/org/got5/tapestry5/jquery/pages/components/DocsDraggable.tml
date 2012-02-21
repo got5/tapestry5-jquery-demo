@@ -62,17 +62,20 @@ t:activeElement="1"
     		This is a example of the Draggable component. <br />
     	</p>	
     	
-    	 <t:jquery.Draggable  t:id="draggableItem1" t:draggablecontext="literal:contexteItem1" >
-    		Drag Item 1 
-  		 </t:jquery.Draggable>
-   		<t:jquery.Draggable  t:id="draggableItem2" t:draggablecontext="literal:contexteItem2" >
-    		Drag Item 2 
-   		</t:jquery.Draggable>
+<t:jquery.Draggable  t:id="draggableItem1" 
+	t:draggablecontext="literal:contexteItem1" >
+	Drag Item 1 
+</t:jquery.Draggable>
+<t:jquery.Draggable  t:id="draggableItem2" 
+	t:draggablecontext="literal:contexteItem2" >
+	Drag Item 2 
+</t:jquery.Draggable>
 
-	   <div t:type='zone'  t:id="dropzone" t:mixins='jquery/zonedroppable'>
-	   		Last zone Update:${now} <br/>
-	   		Last Drop:${data}
-	   </div>
+<div t:type='zone'  t:id="dropzone" 
+	t:mixins='jquery/zonedroppable'>
+		Last zone Update:${now} <br/>
+		Last Drop:${data}
+</div>
 	
 	   <style type="text/css">
 	   	.ui-draggable { width: 75px; height: 25px; background: silver; padding: 10px; margin-bottom:20px;}
@@ -81,7 +84,7 @@ t:activeElement="1"
     	
     	<br />
     	
-    	<div t:type="jquery/showSource" t:ext="html" t:endLine="75" t:beginLine="65" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsDraggable.tml"></div>
+    	<div t:type="jquery/showSource" t:ext="html" t:endLine="78" t:beginLine="65" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsDraggable.tml"></div>
     	
     </p:example>
    </t:jquery.tabs> 

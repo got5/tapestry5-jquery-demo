@@ -47,16 +47,18 @@ t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
  <t:grid source="users" row="user" model="myModel" t:inplace="true" 
  			rowIndex="currentIndex" rowsPerPage="10">
  	<p:firstnameCell>
-    	<div t:id="firstName" t:type="jquery/inPlaceEditor" value="user.firstName" t:context="${currentIndex}"/>
+    	<div t:id="firstName" t:type="jquery/inPlaceEditor" 
+    		value="user.firstName" t:context="${currentIndex}"/>
     </p:firstnameCell>
     <p:lastnameCell>
-    	<div t:id="lastName" t:type="jquery/inPlaceEditor" value="user.lastName" t:context="${currentIndex}"/>
+    	<div t:id="lastName" t:type="jquery/inPlaceEditor" 
+    		value="user.lastName" t:context="${currentIndex}"/>
      </p:lastnameCell>
 </t:grid>
 		    
-	    	<div t:type="jquery/showSource" t:ext="html" t:beginLine="47" t:endLine="55" t:path="resources/org/got5/tapestry5/jquery/pages/core/DocsInPlaceEditor.tml"></div>
+	    	<div t:type="jquery/showSource" t:ext="html" t:beginLine="47" t:endLine="57" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsInPlaceEditor.tml"></div>
 	    	
-	    	<div t:type="jquery/showSource" t:ext="java" t:beginLine="34" t:endLine="106" t:path="java/org/got5/tapestry5/jquery/pages/core/DocsGrid.java"></div>    	
+	    	<div t:type="jquery/showSource" t:ext="java" t:beginLine="38" t:endLine="106" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsInPlaceEditor.java"></div>    	
 	    </p:example>
     </t:jquery.tabs>
 </html>
