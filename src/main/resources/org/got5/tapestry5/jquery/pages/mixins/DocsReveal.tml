@@ -58,6 +58,16 @@
 					t:description="The CSS class for the element that will close the modal."
 				/>
 			</p:param_5>
+			<p:param_6>
+				<t:componentParameter
+					t:name="selector"
+					t:required="false"
+					t:javaType="String"
+					t:prefix="literal"
+					t:description="The jQuery Selector for the element used to display the modal 
+					window (a link most of the time) By default, the #id of the element."
+				/>
+			</p:param_6>
 		</t:componentDocumentation>
 		  	
     </p:docs>
@@ -71,7 +81,7 @@
 	  Click Here in order to display the modal window.
 </a>
 		  
-		  <div t:type="jquery/showSource" t:ext="html" t:beginLine="66" t:endLine="72" t:path="resources/org/got5/tapestry5/jquery/pages/mixins/DocsReveal.tml"></div>
+		  <div t:type="jquery/showSource" t:ext="html" t:beginLine="76" t:endLine="82" t:path="resources/org/got5/tapestry5/jquery/pages/mixins/DocsReveal.tml"></div>
 		  
 		  <div t:type="jquery/showSource" t:ext="html" t:beginLine="80" t:endLine="83" t:path="resources/org/got5/tapestry5/jquery/pages/mixins/DocsReveal.tml"></div>
 
