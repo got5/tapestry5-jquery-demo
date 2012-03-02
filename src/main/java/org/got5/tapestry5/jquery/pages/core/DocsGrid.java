@@ -38,7 +38,10 @@ public class DocsGrid
 {
 	@Property
 	private User user;
-	    
+	
+	@Property
+	private User currentUser;
+	
 	@Property
 	private int currentIndex;
 	    
@@ -73,10 +76,15 @@ public class DocsGrid
 	}
 	    
 	@OnEvent(value = EventConstants.ACTION)
-	Object showDetail(int index)
+	Object showDetail(String lastName)
 	{
 		if (!request.isXHR()) { return this; }
-	    user= (User)users.get(index);
+	    
+		for(User u : users){
+			if(u.getLastName().equalsIgnoreCase(lastName))
+				user= u;
+		}
+		
 	    return detailZone;
 	}
 	    

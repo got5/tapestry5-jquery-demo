@@ -1,6 +1,6 @@
 package org.got5.tapestry5.jquery.pages.mixins;
 
-import org.apache.tapestry5.annotations.Component;
+import org.apache.tapestry5.annotations.InjectComponent;
 import org.apache.tapestry5.annotations.OnEvent;
 import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
@@ -16,7 +16,7 @@ public class DocsBind {
 	@Persist
 	private String textZone;
 	
-	@Component
+	@InjectComponent
 	private Zone zoneSlideChange;
 	
 	@OnEvent(value="slidechange")

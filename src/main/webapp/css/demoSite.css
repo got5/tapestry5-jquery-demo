@@ -146,3 +146,5 @@ caption{
 .extra ul {
 	list-style-type: square;
 }
+
+dl.t-beandisplay dt {width: 100px;}
