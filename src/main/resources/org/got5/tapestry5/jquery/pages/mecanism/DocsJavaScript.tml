@@ -28,6 +28,15 @@
 			(by using jQuery.noConflict())
 		</p>
 		
+		<p>
+			According to the PRODUCTION_MODE value, Tapestry5-jQuery will include the minified or
+			the unminified version of tapestry.js. If you redefine the jQuery main file 
+			(<strong>JQuerySymbolConstants.JQUERY_CORE_PATH</strong> symbol) , you have to keep the file structure 
+			of the jQuery project : The minified version has to be in the package as the unminified one,  
+			but has to be suffixed by <strong>.min.js</strong>.
+		</p>
+		<ul><li>Example : jquery.min.js for jquery.js</li></ul>
+		
 		<h2>The @ImportJQueryUI annotation</h2>
 		<p>
 			If you need more jQuery-UI Javascript files (jquery.ui.mouse.js, jquery.ui.sortable.js ...), 
@@ -36,7 +45,15 @@
 			import the unminified version if your are in development mode, otherwise the minified version.
 			
 		</p>
-		
+		<p>
+			According to the PRODUCTION_MODE value, Tapestry5-jQuery will include the minified or
+			the unminified version of your jQuery UI JavaScript files, even for the files coming
+			from the main JavaScript Stack (see previous part : jquery.ui.core, jquery.ui.position). 
+			If you redefine the jQuery-UI package (<strong>JQuerySymbolConstants.JQUERY_UI_PATH</strong> 
+			symbol), you have to keep the file structure of the jQuery UI project : All the minified versions 
+			will be in a minified directory, and will be suffixed by <strong>.min.js</strong>.
+		</p>
+		<ul><li>Example : minified/jquery.ui.slider.min.js for jquery.ui.slider.js</li></ul>
 		<div t:type="jquery/showSource" t:ext="java" t:beginLine="5" t:endLine="8" t:path="java/org/got5/tapestry5/jquery/pages/mecanism/DocsJavaScript.java"></div>
 	</p:services>
 </t:jquery.tabs>

@@ -24,13 +24,13 @@
     	</p:block1>
     	
     	<p:block2>
-    		## How to use it
-			<br/><br/>
-	                Just add tapestry5-jquery to your classpath (see Maven dependency snippet <a href="#mvn.snippet">below</a>)!
-			
-			<br/><br/>
+    		<h2>How to use it</h2>
+			<p>
+	        Just add tapestry5-jquery to your classpath (see Maven dependency snippet <a href="#mvn.snippet">below</a>)!
+			</p>
+			<p>
 			Then use components like you would normally do. For Autocomplete and Palette use "jquery" namespace: 		
-	 		<br/><br/>
+	 		</p>
 	
 			<div style="visibility: hidden; position: absolute; top: -9999%; left: -9999%;">
 	                    <![CDATA[
@@ -43,9 +43,9 @@
 	
 	                <div t:type="jquery/showSource" t:specs="{'collapse': 'false'}" t:ext="html" t:beginLine="37" t:endLine="40" t:path="resources/org/got5/tapestry5/jquery/pages/Index.tml"></div>
 			
-			<br/><br/>
+			<p>
 			Or add jquery to the tapestry-library namespace:
-			<br/><br/>
+			</p>
 	                
 			<div style="visibility: hidden; position: absolute; top: -9999%; left: -9999%;">
 	                <![CDATA[
@@ -62,17 +62,17 @@
 	                </div>
 	                <div t:type="jquery/showSource" t:specs="{'collapse': 'false'}" t:ext="html" t:beginLine="52" t:endLine="60" t:path="resources/org/got5/tapestry5/jquery/pages/Index.tml"></div>
 	                
-			<br/><br/>
-			## You still need to have PrototypeJS and the components originally included in tapestry ?
-			<br/><br/>
+			
+			<h2>You still need to have PrototypeJS and the components originally included in tapestry ?</h2>
+			<p>
 			Tapestry5-jquery project allows you to choose whether to include or not Prototype (and original tapestry components).
 			jQuery will be added to the javascript stack in every case.
 			In your AppModule, contributeApplicationDefaults method, you can add `configuration.add(JQuerySymbolConstants.SUPPRESS_PROTOTYPE, "false");`
+			</p>
 			
-			<br/><br/>
-			## Note about jQuery
-			<br/><br/>
+			<h2>Note about jQuery</h2>
 			
+			<p>
 			In traditional jQuery development, we are used to manipulate the `$` alias to select the elements we want to play with.
 			jQuery allows us to change this default alias (for compatibility with other js frameworks also using the `$` alias : like PrototypeJS, included in Tapestry, for example).
 			The tapestry5-jquery project has an option permitting you to customize this alias : in your AppModule, contributeApplicationDefaults method, you can add `configuration.add(JQuerySymbolConstants.JQUERY_ALIAS, "yourOwnAlias");`.
@@ -81,12 +81,12 @@
 			By the way, if you've set the `JQuerySymbolConstants.SUPPRESS_PROTOTYPE` option to false, you may not use `$` to refer to jQuery, because `$` actually refers to Prototype.
 			Thus, you may want to change jQuery's alias in that particular case.
 			However, if you didn't change it, jQuery's alias will automatically be set to `$j`.
-	                
-	                <br/><br/> 
+	        </p>        
+	             
 	                <div id="mvn.snippet">
-	                    ## Maven dependency description:
+	                    <h2>Maven dependency description:</h2>
 	                </div>
-	                <br/><br/>
+	                
 	                
 			<div style="visibility: hidden; position: absolute; top: -9999%; left: -9999%;">
 	                <![CDATA[
@@ -129,10 +129,29 @@
 	                     t:specs="{'collapse': 'false'}"
 	                     t:ext="xml" t:beginLine="93"
 	                     t:endLine="125" t:path="resources/org/got5/tapestry5/jquery/pages/Index.tml"></div>
+	            <h2>Gradle dependency description:</h2>        
+	            <div style="visibility: hidden; position: absolute; top: -9999%; left: -9999%;">
+	                <![CDATA[
+					dependencies {
+					    compile group: 'org.got5', name: 'tapestry5-jquery', version: '3.0.0'
+					}
+					
+					repositories {
+						mavenCentral()
+						maven {
+							url "http://nexus.devlab722.net/nexus/content/repositories/releases"
+						}
+					}
+	                ]]>
+	                </div>
+	                <div t:type="jquery/showSource"
+	                     t:specs="{'collapse': 'false'}"
+	                     t:ext="java" t:beginLine="135"
+	                     t:endLine="144" t:path="resources/org/got5/tapestry5/jquery/pages/Index.tml"></div>
     	</p:block2>
     	
     	<p:block3>
-    		## List Of Contributors<br/>
+    		<h2>List Of Contributors</h2>
 			- Robin KOMIWES as robink		<br/>
 			- Andreas ANDREOU as andyhot	<br/>
 			- Christian RIEDEL as criedel	<br/>
@@ -145,12 +164,12 @@
 			- Pablo NUSSEMBAUL as bauna<br/>
 			- Alexander OBLOVATNIY<br/>
 	
-			<br/><br/>
-			##Hosting<br/>
+			
+			<h2>Hosting</h2>
 			Christophe Furmaniak 	
 	
-			<br/><br/>
-			## Changelog<br/>
+			
+			<h2>Changelog</h2>
 			<strong> 3.0.0 :</strong>
 			<div class="releasenotes">
 				<ul>
