@@ -59,7 +59,7 @@ public class LayoutWithAccordion
 	}
 	
 	public JSONObject getParams(){
-		return new JSONObject("fillSpace", "true");
+		return new JSONObject("autoHeight", "true");
 	}
 	
 	public boolean getWithAccordion(){ return accordion; }

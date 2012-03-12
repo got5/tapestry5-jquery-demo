@@ -83,7 +83,7 @@
 		  
 		  <div t:type="jquery/showSource" t:ext="html" t:beginLine="76" t:endLine="82" t:path="resources/org/got5/tapestry5/jquery/pages/mixins/DocsReveal.tml"></div>
 		  
-		  <div t:type="jquery/showSource" t:ext="html" t:beginLine="80" t:endLine="83" t:path="resources/org/got5/tapestry5/jquery/pages/mixins/DocsReveal.tml"></div>
+		  <div t:type="jquery/showSource" t:ext="html" t:beginLine="90" t:endLine="93" t:path="resources/org/got5/tapestry5/jquery/pages/mixins/DocsReveal.tml"></div>
 
 	</p:example>
  </t:jquery.tabs>   

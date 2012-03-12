@@ -113,7 +113,7 @@ xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:p
     
 <div t:type="jquery/showSource" t:ext="java" t:beginLine="117" t:endLine="139" t:path="java/org/got5/tapestry5/jquery/pages/core/DocsZone.java"></div>
 
-<div t:type="jquery/showSource" t:ext="javascript" t:path="webapp/js/demo.js"></div>
+<div t:type="jquery/showSource" t:beginLine="1" t:endLine="8" t:ext="javascript" t:path="webapp/js/demo.js"></div>
     	</p:ZoneBlock5>
     	
     	<p:ZoneBlock6>

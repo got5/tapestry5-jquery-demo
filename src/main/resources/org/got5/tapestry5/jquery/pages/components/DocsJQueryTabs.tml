@@ -55,6 +55,15 @@ t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 					t:description="The Tabs parameters (please refer to jquery-ui documentation). "
 				/>
 			</p:param_4>
+			<p:param_5>
+				<t:componentParameter
+					t:name="ajax "
+					t:required="false"
+					t:javaType="Boolean"
+					t:prefix="literal"
+					t:description="Indicate if you want to load your block by ajax."
+				/>
+			</p:param_5>
 		</t:componentDocumentation>
 	</p:docs>
 	
@@ -91,7 +100,7 @@ t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 	</p:TabsDemoTabs4>
 </t:jquery.tabs>
 
-	<div t:type="jquery/showSource" t:ext="html" t:beginLine="62" t:endLine="92" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsJQueryTabs.tml"></div>      		
+	<div t:type="jquery/showSource" t:ext="html" t:beginLine="71" t:endLine="101" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsJQueryTabs.tml"></div>      		
 			
 	</p:example>
 </t:jquery.tabs>
