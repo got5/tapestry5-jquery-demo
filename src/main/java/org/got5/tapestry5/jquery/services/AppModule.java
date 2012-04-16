@@ -69,7 +69,7 @@ public class AppModule
     	
     	configuration.add("enableAnalytics", "false");
 
-    	configuration.add("demo-src-dir","D:\\Documents\\a503018\\Documents\\WEBPLATFORM_DOCUMENTATION\\TAPESTRY5-jQUERY\\tapestry5-jquery-demo\\src\\main\\");
+    	configuration.add("demo-src-dir","D:\\TAPESTRY5-jQUERY\\tapestry5-jquery-demo\\src\\main\\");
 
     }
     

@@ -1,0 +1,48 @@
+<html t:type="layoutWithAccordion" 
+t:title="Alert Demo" 
+t:activeElement="0" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
+
+<t:jquery.tabs  t:tabs="docs,example" t:activePanelId="0" t:ajax="false">
+<p:docs>
+	<t:componentDocumentation>
+		<p:title>
+			JGrowl Component
+		</p:title>
+		<p:description>
+				This component makes it possible to display Tapestry Alerts (using the AlertManager service), but
+				with the JavaScript behavior of the jGrowl plugin. 
+				
+				By default, the look of the alerts (info, warning, error) will be same. But, you will be able to 
+				modify the look by using these CSS classes : jgrowl-t-info, jgrowl-t-warn and jgrowl-t-error.
+		</p:description>
+		<p:link_1>jGrowl: <t:componentLink t:url="http://stanlemon.net/pages/jgrowl"/></p:link_1>
+		<p:param_1>
+                <t:componentParameter
+                    t:name="params"
+                    t:required="no"
+                    t:javaType="JSONObject"
+                    t:prefix="prop"
+                    t:description="The JSON-type parameter for the jQuery plugin. This component
+		 							 will extend the default options of the jGrowl plugin by this parameter"
+                />
+        </p:param_1>
+    </t:componentDocumentation>
+</p:docs>
+<p:example>
+<h1>JGrowl Alert Demo</h1>
+<br /><br />
+
+<t:jquery.jgrowl />
+
+<t:actionLink t:id="transient">Transient Mode</t:actionLink><br />
+<t:actionLink t:id="single">Single Mode</t:actionLink><br />
+<t:actionLink t:id="untilDismiss">Until-Dismiss Mode</t:actionLink><br />
+
+<div t:type="jquery/showSource" t:ext="html" t:beginLine="35" t:endLine="39" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsJGrowl.tml"></div>
+    	
+<div t:type="jquery/showSource" t:ext="java" t:beginLine="8" t:endLine="33" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsJGrowl.java"></div>
+
+</p:example>
+</t:jquery.tabs>
+
+</html>

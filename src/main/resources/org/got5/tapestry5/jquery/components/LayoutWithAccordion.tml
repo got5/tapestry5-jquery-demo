@@ -78,6 +78,7 @@ can fully replace Prototype and Scriptaculous by jQuery
 				<li><t:pagelink t:page="components/DocsDataTables">DataTables</t:pagelink></li>
 				<li><t:pagelink t:page="components/DocsDraggable">Draggable/Droppable</t:pagelink></li>
 				<li><t:pagelink t:page="components/DocsInPlaceEditor">InPlaceEditor</t:pagelink></li>
+				<li><t:pagelink t:page="components/DocsJGrowl">JGrowl alerts</t:pagelink></li>
 			</ul>
 		</p:block2>
 
