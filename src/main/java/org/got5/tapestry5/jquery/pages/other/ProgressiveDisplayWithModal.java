@@ -7,13 +7,13 @@ import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.javascript.JavaScriptSupport;
 
 public class ProgressiveDisplayWithModal {
-	
+
 	@Inject
 	private JavaScriptSupport js;
-	
+
 	@Inject
 	private Block block;
-	
+
 	@OnEvent(EventConstants.PROGRESSIVE_DISPLAY)
 	public Object returnBlock() throws InterruptedException{
 		Thread.sleep(2000);

@@ -10,6 +10,9 @@
     		<li>
     			<a t:type="pageLink" t:page="other/progressiveDisplayWithModal">ProgressiveDisplay component combining with a model window</a>
     		</li>
+    		<li>
+    			<a t:type="pageLink" t:page="other/DataTableAjaxWithNewColumn">How can we add a column in DataTable using Ajax Pagination</a>
+    		</li>
     	</ul>
     </div>
     

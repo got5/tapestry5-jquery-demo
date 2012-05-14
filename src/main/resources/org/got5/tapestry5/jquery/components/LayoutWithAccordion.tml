@@ -12,7 +12,7 @@
 <div class="wrapper bs">
 <ul class="nav">
 	<li><t:pagelink t:page="index">Home</t:pagelink></li>
-	<!-- <li><t:pagelink t:page="other/Index">Other Samples</t:pagelink></li>-->
+	<li><t:pagelink t:page="other/Index">Other Samples</t:pagelink></li>
 	<li><a href="https://github.com/got5/tapestry5-jquery">Download</a>
 	</li>
 	<li><a href="http://twitter.com/#!/GOTapestry5">Twitter</a></li>

@@ -1,0 +1,41 @@
+<html t:type="layoutWithAccordion" t:title="Tapestry5 JQuery" t:accordion="false" t:activeElement="0" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
+    
+    <div class="extra">
+		<p>
+			In this sample, we will create a DataTable using the ajax-mode, and with an extra column (called Action).
+		</p>
+		<p>
+			By default, it is impossible to render a block in the JSON-type response. We must implement our own implementation of the DataTableModel interface, 
+			and use the dataTableModel parameter of the dataTable component
+		</p>
+		<p>
+			The first thing to do is to add the new column in the Model : in the template (by using the t:add parameter) or in the Java Class (by using the  
+			t:model parameter), and to define the header of this new column
+		</p>
+		<p>
+			Then, we will create our own implementation of the DataTableModel Interface (just copy/past the default implementation : DefaultDataTableModel), 
+			and modify the JSON-type response, by adding the content of our new column (please check the getResponse method).
+		</p>
+		
+		<t:jquery.datatable t:source="celebritySource" rowsPerPage="5" 
+	        exclude="id, biography, birthDateVerified"
+			reorder="lastName,firstName,occupation,dateOfBirth" t:options="options"  
+			t:mode="true" t:model="model" t:row="current" t:tableInformation="tableInformation" 
+			t:dataTableModel="override"	t:add="view">
+			<p:viewHeader>
+				Action
+			</p:viewHeader>
+		</t:jquery.datatable>
+	
+	
+		
+		
+		<div t:type="jquery/showSource" t:ext="html" t:beginLine="20" t:endLine="28" t:path="resources/org/got5/tapestry5/jquery/pages/other/DataTableAjaxWithNewColumn.tml"></div>
+		<div t:type="jquery/showSource" t:ext="java" t:beginLine="42" t:endLine="138" t:path="java/org/got5/tapestry5/jquery/pages/other/DataTableAjaxWithNewColumn.java"></div>
+		
+		<div t:type="jquery/showSource" t:ext="java" t:beginLine="26" t:endLine="245" t:path="java/org/got5/tapestry5/jquery/data/OverrideDataTableModel.java"></div>
+		
+	
+	</div>
+	
+</html>
