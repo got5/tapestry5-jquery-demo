@@ -1,0 +1,43 @@
+<html t:type="layoutWithAccordion" t:title="Tapestry5 JQuery" t:accordion="false" t:activeElement="0" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
+    
+    <div class="extra">
+		<p>
+			In this sample, we will describe how to display a Document Viewer
+		</p>
+		<p>
+			We will use the Gallery component, available in the Tapestry5-jQuery project. In order to display a document (pdf, doc ...), 
+			we will also use a service provided by Google : <a href="https://docs.google.com/viewer">Google Document Viewer</a>
+		</p>
+		<p>
+			The Colorbox jQuery widget, used by the Gallery, make it possible to display an iframe in the modal dialog. You just need to : 
+			 
+		</p>
+		<ul>
+			<li>Specify, in the href attribute of your link, the url of the page you want to display inside the iframe</li>
+			<li>Modify the JSON-type parameter of the GalleryComponent</li>
+		</ul>
+		
+		<div class="gallery" t:type="jQuery/Gallery" t:selector="a[rel^=file]" t:params="params">
+	    <h2>All my Files :</h2>
+	    
+	    <ul>
+	    	<li>
+			    <a href="http://docs.google.com/viewer?url=http%3A%2F%2Fsamplepdf.com%2Fsample.pdf" 
+			    	id="pdf" rel="file" title="pdf file">
+					Read this PDF File
+			    </a>
+	    	</li>
+	    	<li>
+			    <a href="http://docs.google.com/viewer?url=www.xmlw.ie%2Faboutxml%2Fwordsample2.doc" 
+			    	id="doc" rel="file" title="doc file">
+					Read this Word File
+			    </a>
+	    	</li>
+	    </ul>
+	    
+		</div>        
+	
+		<div t:type="jquery/showSource" t:ext="html" t:beginLine="20" t:endLine="38" t:path="resources/org/got5/tapestry5/jquery/pages/other/DocumentViewer.tml"></div>
+		<div t:type="jquery/showSource" t:ext="java" t:beginLine="6" t:endLine="16" t:path="java/org/got5/tapestry5/jquery/pages/other/DocumentViewer.java"></div>
+	</div>
+</html>
