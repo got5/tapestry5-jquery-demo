@@ -1,0 +1,49 @@
+<html t:type="layoutWithAccordion" t:title="Tapestry5 JQuery" t:accordion="false" t:activeElement="0" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
+    
+    <div class="extra">
+		<p>
+			In this sample, we will create a DataTable with a Filter mechanism on each columns
+		</p>
+		<p>
+			For doing that, we will create a mixin using the columnFilter plugin : <a href="http://jquery-datatables-column-filter.googlecode.com/svn/trunk/index.html">http://jquery-datatables-column-filter.googlecode.com/svn/trunk/index.html</a>
+		</p>
+		<p>
+			This mixin will have one JSON-type parameter, corresponding to the parameter of the JavaScript plugin. 
+		</p>
+		<p>
+			The mixin will call 2 JavaScript functions : 
+		</p>
+		<ul>
+			<li>
+			By default, the Tapestry5-jQuery datatable have only on TR element in its THEAD. In order to make the columnFilter working, we have to add a second 
+			one. This clone will be done before the creation of the dataTable, by using the InitializationPriority.EARLY priority. 
+			</li>
+			<li>
+			We will call the columnFilter plugin after creating the DataTable, with the InitializationPriority.LATE priority.
+			</li>
+		</ul>
+		<p>
+			If you use the DataTable in an Ajax mode, you should create your implementation of the DataTableModel interface,
+			in order to consider all the filters. For more information, please have a look to this <a t:type="pageLink" t:page="other/datatableajaxwithnewcolumn">sample</a>.
+		</p>
+		<t:jquery.datatable t:source="celebritySource" rowsPerPage="5" 
+	        exclude="id, biography, birthDateVerified"
+			reorder="lastName,firstName,occupation,dateOfBirth" t:options="options"  
+			t:mode="false" t:model="model" t:row="current" t:tableInformation="tableInformation" 
+			t:mixins="ColumnFilter" t:filterJson="filterJson">
+			
+		</t:jquery.datatable>
+	
+	
+		
+		
+		<div t:type="jquery/showSource" t:ext="html" t:beginLine="29" t:endLine="35" t:path="resources/org/got5/tapestry5/jquery/pages/other/DataTableWithFilters.tml"></div>
+		<div t:type="jquery/showSource" t:ext="java" t:beginLine="44" t:endLine="161" t:path="java/org/got5/tapestry5/jquery/pages/other/DataTableWithFilters.java"></div>
+		
+		<div t:type="jquery/showSource" t:ext="java" t:beginLine="13" t:endLine="37" t:path="java/org/got5/tapestry5/jquery/mixins/ColumnFilter.java"></div>
+		<div t:type="jquery/showSource" t:ext="javascript" t:beginLine="1" t:endLine="32" t:path="webapp/js/other/ColumnFilter/demo.js"></div>
+		
+	
+	</div>
+	
+</html>

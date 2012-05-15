@@ -21,7 +21,7 @@
 	        exclude="id, biography, birthDateVerified"
 			reorder="lastName,firstName,occupation,dateOfBirth" t:options="options"  
 			t:mode="true" t:model="model" t:row="current" t:tableInformation="tableInformation" 
-			t:dataTableModel="override"	t:add="view">
+			t:dataTableModel="override"	t:add="view" >
 			<p:viewHeader>
 				Action
 			</p:viewHeader>

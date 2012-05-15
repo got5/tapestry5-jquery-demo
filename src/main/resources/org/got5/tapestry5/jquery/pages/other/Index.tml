@@ -13,6 +13,9 @@
     		<li>
     			<a t:type="pageLink" t:page="other/DataTableAjaxWithNewColumn">How can we add a column in DataTable using Ajax Pagination</a>
     		</li>
+    		<li>
+    			<a t:type="pageLink" t:page="other/DataTableWithFilters">How to add a Filter mechanism on each columns of a DataTable</a>
+    		</li>
     	</ul>
     </div>
     

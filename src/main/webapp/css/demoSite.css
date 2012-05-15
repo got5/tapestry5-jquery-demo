@@ -133,18 +133,23 @@ caption{
 }
 
 .extra {
-	margin-left : 60px;
-	margin-right : 60px;
+
 	margin-top : 30px;
+	margin-right: 20px;
+	margin-left: 20px;
 }
 
 .extra p {
-	margin-right: 200px;
-	margin-bottom: 20px;
+	
 }
 
 .extra ul {
+	padding-left: 70px;
 	list-style-type: square;
+}
+
+.extra ul li {
+	margin-bottom: 10px;
 }
 
 dl.t-beandisplay dt {width: 100px;}
