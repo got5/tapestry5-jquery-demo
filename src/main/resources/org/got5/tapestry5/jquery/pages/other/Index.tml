@@ -16,6 +16,9 @@
     		<li>
     			<a t:type="pageLink" t:page="other/DataTableWithFilters">How to add a Filter mechanism on each columns of a DataTable</a>
     		</li>
+    		<li>
+    			<a t:type="pageLink" t:page="other/DocumentViewer">Document Viewer with the Colorbox widget</a>
+    		</li>
     	</ul>
     </div>
     
