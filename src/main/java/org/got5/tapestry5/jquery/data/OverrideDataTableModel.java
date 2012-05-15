@@ -12,16 +12,17 @@ import org.apache.tapestry5.grid.ColumnSort;
 import org.apache.tapestry5.grid.GridDataSource;
 import org.apache.tapestry5.grid.GridSortModel;
 import org.apache.tapestry5.grid.SortConstraint;
-import org.apache.tapestry5.internal.EmptyEventContext;
 import org.apache.tapestry5.internal.grid.CollectionGridDataSource;
 import org.apache.tapestry5.ioc.internal.util.InternalUtils;
 import org.apache.tapestry5.ioc.services.TypeCoercer;
 import org.apache.tapestry5.json.JSONArray;
 import org.apache.tapestry5.json.JSONObject;
+import org.apache.tapestry5.services.PageRenderLinkSource;
 import org.apache.tapestry5.services.Request;
 import org.apache.tapestry5.services.TranslatorSource;
 import org.got5.tapestry5.jquery.DataTableConstants;
 import org.got5.tapestry5.jquery.internal.DataTableModel;
+import org.got5.tapestry5.jquery.pages.other.DataTableAjaxWithNewColumn;
 
 public class OverrideDataTableModel implements DataTableModel {
 
@@ -40,12 +41,15 @@ public class OverrideDataTableModel implements DataTableModel {
 	private JSONObject response = new JSONObject();
 
 	private ComponentResources resources;
+
+	private PageRenderLinkSource linkSource;
 	
-	public OverrideDataTableModel(TypeCoercer typeCoercer,TranslatorSource translatorSource, ComponentResources cr) {
+	public OverrideDataTableModel(TypeCoercer typeCoercer,TranslatorSource translatorSource, ComponentResources cr, PageRenderLinkSource linkSource) {
 		super();
 		this.typeCoercer = typeCoercer;
 		this.translatorSource = translatorSource;
 		this.resources = cr;
+		this.linkSource = linkSource;
 	}
 
 
@@ -184,7 +188,7 @@ public class OverrideDataTableModel implements DataTableModel {
 	    			 
 	    			 //We use the ComponentResources service, for creating an EventLink
 	    			 //We will add the id of the current element as a context of the event link
-	    			 val = String.format("<a href='%s'>Update</a>",resources.createEventLink("select", obj.getId()).toURI());
+	    			 val = String.format("<a href='%s'>Update</a>",linkSource.createPageRenderLinkWithContext(DataTableAjaxWithNewColumn.class,obj.getId()).toURI());
 	    					 
 	    		 }
 	    		 else {

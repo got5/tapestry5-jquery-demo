@@ -31,9 +31,9 @@
 		
 		
 		<div t:type="jquery/showSource" t:ext="html" t:beginLine="20" t:endLine="28" t:path="resources/org/got5/tapestry5/jquery/pages/other/DataTableAjaxWithNewColumn.tml"></div>
-		<div t:type="jquery/showSource" t:ext="java" t:beginLine="42" t:endLine="138" t:path="java/org/got5/tapestry5/jquery/pages/other/DataTableAjaxWithNewColumn.java"></div>
+		<div t:type="jquery/showSource" t:ext="java" t:beginLine="43" t:endLine="142" t:path="java/org/got5/tapestry5/jquery/pages/other/DataTableAjaxWithNewColumn.java"></div>
 		
-		<div t:type="jquery/showSource" t:ext="java" t:beginLine="26" t:endLine="245" t:path="java/org/got5/tapestry5/jquery/data/OverrideDataTableModel.java"></div>
+		<div t:type="jquery/showSource" t:ext="java" t:beginLine="27" t:endLine="249" t:path="java/org/got5/tapestry5/jquery/data/OverrideDataTableModel.java"></div>
 		
 	
 	</div>

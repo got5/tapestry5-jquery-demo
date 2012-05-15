@@ -30,6 +30,7 @@ import org.apache.tapestry5.ioc.services.TypeCoercer;
 import org.apache.tapestry5.json.JSONObject;
 import org.apache.tapestry5.services.AssetSource;
 import org.apache.tapestry5.services.BeanModelSource;
+import org.apache.tapestry5.services.PageRenderLinkSource;
 import org.apache.tapestry5.services.TranslatorSource;
 import org.apache.tapestry5.services.javascript.JavaScriptSupport;
 import org.got5.tapestry5.jquery.data.Celebrity;
@@ -77,8 +78,11 @@ public class DataTableAjaxWithNewColumn
 	@Inject
 	private TranslatorSource ts;
 	
+	@Inject 
+	private PageRenderLinkSource linkSource;
+	
 	@Property
-	private final DataTableModel override = new OverrideDataTableModel(typeCoercer, ts, resources);
+	private final DataTableModel override = new OverrideDataTableModel(typeCoercer, ts, resources, linkSource);
 	
 	public GridDataSource getCelebritySource() {
 		if(celebritySource==null)
