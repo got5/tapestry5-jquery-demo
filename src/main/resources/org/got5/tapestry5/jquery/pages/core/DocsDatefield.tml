@@ -18,7 +18,7 @@ t:activeElement="0" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 				</p:description>
 				
 				<p:link_1><t:componentLink t:url="http://jqueryui.com/demos/datepicker/ "/></p:link_1>
-				<p:link_2><t:componentLink t:url="http://tapestry.apache.org/current/tapestry-core/ref/org/apache/tapestry5/corelib/components/DateField.html "/></p:link_2>
+				<p:link_2><t:componentLink t:url="http://tapestry.apache.org/current/apidocs/org/apache/tapestry5/corelib/components/DateField.html"/></p:link_2>
 				
 	
 			</t:componentDocumentation>

@@ -14,7 +14,7 @@ xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:p
 						<br/>By default we use the jQuery implementation provided by Tapestry-jquery.js. 
 					</p:description>
 					
-					<p:link_1><t:componentLink t:url="http://tapestry.apache.org/current/tapestry-core/ref/org/apache/tapestry5/corelib/components/Zone.html"/></p:link_1>
+					<p:link_1><t:componentLink t:url="http://tapestry.apache.org/current/apidocs/org/apache/tapestry5/corelib/components/Zone.html"/></p:link_1>
 			</t:componentDocumentation>
     	</p:ZoneBlock1>
     	
