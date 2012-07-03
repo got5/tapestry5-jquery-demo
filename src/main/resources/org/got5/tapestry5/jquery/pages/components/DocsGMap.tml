@@ -1,0 +1,37 @@
+<html t:type="layoutWithAccordion" 
+t:title="Alert Demo" 
+t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
+
+<t:jquery.tabs  t:tabs="docs" t:activePanelId="0" t:ajax="false">
+<p:docs>
+	<t:componentDocumentation>
+		<p:title>
+			Google Map Component
+		</p:title>
+		<p:description>
+				This Component is used to generate a Google Map, by using the GMap v3 widget
+		</p:description>
+		<p:link_1>GMap v3: <t:componentLink t:url="http://gmap3.net/index.html"/></p:link_1>
+		<p:param_1>
+                <t:componentParameter
+                    t:name="parameters"
+                    t:required="no"
+                    t:javaType="JSONObject"
+                    t:prefix="prop"
+                    t:description="The JSON-type parameter for the jQuery plugin."
+                />
+        </p:param_1>
+    </t:componentDocumentation>
+    
+
+<div>
+<div t:type="jquery/gmap" t:id="map" t:parameters="options"></div>
+
+<div t:type="jquery/showSource" t:ext="html" t:beginLine="28" t:endLine="28" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsGMap.tml"></div>
+    	
+<div t:type="jquery/showSource" t:ext="java" t:beginLine="5" t:endLine="10" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsGMap.java"></div>
+</div>
+</p:docs>
+</t:jquery.tabs>
+
+</html>

@@ -98,6 +98,6 @@
 	</build>
 
 	<properties>
-		<tapestry-jquery-release-version>3.2.1-SNAPSHOT</tapestry-jquery-release-version>
+		<tapestry-jquery-release-version>3.3.0-SNAPSHOT</tapestry-jquery-release-version>
 	</properties>
 </project>
