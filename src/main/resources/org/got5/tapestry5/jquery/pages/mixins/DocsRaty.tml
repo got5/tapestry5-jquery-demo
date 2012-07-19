@@ -1,0 +1,109 @@
+<html t:type="layoutWithAccordion" t:activeElement="literal:2"
+	t:title="Raty"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+<t:jquery.tabs t:tabs="docs,example" t:activePanelId="0" t:ajax="false">
+
+	<p:docs>
+		<t:componentDocumentation>
+			<p:title>
+				Raty Mixin
+			</p:title>
+			<p:description>
+				This Mixin is used to call a jquery plugin "raty" that will provide rendered stars for different uses: 
+				<li>In a form: You can call the mixin in a Textfield or a
+					Select, it will replace the input with a list of stars to rate
+				</li>
+				<li>In a division: You can call the mixin in a division to
+					display a result.
+				</li>
+			</p:description>
+
+			<p:link_1>
+				<t:componentLink t:url="https://github.com/wbotelhos/raty" />
+			</p:link_1>
+
+			<p:param_1>
+				<t:componentParameter t:name="ratyOptions" t:required="false"
+					t:javaType="JSONObject" t:prefix="prop" t:defaultValue=""
+					t:description="The options you want to pass onto the JQuery plugin 'raty' used for the rate" />
+			</p:param_1>
+			
+			<p:param_2>
+				<t:componentParameter t:name="ratyRates" t:required="false"
+					t:javaType="SelectModel" t:prefix="prop" t:defaultValue=""
+					t:description="the list of rates you want to be displayed/available. The SelectModel values must start from (0 if you want the possiblity of no rate or 1) 
+						and increase its value by 1 for each rate in case of an input to synchronize both" />
+			</p:param_2>
+			
+			<p:param_3>
+				<t:componentParameter t:name="ratyValue" t:required="false"
+					t:javaType="Float" t:prefix="prop" t:defaultValue=""
+					t:description="The value you want to setfor the raty plugin." />
+			</p:param_3>
+			
+			<p:param_4>
+				<t:componentParameter t:name="ratyStarOn" t:required="false"
+					t:javaType="Asset" t:prefix="prop" t:defaultValue=""
+					t:description="The asset containing the image you want to be displayed for an active star icon." />
+			</p:param_4>
+			
+			<p:param_5>
+				<t:componentParameter t:name="ratyStarOff" t:required="false"
+					t:javaType="Asset" t:prefix="prop" t:defaultValue=""
+					t:description="The asset containing the image you want to be displayed for an inactive star icon." />
+			</p:param_5>
+			
+			<p:param_6>
+				<t:componentParameter t:name="ratyCancelOn" t:required="false"
+					t:javaType="Asset" t:prefix="prop" t:defaultValue=""
+					t:description="The asset containing the image you want to be displayed for an active cancel icon." />
+			</p:param_6>
+			
+			<p:param_7>
+				<t:componentParameter t:name="ratyCancelOff" t:required="false"
+					t:javaType="Asset" t:prefix="prop" t:defaultValue=""
+					t:description="The asset containing the image you want to be displayed for an inactive cancel icon." />
+			</p:param_7>
+			
+			<p:param_8>
+				<t:componentParameter t:name="ratyLocation" t:required="false"
+					t:javaType="TagLocation" t:prefix="prop" t:defaultValue=""
+					t:description="The string containing the literal ('before' or 'after') expression for the relative location of the Raty mixin refering to the input." />
+			</p:param_8>
+		</t:componentDocumentation>
+	</p:docs>
+
+	<p:example>
+		<div>
+			<h2>The Raty mixin with a Select or TextField components</h2>
+
+			<t:form t:id="monForm">
+
+				<t:label for="criteriaValue">Raty : </t:label>
+				<input type="text" class="ratingCriteriaValue" t:type="select"
+					t:value="value" t:id="criteriaValue" t:model="model"
+					t:mixins="jquery/raty" t:ratyRates="prop:model" t:ratyValue="value" />
+
+				<t:submit />
+			</t:form>
+
+			<h2>The Raty mixin with the Any Component, for displaying in
+				readn-only the value of the rate</h2>
+
+			<t:any t:mixins="jquery/raty" t:ratyRates="prop:model"
+				t:ratyValue="literal:1" />
+
+			<div t:type="jquery/showSource" t:ext="html" t:beginLine="45"
+				t:endLine="51"
+				t:path="resources/org/got5/tapestry5/jquery/pages/mixins/DocsRaty.tml"></div>
+
+			<div t:type="jquery/showSource" t:ext="java" t:beginLine="82"
+				t:endLine="96"
+				t:path="java/org/got5/tapestry5/jquery/pages/mixins/DocsRaty.java"></div>
+		</div>
+
+	</p:example>
+</t:jquery.tabs>
+</html>

@@ -93,6 +93,7 @@ can fully replace Prototype and Scriptaculous by jQuery
 				<li><t:pagelink t:page="mixins/DocsTooltip">Tooltip</t:pagelink></li>
 				<li><t:pagelink t:page="mixins/DocsSortable">Sortable</t:pagelink></li>
 				<!-- <li><t:pagelink t:page="mixins/DocsZoneRefresh">ZoneRefresh</t:pagelink></li>-->
+				<li><t:pagelink t:page="mixins/DocsRaty">Raty</t:pagelink></li>
 				<li><t:pagelink t:page="mixins/DocsWidget">Widget</t:pagelink></li>
 			</ul>
 		</p:block3>
