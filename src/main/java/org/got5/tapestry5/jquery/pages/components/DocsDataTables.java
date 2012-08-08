@@ -20,7 +20,9 @@ import java.util.List;
 
 import org.apache.tapestry5.ComponentResources;
 import org.apache.tapestry5.annotations.AfterRender;
+import org.apache.tapestry5.annotations.Environmental;
 import org.apache.tapestry5.annotations.Import;
+import org.apache.tapestry5.annotations.OnEvent;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.annotations.SessionState;
 import org.apache.tapestry5.beaneditor.BeanModel;
@@ -29,7 +31,11 @@ import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.json.JSONObject;
 import org.apache.tapestry5.services.AssetSource;
 import org.apache.tapestry5.services.BeanModelSource;
+import org.apache.tapestry5.services.Request;
 import org.apache.tapestry5.services.javascript.JavaScriptSupport;
+import org.got5.tapestry5.jquery.DataTableConstants;
+import org.got5.tapestry5.jquery.JQueryEventConstants;
+import org.got5.tapestry5.jquery.components.InPlaceEditor;
 import org.got5.tapestry5.jquery.data.Celebrity;
 import org.got5.tapestry5.jquery.data.CelebritySource;
 import org.got5.tapestry5.jquery.data.IDataSource;
@@ -59,6 +65,9 @@ public class DocsDataTables
 	
 	@Property
 	private Celebrity current;
+	
+	@Property
+	private int index;
 	
 	@SuppressWarnings("unchecked")
 	private BeanModel model;
@@ -145,5 +154,37 @@ public class DocsDataTables
 				return "";
 			}
 		};
+	}
+	
+	@Property
+	@Environmental //This annotation is required for the property bound to 'row' parameter
+	private Celebrity currentBis;
+	
+	@Property
+	@Environmental //This annotation is required for the property bound to 'index' parameter
+	private int indexBis;
+	
+	@Inject
+	private Request request;
+	
+	/**
+	 * Event handler method called when datatable's search field is used
+	 * Gives a chance to the user to filter data in lazy-loading mode (mode=true)
+	 * */
+	@OnEvent(value= JQueryEventConstants.FILTER_DATA, component="datatableAjax")
+	public void filterData(){
+		String val = request.getParameter(DataTableConstants.SEARCH); 
+		dataSource.filter(val);
+	}
+	
+	/**
+	 * Event handler method for InPlaceEditor used in datatable with mode=true 
+	 * Just to show that 'ajax' components can be used inside the datatable
+	 * */
+	@OnEvent(component = "firstName", value = InPlaceEditor.SAVE_EVENT)
+	void setFirstName(Long id, String value)
+	{
+		Celebrity c = dataSource.getCelebrityById(id);
+		c.setFirstName(value);
 	}
 }

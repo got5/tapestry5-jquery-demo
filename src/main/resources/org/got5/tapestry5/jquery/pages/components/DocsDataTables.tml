@@ -2,7 +2,7 @@
 t:title="jQuery DataTables" 
 t:activeElement="1">
  	
- 	<t:jquery.tabs  t:tabs="docs,example" t:activePanelId="0" t:ajax="false">
+ 	<t:jquery.tabs  t:tabs="docs,example,exampleWithAjaxMode" t:activePanelId="0" t:ajax="false">
  	
  		<p:docs>
  			<t:componentDocumentation>
@@ -12,7 +12,8 @@ t:activeElement="1">
 				<p:description>
 					This component will display a dynamic table, like the Tapestry Grid component. 
 					It has the same behavior as the Grid component : same parameters, we
-					can override the rendering of a header or a cell ..., but add some additional parameters. 
+					can override the rendering of a header or a cell ..., but add some additional parameters.
+					Also, it provides an ajax mode to handle lazy loading or server-side pagination. 
 				</p:description>
 				
 				<p:link_1><t:componentLink t:url="http://datatables.net/"/></p:link_1>
@@ -34,7 +35,8 @@ t:activeElement="1">
 						t:prefix="literal"
 						defaultValue="false"
 						t:description="By default (mode=false), all the datas are added to the generated HTML (in a table element). 
-									   But if mode=true, a ajax request will be send in order to get a part of the datas (when we want to filter, sort ...).
+									   But if mode=true, a ajax request will be send in order to get a part of the datas (when we want to filter, sort ...). This feature is suitable for lazy loading or server-side pagination.
+									   Note that if mode=true, the iteration properties (bound to 'row' and 'index' parameters) expected to be used in block parameters (&lt;p:fieldNameCell&gt;...&lt;/p:fieldNameCell&gt;) must be annotated with '@Environmental'.
 									   You can define your own response by using the dataTableModel parameter."
 					/>
 				</p:param_2>
@@ -52,19 +54,38 @@ t:activeElement="1">
  		</p:docs>
  		
  		<p:example>
-<t:jquery.datatable t:source="celebritySource" rowsPerPage="5" 
-        exclude="id, biography, birthDateVerified"
-		reorder="lastName,firstName,occupation,dateOfBirth" t:options="options"  
-		t:mode="false" t:model="model" t:row="current" t:tableInformation="tableInformation">
-		
-	<p:firstNameHeader>First Name</p:firstNameHeader>
-			
-	<p:firstNameCell>${current?.firstName}</p:firstNameCell>
-		
-</t:jquery.datatable>
-		
-		<div t:type="jquery/showSource" t:ext="html" t:beginLine="55" t:endLine="64" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsDataTables.tml"></div>
-		<div t:type="jquery/showSource" t:ext="java" t:beginLine="44" t:endLine="149" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsDataTables.java"></div>
+			<t:jquery.datatable t:id="datatable1" t:source="celebritySource" rowsPerPage="5" 
+			        exclude="id, biography, birthDateVerified"
+					reorder="lastName,firstName,occupation,dateOfBirth" t:options="options"  
+					t:mode="false" t:model="model" t:row="current" t:tableInformation="tableInformation">
+					
+				<p:firstNameHeader>First Name</p:firstNameHeader>
+						
+				<p:firstNameCell>${current?.firstName}</p:firstNameCell>
+					
+			</t:jquery.datatable>
+				
+			<div t:type="jquery/showSource" t:ext="html" t:beginLine="55" t:endLine="64" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsDataTables.tml"></div>
+			<div t:type="jquery/showSource" t:ext="java" t:beginLine="44" t:endLine="149" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsDataTables.java"></div>
  		</p:example>
+ 		
+ 		<p:exampleWithAjaxMode>
+			<t:jquery.datatable t:id="datatableAjax" t:source="celebritySource" rowsPerPage="5" 
+			        exclude="id, biography, birthDateVerified"
+					reorder="lastName,firstName,occupation,dateOfBirth" t:options="options"  
+					t:mode="true" t:model="model" t:row="currentBis" t:rowIndex="indexBis" t:tableInformation="tableInformation">
+					
+				<p:firstNameHeader>First Name</p:firstNameHeader>
+						
+				<p:lastNameCell>${currentBis?.lastName}</p:lastNameCell>
+				
+				<p:firstNameCell><div t:id="firstname" t:type="jquery/inPlaceEditor" value="currentBis?.firstName" t:context="currentBis?.id"/></p:firstNameCell>
+					
+			</t:jquery.datatable>
+					
+			<div t:type="jquery/showSource" t:ext="html" t:beginLine="72" t:endLine="84" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsDataTables.tml"></div>
+			<div t:type="jquery/showSource" t:ext="java" t:beginLine="158" t:endLine="190" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsDataTables.java"></div>
+ 		</p:exampleWithAjaxMode>
+ 		
  	</t:jquery.tabs>
 </html>
