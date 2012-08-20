@@ -13,7 +13,8 @@ t:activeElement="1">
 					This component will display a dynamic table, like the Tapestry Grid component. 
 					It has the same behavior as the Grid component : same parameters, we
 					can override the rendering of a header or a cell ..., but add some additional parameters.
-					Also, it provides an ajax mode to handle lazy loading or server-side pagination. 
+					Also, it provides an ajax mode to handle lazy loading or server-side pagination.
+					In the current version, you can not use the DataTable component inside a Tapestry Form.
 				</p:description>
 				
 				<p:link_1><t:componentLink t:url="http://datatables.net/"/></p:link_1>
@@ -65,7 +66,7 @@ t:activeElement="1">
 					
 			</t:jquery.datatable>
 			<br/><br/><br/>		
-			<div t:type="jquery/showSource" t:ext="html" t:beginLine="55" t:endLine="64" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsDataTables.tml"></div>
+			<div t:type="jquery/showSource" t:ext="html" t:beginLine="58" t:endLine="67" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsDataTables.tml"></div>
 			<div t:type="jquery/showSource" t:ext="java" t:beginLine="44" t:endLine="149" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsDataTables.java"></div>
  		</p:example>
  		
@@ -83,7 +84,7 @@ t:activeElement="1">
 					
 			</t:jquery.datatable>
 			<br/><br/><br/>		
-			<div t:type="jquery/showSource" t:ext="html" t:beginLine="72" t:endLine="84" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsDataTables.tml"></div>
+			<div t:type="jquery/showSource" t:ext="html" t:beginLine="74" t:endLine="85" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsDataTables.tml"></div>
 			<div t:type="jquery/showSource" t:ext="java" t:beginLine="158" t:endLine="190" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsDataTables.java"></div>
  		</p:exampleWithAjaxMode>
  		

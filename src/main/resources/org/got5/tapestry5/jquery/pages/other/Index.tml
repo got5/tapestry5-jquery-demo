@@ -10,15 +10,15 @@
     		<li>
     			<a t:type="pageLink" t:page="other/progressiveDisplayWithModal">ProgressiveDisplay component combining with a model window</a>
     		</li>
-    		<li>
+    		<!-- >li>
     			<a t:type="pageLink" t:page="other/DataTableAjaxWithNewColumn">How can we add a column in DataTable using Ajax Pagination</a>
-    		</li>
+    		</li-->
     		<li>
     			<a t:type="pageLink" t:page="other/DataTableWithFilters">How to add a Filter mechanism on each columns of a DataTable</a>
     		</li>
-    		<li>
+    		<!-- li>
     			<a t:type="pageLink" t:page="other/DocumentViewer">Document Viewer with the Colorbox widget</a>
-    		</li>
+    		</li-->
     	</ul>
     </div>
     

@@ -44,7 +44,7 @@ import org.got5.tapestry5.jquery.internal.TableInformation;
 @Import(stylesheet ={ "context:dataTables/css/demo_table_jui.css",
 					  "context:dataTables/css/demo_page.css",	
 					  "context:dataTables/css/demo_table.css",
-					  "context:dataTables/TableTools/css/TableTools.css"})
+					  "context:dataTables/TableTools/media/css/TableTools.css"})
 public class DataTableWithFilters
 {
 	@SessionState

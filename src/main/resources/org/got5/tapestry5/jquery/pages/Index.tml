@@ -95,7 +95,7 @@
 	    <dependency>
 	        <groupId>org.got5</groupId>
 	        <artifactId>tapestry5-jquery</artifactId>
-	        <version>3.0.0</version>
+	        <version>3.3.1</version>
 	    </dependency>
 	    ...
 	</dependencies>
@@ -133,7 +133,7 @@
 	            <div style="visibility: hidden; position: absolute; top: -9999%; left: -9999%;">
 	                <![CDATA[
 					dependencies {
-					    compile group: 'org.got5', name: 'tapestry5-jquery', version: '3.0.0'
+					    compile group: 'org.got5', name: 'tapestry5-jquery', version: '3.3.1'
 					}
 					
 					repositories {
