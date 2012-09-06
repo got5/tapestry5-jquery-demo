@@ -1,5 +1,5 @@
 //
-// Copyright 2010 GOT5 (GO Tapestry 5)
+// Copyright 2012 GOT5 (GO Tapestry 5)
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,12 +20,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.tapestry5.ComponentResources;
+import org.apache.tapestry5.annotations.InjectComponent;
 import org.apache.tapestry5.annotations.OnEvent;
 import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.beaneditor.BeanModel;
+import org.apache.tapestry5.corelib.components.Zone;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.json.JSONArray;
+import org.apache.tapestry5.json.JSONLiteral;
 import org.apache.tapestry5.json.JSONObject;
 import org.apache.tapestry5.services.BeanModelSource;
 import org.apache.tapestry5.services.Request;
@@ -102,5 +105,35 @@ public class DocsInPlaceEditor
 	{
 		User user = (User)users.get(id.intValue());
 		user.setFirstName(value);
+	}
+	
+	@InjectComponent
+	private Zone updateZone;
+
+	/**
+	 * <p>
+	 * JSON parameter used to configure InPlaceEditor callback
+	 * </p>
+	 */
+	public JSONObject getOptionsJSON()
+	{	
+		JSONObject params=new JSONObject();
+		Object [] context = new Object [] {currentIndex};
+		String listenerURI = _componentResources.createEventLink("refresh", context).toAbsoluteURI(false);
+	    String zoneID = updateZone.getClientId();
+	    params.put("tooltip", "Cliquer pour �diter");
+		params.put("callback", new JSONLiteral("function(value, settings)" +
+							   "{" +
+							   " var zoneElement = $('#"+zoneID+"');" +
+							   " zoneElement.tapestryZone('update',{url : '"+listenerURI+"',params : {id:"+currentIndex+"} });" +
+							   "}"));
+	return params;
+	}
+
+	@OnEvent(value = "refresh")
+	public Object refresh(Long id) {
+			user = (User)users.get(id.intValue());
+			return updateZone.getBody();
+		
 	}
 }
