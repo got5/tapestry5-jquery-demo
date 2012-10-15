@@ -18,7 +18,7 @@
 		<dependency>
 			<groupId>org.apache.tapestry</groupId>
 			<artifactId>tapestry-yuicompressor</artifactId>
-			<version>5.3.6</version>
+			<version>${tapestry-release-version}</version>
 		</dependency>
 		<dependency>
          		<groupId>org.got5</groupId>
@@ -98,6 +98,7 @@
 	</build>
 
 	<properties>
+		<tapestry-release-version>5.3.6</tapestry-release-version>
 		<tapestry-jquery-release-version>3.3.3</tapestry-jquery-release-version>
 	</properties>
 </project>

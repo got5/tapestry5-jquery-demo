@@ -48,17 +48,24 @@ t:activeElement="1" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
  			rowIndex="currentIndex" rowsPerPage="10">
  	<p:firstnameCell>
     	<div t:id="firstName" t:type="jquery/inPlaceEditor" 
-    		value="user.firstName" t:context="${currentIndex}"/>
+    		value="user.firstName" t:context="${currentIndex}" t:options="optionsJSON"/>
     </p:firstnameCell>
     <p:lastnameCell>
     	<div t:id="lastName" t:type="jquery/inPlaceEditor" 
-    		value="user.lastName" t:context="${currentIndex}"/>
+    		value="user.lastName" t:context="${currentIndex}" t:options="optionsJSON"/>
      </p:lastnameCell>
 </t:grid>
+
+ <t:zone t:id="updateZone" id="updateZone" visible="false">
+ 		<div>
+  			Last in place editor update is related to <br/>
+			<t:beandisplay object="user"/>
+		</div>	
+</t:zone> 
 		    
-	    	<div t:type="jquery/showSource" t:ext="html" t:beginLine="47" t:endLine="57" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsInPlaceEditor.tml"></div>
+	    	<div t:type="jquery/showSource" t:ext="html" t:beginLine="47" t:endLine="65" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsInPlaceEditor.tml"></div>
 	    	
-	    	<div t:type="jquery/showSource" t:ext="java" t:beginLine="38" t:endLine="106" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsInPlaceEditor.java"></div>    	
+	    	<div t:type="jquery/showSource" t:ext="java" t:beginLine="38" t:endLine="138" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsInPlaceEditor.java"></div>    	
 	    </p:example>
     </t:jquery.tabs>
 </html>
