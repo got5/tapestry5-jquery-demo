@@ -1,0 +1,98 @@
+<html t:type="layoutWithAccordion" t:activeElement="literal:2"
+	t:title="Confirm"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+<t:jquery.tabs t:tabs="docs,example" t:activePanelId="0" t:ajax="false">
+
+	<p:docs>
+		<t:componentDocumentation>
+			<p:title>
+				Confirm Mixin
+			</p:title>
+			<p:description>
+				This mixin is used to attach a JavaScript confirmation box to the onclick event of any component that implements ClientElement.
+				<br />
+				Depending on the mixin configuration, default javascript confirm or JQuery dialog box can be used.
+			</p:description>
+
+			<p:link_1>
+				<t:componentLink t:url="http://jqueryui.com/dialog/" />
+			</p:link_1>
+
+			<p:param_1>
+				<t:componentParameter t:name="message" t:required="false"
+					t:javaType="String" t:prefix="literal"
+					t:defaultValue="Are you sure?"
+					t:description="Confirmation message to display." />
+			</p:param_1>
+			<p:param_2>
+				<t:componentParameter t:name="title" t:required="false"
+					t:javaType="String" t:prefix="literal"
+					t:defaultValue="Confirmation" t:description="Dialog box title." />
+			</p:param_2>
+			<p:param_3>
+				<t:componentParameter t:name="validationMsg" t:required="false"
+					t:javaType="String" t:prefix="literal" t:defaultValue="OK"
+					t:description="Validation Button text." />
+			</p:param_3>
+			<p:param_4>
+				<t:componentParameter t:name="cancelMsg" t:required="false"
+					t:javaType="String" t:prefix="literal" t:defaultValue="OK"
+					t:description="Cancel Button text." />
+			</p:param_4>
+			<p:param_5>
+				<t:componentParameter t:name="height" t:required="false"
+					t:javaType="String" t:prefix="literal" t:defaultValue="180"
+					t:description="Confirmation box height." />
+			</p:param_5>
+			<p:param_5>
+				<t:componentParameter t:name="isModal" t:required="false"
+					t:javaType="String" t:prefix="literal" t:defaultValue="true"
+					t:description="If this parameter is set to true, the user can't interact with the application while the confirmation box is displayed." />
+			</p:param_5>
+			<p:param_6>
+				<t:componentParameter t:name="isResizable" t:required="false"
+					t:javaType="String" t:prefix="literal" t:defaultValue="false"
+					t:description="If this parameter is set to true, the user can dynamically resize the confirmation box." />
+			</p:param_6>
+			<p:param_7>
+				<t:componentParameter t:name="isDraggable" t:required="false"
+					t:javaType="String" t:prefix="literal" t:defaultValue="true"
+					t:description="If this parameter is set to true, the user can drag the confirmation box." />
+			</p:param_7>
+			<p:param_8>
+				<t:componentParameter t:name="useDefaultConfirm" t:required="false"
+					t:javaType="String" t:prefix="literal" t:defaultValue="false"
+					t:description="If this parameter is set to true, default javascript alert is used. Otherwise, jquery dialog box is used, and can be customized with several parameters. Usable parameters in both configurations: message. Usable parameters when useDefaultConfirm = false: title, validationMsg, cancelMsg, isModal, isResizable, isDraggable, validationMsg, cancelMsg, isModal, isResizable, height" />
+			</p:param_8>
+		</t:componentDocumentation>
+	</p:docs>
+
+	<p:example>
+
+		<h2>ActionLink/Zone case (width jquery dialog):</h2>
+		<div t:type="zone" t:id="counterZone" id="counterZone">
+			<p>
+				You have clicked the link <strong>${clickCount}</strong> times.
+			</p>
+		</div>
+
+		<a t:type="actionlink" t:id="actionLinkConfirm" t:zone="counterZone"
+			t:mixins="jquery/Confirm">Increment the count</a>
+
+		<h2>Classic link case (with default javascript confirm):</h2>
+		<t:pagelink t:id="pageLinkConfirm" page="mixins/DocsConfirm"
+			t:useDefaultConfirm="true" t:message="Return to Documentation?"
+			t:mixins="jquery/Confirm">PageLink confirmation test</t:pagelink>
+
+		<div t:type="jquery/showSource" t:ext="html" t:beginLine="74"
+			t:endLine="87"
+			t:path="resources/org/got5/tapestry5/jquery/pages/mixins/DocsConfirm.tml"></div>
+
+		<div t:type="jquery/showSource" t:ext="html" t:beginLine="0" t:endLine="4"
+			t:path="resources/org/got5/tapestry5/jquery/pages/mixins/DocsConfirm.properties"></div>
+
+	</p:example>
+</t:jquery.tabs>
+</html>

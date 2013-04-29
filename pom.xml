@@ -99,6 +99,6 @@
 
 	<properties>
 		<tapestry-release-version>5.3.6</tapestry-release-version>
-		<tapestry-jquery-release-version>3.3.3</tapestry-jquery-release-version>
+		<tapestry-jquery-release-version>3.3.6-SNAPSHOT</tapestry-jquery-release-version>
 	</properties>
 </project>

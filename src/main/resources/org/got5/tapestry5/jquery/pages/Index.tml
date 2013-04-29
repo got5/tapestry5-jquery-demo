@@ -170,6 +170,12 @@
 	
 			
 			<h2>Changelog</h2>
+			<strong> 3.0.1 :</strong>
+			<div class="releasenotes">
+				<ul>
+					<li>add Mixins : Confirm, ContextMenu</li>
+				</ul>
+			</div>
 			<strong> 3.0.0 :</strong>
 			<div class="releasenotes">
 				<ul>

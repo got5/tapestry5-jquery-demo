@@ -87,6 +87,8 @@ can fully replace Prototype and Scriptaculous by jQuery
 			<ul>
 				<li><t:pagelink t:page="mixins/DocsBind">Bind</t:pagelink></li>
 				<li><t:pagelink t:page="mixins/DocsButton">Button</t:pagelink></li>
+				<li><t:pagelink t:page="mixins/DocsConfirm">Confirm</t:pagelink></li>
+				<li><t:pagelink t:page="mixins/DocsContextMenu">ContextMenu</t:pagelink></li>
 				<li><t:pagelink t:page="mixins/DocsCustomDatepicker">CustomDatepicker</t:pagelink></li>
 				<li><t:pagelink t:page="mixins/DocsMask">Mask</t:pagelink></li>
 				<li><t:pagelink t:page="mixins/Docsreveal">Reveal</t:pagelink></li>

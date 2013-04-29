@@ -42,6 +42,8 @@ public class Autocomplete
     	list.add("Button");
     	list.add("Carousel");
     	list.add("Checkbox");
+    	list.add("Confirm");
+    	list.add("ContextMenu");
     	list.add("CustomDatepicker");
     	list.add("Datefield");
     	list.add("Dialog");
