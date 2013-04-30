@@ -67,7 +67,7 @@ t:activeElement="1">
 			</t:jquery.datatable>
 			<br/><br/><br/>		
 			<div t:type="jquery/showSource" t:ext="html" t:beginLine="58" t:endLine="67" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsDataTables.tml"></div>
-			<div t:type="jquery/showSource" t:ext="java" t:beginLine="44" t:endLine="149" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsDataTables.java"></div>
+			<div t:type="jquery/showSource" t:ext="java" t:beginLine="44" t:endLine="157" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsDataTables.java"></div>
  		</p:example>
  		
  		<p:exampleWithAjaxMode>
@@ -85,7 +85,7 @@ t:activeElement="1">
 			</t:jquery.datatable>
 			<br/><br/><br/>		
 			<div t:type="jquery/showSource" t:ext="html" t:beginLine="74" t:endLine="85" t:path="resources/org/got5/tapestry5/jquery/pages/components/DocsDataTables.tml"></div>
-			<div t:type="jquery/showSource" t:ext="java" t:beginLine="158" t:endLine="190" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsDataTables.java"></div>
+			<div t:type="jquery/showSource" t:ext="java" t:beginLine="159" t:endLine="188" t:path="java/org/got5/tapestry5/jquery/pages/components/DocsDataTables.java"></div>
  		</p:exampleWithAjaxMode>
  		
  	</t:jquery.tabs>
