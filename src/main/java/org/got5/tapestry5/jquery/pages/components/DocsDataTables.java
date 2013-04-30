@@ -157,11 +157,9 @@ public class DocsDataTables
 	}
 	
 	@Property
-	@Environmental //This annotation is required for the property bound to 'row' parameter
 	private Celebrity currentBis;
 	
 	@Property
-	@Environmental //This annotation is required for the property bound to 'index' parameter
 	private int indexBis;
 	
 	@Inject
