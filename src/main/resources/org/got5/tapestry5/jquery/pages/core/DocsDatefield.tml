@@ -14,7 +14,10 @@ t:activeElement="0" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 					<br/>In RemovePrototype mode we use the jQuery implementation provided by Tapestry-jquery.js and we override <a href="http://tapestry.apache.org/current/apidocs/org/apache/tapestry5/internal/services/javascript/DateFieldStack.html">datefieldStack</a>.
 					
 					<br/>Tapestry's DateField component is a wrapper around WebFX DatePicker. The new jQueryDatefieldStack add all the scripts files required by jQuery-UI Calendar. 
-	
+					
+					<br/>You have to be careful with the format of a date. A jQuery and Java Date formats are totally different. A conversion is automatically done by Tapestry5-jQuery. But if
+					the format you need is not managed, you should specify the format parameter of the Tapestry DateField component, and the jQuery UI dateFormat parameter thanks to the params parameter 
+					of the Tapestry5-jQuery CustomDatepicker mixin. 
 				</p:description>
 				
 				<p:link_1><t:componentLink t:url="http://jqueryui.com/demos/datepicker/ "/></p:link_1>
