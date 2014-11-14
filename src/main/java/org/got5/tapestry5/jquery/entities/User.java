@@ -107,7 +107,7 @@ public class User
 	static {
 		
 		ROOT.addChild(new User("Renault")
-						.addChild(new User("Mégane"))
+						.addChild(new User("Espace"))
 						.addChild(new User("Clio")
 							.addChildrenNamed("Clio Campus", "Clio Sport")
 						)
