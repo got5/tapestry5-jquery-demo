@@ -7,6 +7,7 @@ import java.util.List;
 import org.apache.tapestry5.Asset;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.ApplicationStateManager;
+import org.apache.tapestry5.services.javascript.JavaScriptAggregationStrategy;
 import org.apache.tapestry5.services.javascript.JavaScriptStack;
 import org.apache.tapestry5.services.javascript.JavaScriptStackSource;
 import org.apache.tapestry5.services.javascript.StylesheetLink;
@@ -44,7 +45,15 @@ public class ThemeStackSwitcher implements JavaScriptStack{
 		return Collections.emptyList();
 	}
 
-	public String getInitialization() {
+    public List<String> getModules() {
+    	return Collections.emptyList();
+    }
+
+    public JavaScriptAggregationStrategy getJavaScriptAggregationStrategy() {
+    	return org.apache.tapestry5.services.javascript.JavaScriptAggregationStrategy.COMBINE_AND_MINIMIZE;
+    }
+
+    public String getInitialization() {
 		return null;
 	}
 
