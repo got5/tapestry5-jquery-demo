@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>tapestry5-jquery-demo</artifactId>
 	<groupId>org.got5</groupId>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>Tapestry 5 JQuery Demo WebSite</name>
 
@@ -16,19 +16,29 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.tapestry</groupId>
-			<artifactId>tapestry-yuicompressor</artifactId>
-			<version>${tapestry-release-version}</version>
-		</dependency>
-		<dependency>
          		<groupId>org.got5</groupId>
         		<artifactId>tapestry5-jquery</artifactId>
         		<version>${tapestry-jquery-release-version}</version>
-            	</dependency>
-         
-	</dependencies>
+        </dependency>
+        <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+                <version>2.3</version>
+        </dependency>
+
+
+        </dependencies>
 	<repositories>
-                <repository>
+        <repository>
+            <id>apache-snapshots</id>
+            <url>http://repository.apache.org/snapshots</url>
+        </repository>
+
+        <repository>
+            <id>apache-releases</id>
+            <url>https://repository.apache.org/content/repositories/releases/</url>
+        </repository>
+        <repository>
 			<id>devlab722-repo</id>
 			<url>http://nexus.devlab722.net/nexus/content/repositories/releases</url>
 			<releases>
@@ -98,7 +108,7 @@
 	</build>
 
 	<properties>
-		<tapestry-release-version>5.3.7</tapestry-release-version>
-		<tapestry-jquery-release-version>3.3.8</tapestry-jquery-release-version>
+		<tapestry-release-version>5.4-beta-22</tapestry-release-version>
+		<tapestry-jquery-release-version>4.0.1-SNAPSHOT</tapestry-jquery-release-version>
 	</properties>
 </project>
