@@ -31,6 +31,11 @@ public class ThemeSwitcher {
 	@Property
 	private String theme;
 	
+	@Parameter (value="FALSE")
+	@Property
+    private Boolean labelVisible;
+	
+	
 	@Inject
 	private JavaScriptSupport javascriptsupport;
 	

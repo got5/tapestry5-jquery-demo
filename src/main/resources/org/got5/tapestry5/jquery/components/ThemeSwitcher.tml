@@ -2,7 +2,9 @@
 	<div class="change-style">
 		<t:form t:id="styleswitch">
 			<p>
-				<label for="i-theme">Select a jQuery UI theme:</label>
+				<t:if test="labelVisible">
+            		<label for="i-theme">Select a jQuery UI theme:</label>
+        		</t:if>
 				<t:select t:clientId="i-theme" t:id="theme" model="themeModel" t:blankOption="NEVER"/>
 			</p>
 			
