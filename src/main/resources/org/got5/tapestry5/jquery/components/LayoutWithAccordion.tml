@@ -9,28 +9,40 @@
 <meta name="Keywords" content="${keywords}" />
 </head>
 <body id="homepage">
-<div class="wrapper bs">
-<ul class="nav">
-	<li><t:pagelink t:page="index">Home</t:pagelink></li>
-	<li><t:pagelink t:page="other/Index">Other Samples</t:pagelink></li>
-	<li><a href="https://github.com/got5/tapestry5-jquery">Download</a>
-	</li>
-	<li><a href="http://twitter.com/#!/GOTapestry5">Twitter</a></li>
-	<li class="last"><a
-		href="https://groups.google.com/forum/?hl=fr#!forum/tapestry5-jquery">Google
-	Group</a></li>
+<div class="wrapper">
+	<header class="navbar-inverse ">
+        <div class="container">
+            <nav class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                    	<t:pagelink t:page="index">Home</t:pagelink>
+                    	
+                    </li>
+					<li>
+						<t:pagelink t:page="other/Index">Other Samples</t:pagelink>
+					</li>
+					<li>
+						<a href="https://github.com/got5/tapestry5-jquery">Download</a>
+					</li>
+					<li><a href="http://twitter.com/#!/GOTapestry5">Twitter</a></li>
+					<li class="last">
+						<a href="https://groups.google.com/forum/?hl=fr#!forum/tapestry5-jquery">Google Group</a>
+					</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-</ul>
-
+ 
 <div id="top">
+
 
 <h1><img src="${context:/css/layout/tapestry.png}" alt="Tapestry"
 	id="tapestry" /></h1>
 
 
 
-<div id="aside">Tapestry5 jQuery provides jQuery Components and
-can fully replace Prototype and Scriptaculous by jQuery
+<div id="aside">Tapestry5 jQuery provides jQuery Components that play well with Tapestry
 <div class="themeSwitcher"><t:themeSwitcher /></div>
 </div>
 
@@ -47,7 +59,6 @@ can fully replace Prototype and Scriptaculous by jQuery
 		t:activeElementId="activeElement" t:params="params">
 		<p:block1>
 			<ul>
-				<li><t:pagelink t:page="core/DocsZone">Zone</t:pagelink></li>
 				<li><t:pagelink t:page="core/DocsDateField">DateField</t:pagelink></li>
 				<li><t:pagelink t:page="core/DocsValidation">Validation</t:pagelink></li>
 				<li><t:pagelink t:page="core/DocsGrid">Grid</t:pagelink></li>
@@ -79,7 +90,6 @@ can fully replace Prototype and Scriptaculous by jQuery
 				<li><t:pagelink t:page="components/DocsDraggable">Draggable/Droppable</t:pagelink></li>
 				<li><t:pagelink t:page="components/DocsInPlaceEditor">InPlaceEditor</t:pagelink></li>
 				<li><t:pagelink t:page="components/DocsJGrowl">JGrowl alerts</t:pagelink></li>
-				<li><t:pagelink t:page="components/DocsGMap">Google Map</t:pagelink></li>
 			</ul>
 		</p:block2>
 
