@@ -17,6 +17,7 @@ import org.apache.tapestry5.internal.TapestryInternalUtils;
 import org.apache.tapestry5.ioc.Messages;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.json.JSONObject;
+import org.apache.tapestry5.services.PageRenderLinkSource;
 import org.apache.tapestry5.services.javascript.JavaScriptStackSource;
 import org.apache.tapestry5.services.javascript.JavaScriptSupport;
 import org.got5.tapestry5.jquery.services.ChoosenTheme;
@@ -47,6 +48,9 @@ public class ThemeSwitcher {
 	
 	@Inject
 	private ComponentResources cr;
+	
+	@Inject
+	private PageRenderLinkSource prls;
 	
 	@Parameter
 	private String urlParam; 
@@ -87,6 +91,6 @@ public class ThemeSwitcher {
 		String themeName = theme.substring("jqueryui_".length());
 		choosen = new ChoosenTheme(theme);
 			
-		return cr.createPageLink(cr.getPageName(), false, null);
+		return prls.createPageRenderLink(cr.getPageName());
 	}
 }
