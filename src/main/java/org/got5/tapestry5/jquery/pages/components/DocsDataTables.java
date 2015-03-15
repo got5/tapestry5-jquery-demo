@@ -120,7 +120,7 @@ public class DocsDataTables
 		 * have to include it in your page. The DataTable will do it for you 
 		 */
 		js.importJavaScriptLibrary(
-			as.getExpandedAsset("${assets.path}/components/datatables/jquery.dataTables.min.js"));
+			as.getExpandedAsset("${jquery.assets.root}/vendor/components/datatables/jquery.dataTables.js"));
 		
 		
 		js.importJavaScriptLibrary(
