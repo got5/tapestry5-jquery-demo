@@ -17,6 +17,7 @@ import org.apache.tapestry5.ioc.internal.util.InternalUtils;
 import org.apache.tapestry5.ioc.services.TypeCoercer;
 import org.apache.tapestry5.json.JSONArray;
 import org.apache.tapestry5.json.JSONObject;
+import org.apache.tapestry5.services.PageRenderLinkSource;
 import org.apache.tapestry5.services.Request;
 import org.apache.tapestry5.services.TranslatorSource;
 import org.got5.tapestry5.jquery.DataTableConstants;
@@ -41,13 +42,16 @@ public class SampleDataTableModel implements DataTableModel {
 	private TranslatorSource translatorSource;
 	
 	private ComponentResources cr;
+	
+	private PageRenderLinkSource prls;
 	 
 	private JSONObject response = new JSONObject();
-	public SampleDataTableModel(TypeCoercer typeCoercer,TranslatorSource translatorSource, ComponentResources cr) {
+	public SampleDataTableModel(TypeCoercer typeCoercer,TranslatorSource translatorSource, ComponentResources cr, PageRenderLinkSource prls) {
 		super();
 		this.typeCoercer = typeCoercer;
 		this.translatorSource = translatorSource;
 		this.cr = cr;
+		this.prls = prls;
 	}
 
 
@@ -202,7 +206,7 @@ public class SampleDataTableModel implements DataTableModel {
 	                    
 	                }
 			 	if(name.equalsIgnoreCase("lastName")){
-			 		val = "<a href=\""+cr.createPageLink(DocsDataTables.class, false, val)+"\">"+val+"</a>";
+			 		val = "<a href=\""+prls.createPageRenderLinkWithContext(DocsDataTables.class, val)+"\">"+val+"</a>";
 			 	}
 			 	
 			 	cell.put(val);
