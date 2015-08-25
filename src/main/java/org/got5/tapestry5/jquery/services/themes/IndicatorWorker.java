@@ -1,4 +1,4 @@
-package org.got5.tapestry5.jquery.services;
+package org.got5.tapestry5.jquery.services.themes;
 
 import org.apache.tapestry5.annotations.AfterRender;
 import org.apache.tapestry5.json.JSONObject;
