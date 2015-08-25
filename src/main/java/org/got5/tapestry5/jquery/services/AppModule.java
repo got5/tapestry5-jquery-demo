@@ -43,6 +43,11 @@ import org.got5.tapestry5.jquery.JQuerySymbolConstants;
 import org.got5.tapestry5.jquery.data.IDataSource;
 import org.got5.tapestry5.jquery.data.MockDataSource;
 import org.got5.tapestry5.jquery.pages.GAnalyticsScriptsInjector;
+import org.got5.tapestry5.jquery.services.themes.IndicatorWorker;
+import org.got5.tapestry5.jquery.services.themes.SmoothnessStack;
+import org.got5.tapestry5.jquery.services.themes.SouthStreetStack;
+import org.got5.tapestry5.jquery.services.themes.SunnyStack;
+import org.got5.tapestry5.jquery.services.themes.ThemeStackSwitcher;
 
 @SubModule(value = JQueryModule.class)
 public class AppModule
@@ -66,6 +71,8 @@ public class AppModule
     	configuration.add(JQuerySymbolConstants.JQUERY_ALIAS, "$");
     	
     	configuration.add(JQuerySymbolConstants.JQUERY_UI_DEFAULT_THEME, "context:css/empty.css");
+    	
+    	configuration.add(SymbolConstants.JAVASCRIPT_INFRASTRUCTURE_PROVIDER, "jquery");
     	
     	configuration.add("enableAnalytics", "false");
 
@@ -149,4 +156,6 @@ public void contributeMarkupRenderer(OrderedConfiguration<MarkupRendererFilter> 
     	
     	configuration.addInstance("indicator", IndicatorWorker.class,"after:RenderPhase");
     }
+	
+	
 }
