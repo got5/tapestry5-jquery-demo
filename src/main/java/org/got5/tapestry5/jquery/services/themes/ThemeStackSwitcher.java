@@ -1,4 +1,4 @@
-package org.got5.tapestry5.jquery.services;
+package org.got5.tapestry5.jquery.services.themes;
 
 import java.util.ArrayList;
 import java.util.Collections;
