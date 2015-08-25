@@ -1,4 +1,4 @@
-package org.got5.tapestry5.jquery.services;
+package org.got5.tapestry5.jquery.services.themes;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -29,7 +29,7 @@ public class SmoothnessStack implements JavaScriptStack{
 
 	public List<StylesheetLink> getStylesheets() {
 		List<StylesheetLink> css = new ArrayList<StylesheetLink>();
-		css.add(new StylesheetLink(assetSource.getContextAsset("css/smoothness/jquery-ui-1.8.19.custom.css", null)));
+		css.add(new StylesheetLink(assetSource.getContextAsset("css/smoothness/jquery-ui.css", null)));
 		return css;
 	}
 
