@@ -20,7 +20,7 @@ import org.apache.tapestry5.json.JSONObject;
 import org.apache.tapestry5.services.PageRenderLinkSource;
 import org.apache.tapestry5.services.javascript.JavaScriptStackSource;
 import org.apache.tapestry5.services.javascript.JavaScriptSupport;
-import org.got5.tapestry5.jquery.services.ChoosenTheme;
+import org.got5.tapestry5.jquery.services.themes.ChoosenTheme;
 
 @Import(library="ThemeSwitcher.js")
 public class ThemeSwitcher {
