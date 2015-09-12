@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>tapestry5-jquery-demo</artifactId>
 	<groupId>org.got5</groupId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.4-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>Tapestry 5 JQuery Demo WebSite</name>
 
@@ -35,7 +35,12 @@
                 <artifactId>commons-lang</artifactId>
                 <version>2.3</version>
         </dependency>
-
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.0.3</version>
+			<scope>test</scope>
+		</dependency>
 
         </dependencies>
 	<repositories>
@@ -49,26 +54,21 @@
             <url>https://repository.apache.org/content/repositories/releases/</url>
         </repository>
         <repository>
-			<id>devlab722-repo</id>
-			<url>http://nexus.devlab722.net/nexus/content/repositories/releases</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-          
-		<repository>
-			<id>devlab722-snapshot-repo</id>
-			<url>http://nexus.devlab722.net/nexus/content/repositories/snapshots</url>
+          		<id>central</id>
+          		<url>https://repo1.maven.org/maven2</url>
+          		<releases>
+            			<enabled>true</enabled>
+          		</releases>
+         </repository>
+
+		 <repository>
+			<id>oss—sonatype-snapshot-repo</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots
+			</url>
 			<releases>
 				<enabled>false</enabled>
 			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
+		 </repository>
         </repositories>
 	<build>
 		<finalName>tapestry-jquery-demo</finalName>
@@ -118,7 +118,7 @@
 	</build>
 
 	<properties>
-		<tapestry-release-version>5.4-beta-26</tapestry-release-version>
-		<tapestry-jquery-release-version>4.0.1-beta-26</tapestry-jquery-release-version>
+		<tapestry-release-version>5.4-beta-35</tapestry-release-version>
+		<tapestry-jquery-release-version>4.0-beta-35-SNAPSHOT</tapestry-jquery-release-version>
 	</properties>
 </project>
