@@ -121,6 +121,9 @@ public class DocsInPlaceEditor
 		Object [] context = new Object [] {currentIndex};
 		String listenerURI = _componentResources.createEventLink("refresh", context).toAbsoluteURI(false);
 	    String zoneID = updateZone.getClientId();
+	    params.put("width", "100");
+	    params.put("height","30");
+		params.put("style","inherit");
 	    params.put("tooltip", "Cliquer pour �diter");
 		params.put("callback", new JSONLiteral("function(value, settings)" +
 							   "{" +
