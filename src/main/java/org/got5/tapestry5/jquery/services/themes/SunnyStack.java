@@ -29,7 +29,7 @@ public class SunnyStack implements JavaScriptStack{
 
 	public List<StylesheetLink> getStylesheets() {
 		List<StylesheetLink> css = new ArrayList<StylesheetLink>();
-		css.add(new StylesheetLink(assetSource.getContextAsset("css/sunny/jquery-ui-1.8.19.custom.css", null)));
+		css.add(new StylesheetLink(assetSource.getContextAsset("css/sunny/jquery-ui.css", null)));
 		return css;
 	}
 
