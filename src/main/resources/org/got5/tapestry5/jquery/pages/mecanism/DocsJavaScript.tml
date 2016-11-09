@@ -13,10 +13,10 @@
 		</p>
 		<ul class="list">
 			<li>jquery.js</li>
-			<li>jquery.ui.core.js</li>
-			<li>jquery.ui.position.js</li>
-			<li>jquery.ui.widget.js</li>
-			<li>jquery.effects.core.js</li>
+			<li>core.js</li>
+			<li>position.js</li>
+			<li>widget.js</li>
+			<li>effect.js</li>
 			<li>jquery.json-2.2.js</li>
 		</ul>	
 	
