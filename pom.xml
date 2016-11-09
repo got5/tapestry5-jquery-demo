@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>tapestry5-jquery-demo</artifactId>
 	<groupId>org.got5</groupId>
-	<version>0.3.5.1</version>
+	<version>0.3.5.2</version>
 	<packaging>war</packaging>
 	<name>Tapestry 5 JQuery Demo WebSite</name>
 
@@ -103,6 +103,6 @@
 
 	<properties>
 		<tapestry-release-version>5.3.8</tapestry-release-version>
-		<tapestry-jquery-release-version>3.5.1</tapestry-jquery-release-version>
+		<tapestry-jquery-release-version>3.5.2-SNAPSHOT</tapestry-jquery-release-version>
 	</properties>
 </project>
