@@ -28,7 +28,7 @@ public class SouthStreetStack implements JavaScriptStack{
 
 	public List<StylesheetLink> getStylesheets() {
 		List<StylesheetLink> css = new ArrayList<StylesheetLink>();
-		css.add(new StylesheetLink(assetSource.getContextAsset("css/south-street/jquery-ui-1.8.19.custom.css", null)));
+		css.add(new StylesheetLink(assetSource.getContextAsset("css/south-street/jquery-ui.min.css", null)));
 		return css;
 	}
 
