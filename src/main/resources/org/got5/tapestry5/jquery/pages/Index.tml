@@ -95,33 +95,30 @@
 	    <dependency>
 	        <groupId>org.got5</groupId>
 	        <artifactId>tapestry5-jquery</artifactId>
-	        <version>3.3.1</version>
+	        <version>3.5.2</version>
 	    </dependency>
 	    ...
 	</dependencies>
 	
 	<repositories>
-	    ...
-	    <repository>
-	        <id>devlab722-repo</id>
-	        <url>
-	            http://nexus.devlab722.net/nexus/content/repositories/releases
-	        </url>
-	        <snapshots>
-	            <enabled>false</enabled>
-	        </snapshots>
-	    </repository>
-	
-	    <repository>
-	        <id>devlab722-snapshot-repo</id>
-	        <url>
-	            http://nexus.devlab722.net/nexus/content/repositories/snapshots
-	        </url>
-	        <releases>
-	            <enabled>false</enabled>
-	        </releases>
-	    </repository>
-	    ...
+		...
+		<repository>
+          		<id>central</id>
+          		<url>https://repo1.maven.org/maven2</url>
+          		<releases>
+            			<enabled>true</enabled>
+          		</releases>
+        	</repository>
+
+		<repository>
+			<id>oss—sonatype-snapshot-repo</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots
+			</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+		...
 	</repositories>
 	                ]]>
 	                </div>
@@ -133,14 +130,12 @@
 	            <div style="visibility: hidden; position: absolute; top: -9999%; left: -9999%;">
 	                <![CDATA[
 					dependencies {
-					    compile group: 'org.got5', name: 'tapestry5-jquery', version: '3.3.1'
+					    compile group: 'org.got5', name: 'tapestry5-jquery', version: '3.5.2'
 					}
 					
 					repositories {
 						mavenCentral()
-						maven {
-							url "http://nexus.devlab722.net/nexus/content/repositories/releases"
-						}
+						
 					}
 	                ]]>
 	                </div>
@@ -152,79 +147,11 @@
     	
     	<p:block3>
     		<h2>List Of Contributors</h2>
-			- Robin KOMIWES as robink		<br/>
-			- Andreas ANDREOU as andyhot	<br/>
-			- Christian RIEDEL as criedel	<br/>
-			- Francois FACON as got5     	<br/>
-			- Tom van DIJK as trolando		<br/>
-			- Emmanuel DEMEY as Gillespie59	<br/>
-			- Clement USTER as cluster		<br/>
-			- Amaury WILLEMANT as awillemant<br/>
-			- Barry BOOKS as trsvax<br/>
-			- Pablo NUSSEMBAUL as bauna<br/>
-			- Alexander OBLOVATNIY<br/>
+			<a href='https://github.com/got5/tapestry5-jquery-demo/graphs/contributors'> https://github.com/got5/tapestry5-jquery-demo/graphs/contributors</a>
 	
-			
-			<h2>Hosting</h2>
-			Christophe Furmaniak 	
-	
-			
+					
 			<h2>Changelog</h2>
-			<strong> 3.0.1 :</strong>
-			<div class="releasenotes">
-				<ul>
-					<li>add Mixins : Confirm, ContextMenu</li>
-				</ul>
-			</div>
-			<strong> 3.0.0 :</strong>
-			<div class="releasenotes">
-				<ul>
-					<li>Switch to Tapestry 5.3 (new JavaScript Layer)</li>
-					<li>add Components : Gallery</li>
-				</ul>
-			</div>
-			<strong> 2.6.1 :</strong>
-			<div class="releasenotes">
-				<ul>
-					<li>improve Validation Mecanism and DataTable Component</li>
-					<li>add Components : InPlaceEditor, Draggable</li>
-					<li>add Mixins : ZoneRefresh, ZoneDroppable </li>
-				</ul>
-			</div>
-			<strong> 2.6.0 :</strong>
-			<div class="releasenotes">
-	            <ul>
-					<li>Switch to Tapestry 5.2.6</li>
-	                <li>Add Mixins : CustomZone, Widget</li>
-					<li>Other Mecanisms : EffectsParam, WidgetParams, Selector Binding</li>
-	            </ul>
-			</div>
-			<strong> 2.1.1 :</strong>
-			<div class="releasenotes">
-	            <ul>
-					<li>Add Components : Carousel, Checkbox, RangeSlide, Slider, Superfish</li>
-					<li>Add Mixins     : CustomDatepicker, Mask, Reveal, Tooltip</li>
-	            </ul>
-			</div>
-			<strong> 2.1.0 :</strong>
-			<div class="releasenotes">
-	            <ul>
-					<li>Switch to Tapestry 5.2.5</li>
-					<li>Add (Tabs, Accordion, AjaxUpload, Button)</li>
-	            </ul>
-			</div>
-			<strong> 1.1-SNAPSHOT :</strong>
-			<div class="releasenotes">
-	            <ul>
-	            	<li>Exclusive jQuery components</li>
-	            </ul>
-			</div>
-			<strong> 1.0-SNAPSHOT :</strong>
-			<div class="releasenotes">
-	            <ul>
-	            	<li>Initial releases</li>
-	            </ul>
-			</div>		
+			<a href='https://github.com/got5/tapestry5-jquery'> https://github.com/got5/tapestry5-jquery</a>
     	</p:block3>
     </t:jquery.tabs>
 </html>
