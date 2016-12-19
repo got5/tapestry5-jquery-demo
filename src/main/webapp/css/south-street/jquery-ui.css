@@ -1077,11 +1077,11 @@ a.ui-button:active,
 }
 .ui-state-active .ui-icon,
 .ui-button:active .ui-icon {
-	background-image: url("images/ui-icons_8DC262_256x240.png");
+	background-image: url("images/ui-icons_8dc262_256x240.png");
 }
 .ui-state-highlight .ui-icon,
 .ui-button .ui-state-highlight.ui-icon {
-	background-image: url("images/ui-icons_8DC262_256x240.png");
+	background-image: url("images/ui-icons_8dc262_256x240.png");
 }
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon {
